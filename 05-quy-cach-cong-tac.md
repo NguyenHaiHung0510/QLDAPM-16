@@ -7,7 +7,7 @@
 ## 1. GitHub là nơi cộng tác và quản lý bản chính
 
 - Làm việc trong repository [QLDAPM-16](https://github.com/NguyenHaiHung0510/QLDAPM-16). Ba file gốc 01–03 là nguồn đã được nhóm thống nhất; Hưng quản lý lưu trữ và duyệt.
-- Mỗi người viết nội dung bằng Markdown, quản lý phần mình và gửi thay đổi để đọc chéo. Bản được chấp nhận nằm trên nhánh tích hợp `main`; bản nháp chưa duyệt nằm trên nhánh riêng hoặc draft PR.
+- Mỗi người viết nội dung bằng Markdown, quản lý phần mình và gửi thay đổi để đọc chéo. Bản được chấp nhận nằm trên nhánh tích hợp `main`; bản nháp chưa duyệt nằm trên nhánh riêng hoặc bản nháp đề nghị tích hợp (draft pull request, viết tắt PR).
 - Quy trình thông thường: cập nhật từ `main` → tạo nhánh cho một phần việc → sửa đúng phạm vi → commit → push nhánh → mở pull request (PR) → đọc chéo → tác giả sửa → Hưng duyệt và merge.
 - Một PR nên chứa một đầu ra hoặc một nhóm thay đổi có cùng mục đích. Không sửa đồng thời file người khác đang viết nếu chưa phối hợp; không lấy bản cũ ghi đè toàn bộ bản mới.
 - Hưng là người tích hợp cuối; người đọc chéo kiểm nội dung và người viết chịu trách nhiệm sửa. Không mặc định Hưng phải viết lại mọi phần. Phần phạm vi do Hưng viết vẫn cần người khác đọc chéo.

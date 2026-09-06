@@ -69,6 +69,13 @@ Mỗi chương cần chỉ rõ quyết định cho dự án kho trà, căn cứ/
 
 ## 4. Bản đồ chín chương và đầu ra làm việc
 
+Các thuật ngữ dùng trong bảng:
+
+- **WBS — Work Breakdown Structure:** cấu trúc phân rã công việc theo sản phẩm bàn giao và gói công việc; cung cấp cấu trúc chung để các phần lập kế hoạch liên kết với nhau.
+- **CPM — Critical Path Method:** phương pháp đường găng, phân tích mạng công việc để xác định chuỗi chi phối thời gian hoàn thành dự án theo các giả định của lịch.
+- **EVM — Earned Value Management:** quản lý giá trị thu được, đối chiếu giá trị công việc theo kế hoạch, giá trị công việc đã hoàn thành và chi phí thực tế; cần đủ dữ liệu, không tính chỉ từ bảng ngân sách tổng.
+- **RACI — Responsible, Accountable, Consulted, Informed:** ma trận phân công người thực hiện, người chịu trách nhiệm cuối cùng, người được tham vấn và người được thông báo. Việc lập ma trận không thay thế xác nhận nhận việc của thành viên.
+
 | Chương theo GV-01 | Câu hỏi quản lý | Đầu ra dự kiến cần chuẩn bị | Quan hệ đầu vào/đầu ra |
 | --- | --- | --- | --- |
 | 1. Tôn chỉ dự án | Vì sao thực hiện, mục tiêu và ràng buộc gì, ai liên quan? | Tôn chỉ dựa trên file 03; đối chiếu file 01 và 02 | Là nền cho toàn bộ kế hoạch; không chép số liệu khác bản gốc |
