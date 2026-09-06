@@ -56,7 +56,7 @@ Trong lúc đó, ae nhận ba phần còn lại có thể đọc tài liệu g�
 
 Sau đó ae đối chiếu với nhau. Ví dụ, lịch cần kỹ sư tích hợp làm một việc thì lịch nhân lực phải có người đó, và bảng chi phí phải tính phần việc tương ứng.
 
-**Không làm tuần tự từ chương 1 đến chương 9.** Nhân lực cần tham gia từ đầu; mua sắm phải cho biết lúc nào có thiết bị. Rủi ro và chất lượng được bổ sung khi xuất hiện vấn đề liên quan, dù chương đầy đủ có thể viết sau.
+**Không làm tuần tự từ chương 1 đến chương 9.** Nhân lực cần tham gia từ đầu; mua sắm phải cho biết lúc nào có thiết bị. Rủi ro và chất lượng được xem từ lúc lập kế hoạch, cập nhật khi có thông tin mới; chương đầy đủ có thể viết sau.
 
 Việc tiếp theo của ae: xem [phân công hiện tại](N-03-phan-cong-va-quyet-dinh.md), chọn phần và báo thời gian có thể làm. Cách gửi bài và phối hợp nằm ở [Cách làm việc](N-02-cach-lam-viec.md).
 
