@@ -1,6 +1,6 @@
 # N-02 · Cách làm việc
 
-**Ae tự làm phần mình bằng Markdown, gửi lên GitHub để đọc chéo; Hưng duyệt và ghép bản cuối.** Không cần cùng online hay ngồi viết chung một file.
+**Ae tự làm phần mình bằng Markdown, gửi lên GitHub để đọc chéo; Hưng duyệt và ghép bản cuối (tạm quyết định thế).** Không cần cùng online hay ngồi viết chung một file.
 
 ## 1. Khi nhận việc
 
@@ -13,7 +13,7 @@ Giao một bảng hoặc một phần đủ dùng trước cũng được. Ví d
 1. Lấy bản mới nhất từ `main`, tạo nhánh riêng cho phần việc.
 2. Viết file Markdown; bảng tính và hình có file nguồn đi kèm.
 3. Commit, push nhánh rồi mở **pull request (PR)** — đề nghị đưa phần sửa vào bản chung.
-4. Một người đọc chéo, người viết xử lý góp ý; Hưng duyệt và merge vào `main`.
+4. Một người đọc chéo, người viết xử lý góp ý; Ae có thể yêu cầu Hưng hoặc các thành viên khác duyệt hoặc tự merge vào `main` rồi báo nhóm.
 
 Trong PR, ghi ngắn: **đã làm gì, cần ae xem gì, còn vướng gì**. Chưa hoàn thiện thì ghi rõ là bản nháp. Phần Hưng viết cũng cần ae đọc chéo.
 

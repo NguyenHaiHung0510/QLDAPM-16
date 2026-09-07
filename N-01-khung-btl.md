@@ -46,7 +46,7 @@ Thứ tự chương theo **slide 0, trang 13**. Cột cuối là gợi ý đầu
 
 ## 5. Ae bắt đầu và phối hợp thế nào?
 
-**Hưng làm phạm vi trước ở mức đủ để ae dùng:** danh sách bàn giao và các gói công việc. WBS là cách sắp xếp những gói đó thành một cấu trúc chung. Chưa cần viết đẹp cả chương mới bàn giao.
+**Hưng làm phần quản lý phạm vi trước ở mức đủ để ae dùng:** danh sách bàn giao và các gói công việc. WBS là cách sắp xếp những gói đó thành một cấu trúc chung. Chưa cần viết đẹp cả chương mới bàn giao.
 
 Trong lúc đó, ae nhận ba phần còn lại có thể đọc tài liệu gốc và chuẩn bị bảng của mình. Khi nhận được danh sách công việc:
 
