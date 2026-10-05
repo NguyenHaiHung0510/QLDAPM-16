@@ -1,6 +1,6 @@
 # CHIẾN LƯỢC CẤU TRÚC: TÔN CHỈ DỰ ÁN (PROJECT CHARTER)
 **Đề tài:** Hệ thống Quản lý Kho Trà và Chuỗi cung ứng Tân Cương (WMS)  
-**Tiêu chí biên soạn:** *Ngắn gọn – Dễ hiểu – Chuẩn format Slide 36 & PMBOK 6 – Khớp tuyệt đối dữ liệu cũ.*
+**Tài liệu tham khảo cấu trúc:** Bài giảng Khởi tạo dự án, [tai-lieu/3-initial.pdf](tai-lieu/3-initial.pdf#page=36), trang 36; PMBOK 6 §4.1.3.1, trang 81. Bản tôn chỉ đầy đủ xem [04](04-ton-chi-du-an-day-du.md).
 
 ```
                                       CẤU TRÚC 5 PHẦN CỐT LÕI
@@ -28,7 +28,7 @@
 
 ---
 
-## 2. Tổng quan hệ thống & Đối tượng sử dụng (Format Slide 36 - Ý 1)
+## 2. Tổng quan hệ thống & Đối tượng sử dụng
 *   **Tổng quan:** Website chạy trên máy trạm Windows tại 3 cơ sở (01 Kho tổng chế biến/đóng gói tại Thái Nguyên + 02 Kho chi nhánh phân phối), tích hợp trực tiếp Cân điện tử RS232, máy in tem theo chuẩn tương thích, máy quét QR và máy chấm công. Xử lý nghiệp vụ nông sản: Định mức chuyển đổi BOM theo độ ẩm, thuật toán xuất kho FEFO.
 *   **Bảng phân vai 6 nhóm người dùng:**
     1.  *Ban Lãnh đạo:* Xem Dashboard KPI, doanh thu xuất kho, tỷ lệ hao hụt chè, báo cáo tuổi hàng (Aging).
@@ -40,7 +40,7 @@
 
 ---
 
-## 3. Sản phẩm bàn giao & Các bên liên quan (Format Slide 36 - Ý 2a)
+## 3. Sản phẩm bàn giao & Các bên liên quan
 *   **4 Nhóm sản phẩm bàn giao (Key Deliverables):**
     1.  *Gói phần mềm WMS:* Web App quản lý kho hoàn chỉnh + Service kết nối phần cứng COM/RS232 + CSDL đồng bộ 3 kho.
     2.  *Hạ tầng & Thiết bị (130 triệu):* 04 Cân RS232, 04 Máy in tem, 08 Máy quét QR, 04 PC Windows (kho tổng: 2/2/4/2; mỗi chi nhánh: 1/1/2/1 theo 02) đã lắp đặt và cấu hình sẵn sàng tại 3 kho.
@@ -52,7 +52,7 @@
 
 ---
 
-## 4. Mốc thời gian then chốt & Dự toán ngân sách (Format Slide 36 - Ý 2b)
+## 4. Mốc thời gian then chốt & Dự toán ngân sách
 *   **Bảng 6 Mốc tiến độ (Milestones khớp 8 tháng):**
     *   `M1 (Tháng 1)`: Hoàn tất Khảo sát, Đặc tả SRS & Thiết kế Kiến trúc hệ thống.
     *   `M2 (Tháng 2 – 4)`: Hoàn thành Lập trình Core WMS, Module RS232 đọc cân, Module in tem QR & Logic BOM/FEFO.
@@ -70,25 +70,25 @@
 
 ---
 
-## 5. Danh mục Ràng buộc, Giả định & Tiêu chí thành công (Format Slide 36 - Ý 3)
+## 5. Danh mục Ràng buộc, Giả định & Tiêu chí thành công
 *   **Ràng buộc cốt lõi (Constraints):**
     *   *Tiến độ:* Kho tổng vận hành chậm nhất cuối tháng thứ 6; đóng gói toàn bộ ở tháng thứ 8.
     *   *Chi phí:* Ngân sách trần không vượt quá 2.000.000.000 VNĐ.
-    *   *Kỹ thuật:* Web chạy trên môi trường máy trạm Windows, đọc dữ liệu cân qua RS232 đáp ứng thao tác và tiêu chí AC-01, không hứa độ trễ bằng không.
+    *   *Kỹ thuật:* Web chạy trên máy trạm Windows, nhận dữ liệu cân qua RS232; sai số cân và thời gian in tem theo tiêu chí nghiệm thu tại chương 2.
     *   *Nghiệp vụ:* Bắt buộc áp dụng đúng thuật toán xuất kho FEFO và công thức hao hụt BOM.
 *   **Nhật ký giả định (Assumption Log):**
     *   Doanh nghiệp Trà Tân Cương bố trí công nhân và thủ kho tham gia UAT đúng tiến độ.
     *   Nguồn điện và đường truyền Internet tại 3 kho ổn định (hệ thống có cơ chế đệm dữ liệu ngoại tuyến).
-    *   Cân mua mới có RS232; giao thức máy in, scanner và máy chấm công được xác nhận theo đặc tả thiết bị, không mặc định mọi thiết bị dùng ASCII/Serial.
+    *   Cân mua mới có RS232; máy in, máy quét và máy chấm công có giao thức kết nối được xác nhận theo đặc tả thiết bị.
     *   Dữ liệu cũ (danh mục chè, nhà vườn) được cung cấp dưới dạng bảng tính Excel chuẩn hóa trước Tháng 5.
 *   **Tiêu chí thành công & Ký duyệt (Sign-off):**
-    *   Vận hành thực tế trơn tru tại 3 kho, sai số cân tự động < 0,1%, thời gian in tem < 2 giây/sản phẩm theo đại lượng, tập mẫu và điều kiện đạt tại AC-01/AC-02 trong chương 2; các nhóm chức năng đạt AC-03.
+    *   Vận hành thực tế tại 3 kho, sai số cân tự động < 0,1%, thời gian in tem < 2 giây/sản phẩm; các chức năng và điều kiện nghiệm thu theo chương 2.
     *   Chữ ký phê duyệt của Project Sponsor (Đại diện Trà Tân Cương) và PM (Bùi Hồng Phú), với xác nhận của đại diện các kho cho phần sử dụng tại kho.
 
 ### Làm rõ giả định triển khai và bàn giao
 
-Nguồn số đo môi trường và chất lượng trà, máy chấm công và đầu cuối văn phòng theo giả định tại 01/02. Thủ kho nhập thủ công số đo; kết nối không dây là tùy chọn phải được thẩm định và phê duyệt, không thêm vào đường cơ sở ngầm. Dải khối lượng sử dụng của từng trạm được xác nhận trong SRS; không tự đặt nghiệp vụ cân gói nhỏ.
+Nguồn số đo môi trường/chất lượng trà và tài sản doanh nghiệp cung cấp theo giả định tại 01/02. Số đo được nhập thủ công; tích hợp đo không dây được đánh giá khi khảo sát và xử lý theo quy trình thay đổi phạm vi. Dải khối lượng sử dụng và độ chia của cân được xác nhận trong SRS.
 
-Gói 25 triệu bao phủ môi trường phát triển, kiểm thử và production trong tám tháng dự án. Tech Lead/Backend triển khai ứng dụng/CSDL, chuẩn bị sao lưu và hướng dẫn vận hành; Onsite kết nối thiết bị và đào tạo tại kho. Sau tháng 8, doanh nghiệp nhận quản trị và chịu phí duy trì; bảo trì dài hạn là thỏa thuận riêng. Giữ khả năng đồng bộ/đệm ngoại tuyến trong yêu cầu gốc; cách lưu trữ được thiết kế trong SAD, không khóa ba CSDL nhân bản.
+Gói 25 triệu bao phủ môi trường phát triển, kiểm thử và production trong tám tháng dự án. Tech Lead/Backend triển khai ứng dụng/CSDL, chuẩn bị sao lưu và hướng dẫn vận hành; Onsite kết nối thiết bị và đào tạo tại kho. Sau tháng 8, doanh nghiệp nhận quản trị và chịu phí duy trì; bảo trì dài hạn là thỏa thuận riêng. SAD xác định kiến trúc dữ liệu chung ba kho và cơ chế đệm/đồng bộ ngoại tuyến.
 
-Tài liệu này là bản cơ sở cấu trúc, đã đồng bộ hồi quy ngày 05/10/2026 với bản tôn chỉ đầy đủ 04. Phân công sinh viên và quy trình cộng tác nằm ở N-01–N-04, không thay quyền hạn các vai trò dự án giả định.
+Tài liệu này là cơ sở cấu trúc của bản tôn chỉ đầy đủ 04. Phân công làm BTL và quy trình cộng tác nằm ở N-01–N-04.

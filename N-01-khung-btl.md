@@ -1,6 +1,6 @@
 # N-01 · Khung BTL
 
-Cập nhật theo chỉ dẫn của Hưng ngày 05/10/2026. Đây là hướng dẫn làm việc, không ghép vào bài nộp.
+Cập nhật ngày 05/10/2026. Đây là hướng dẫn làm việc, không ghép vào bài nộp.
 
 ## 1. Nhóm cần làm ra gì?
 
@@ -21,7 +21,7 @@ Bản nộp gồm **quyển PDF chín chương và slide thuyết trình**. Quy�
 
 Các file `N-01` đến `N-04` hướng dẫn cách làm và ghi nhận bối cảnh tài liệu. Slide và bài giảng là căn cứ yêu cầu môn học; PMBOK 6 dùng để tra thêm khi cần. Gợi ý hoặc chiến lược học riêng không tự trở thành yêu cầu của BTL.
 
-Bộ gốc hiện còn điểm chưa khớp, kể cả giữa 03 và 04. Khi gặp mâu thuẫn, chỉ rõ hai nguồn và xử lý theo [N-02](N-02-cach-lam-viec.md); không tự chọn số liệu thuận tiện, cũng không coi bản gốc là bất biến. Xem bối cảnh ở [N-04](N-04-ghi-chu-ban-ton-chi.md).
+Khi phát hiện mâu thuẫn giữa các tài liệu, ghi rõ nguồn và xử lý theo [N-02](N-02-cach-lam-viec.md). Các quyết định và giả định hiện hành được ghi ở [N-04](N-04-ghi-chu-ban-ton-chi.md).
 
 ## 3. Chín chương
 
@@ -47,7 +47,7 @@ Người làm tiếp cần hiểu các phần trước ở mức cần thiết c
 
 Khi làm phát hiện đầu vào sai hoặc thiếu, có thể cập nhật ngược tài liệu liên quan, đối chiếu các phần bị ảnh hưởng và thông báo trên nhóm. Không bắt buộc review toàn bộ tài liệu mỗi lần nhận việc. Trước khi gửi phần đã làm, thực hiện ít nhất một lượt Agent ad-review theo [N-02](N-02-cach-lam-viec.md).
 
-Phân công sinh viên làm BTL khác với các vai trò PM, BA, kỹ sư… trong dự án giả định. Một người viết chương thời gian không vì vậy trở thành PM của tình huống dự án.
+Phân công làm BTL nằm ở N-03; vai trò và lịch huy động nhân sự của dự án giả định nằm ở 02.
 
 ## 5. Nguồn để kiểm tra
 
@@ -55,7 +55,7 @@ Phân công sinh viên làm BTL khác với các vai trò PM, BA, kỹ sư… tr
 - `tai-lieu/1-overview.pdf`: tổng quan, ràng buộc và bài tập dự toán.
 - `tai-lieu/2-process.pdf`: tiến trình, tổ chức và lập kế hoạch.
 - `tai-lieu/3-initial.pdf`: khởi tạo dự án; `tai-lieu/Bai giang Quan ly du an phan mem.pdf`: bài giảng tổng hợp.
-- Slide từng chương được dùng khi làm chương đó; nguồn chưa nằm trong repo thì trao đổi trên nhóm để cùng truy cập. Repo hiện đã có bảy PDF trong `tai-lieu/`, không phải chưa có tài liệu môn.
+- [tai-lieu/4-scope.pdf](tai-lieu/4-scope.pdf): bài giảng Quản lý phạm vi dự án. Các slide còn lại được chia sẻ trên nhóm khi làm chương tương ứng.
 
 Slide 0 quy định trừ điểm khi sao chép hoặc dùng AI làm báo cáo. **Ngày 05/10/2026, Hưng xác nhận giảng viên cho phép dùng AI phản biện bản nháp, không viết thay nội dung học thuật.** Quy tắc ít nhất một lượt Agent ad-review của nhóm áp dụng trong giới hạn này; người làm tự viết và chịu trách nhiệm nội dung.
 

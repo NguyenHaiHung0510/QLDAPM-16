@@ -1,6 +1,6 @@
 # N-02 · Cách làm việc
 
-Cập nhật ngày 05/10/2026. **Mỗi người tự làm và chịu trách nhiệm phần mình; không có bước bắt buộc Hưng duyệt hoặc merge.**
+Cập nhật ngày 05/10/2026. **Mỗi thành viên tự làm, kiểm tra và chịu trách nhiệm đưa phần mình lên bản chung theo quyền truy cập repo.**
 
 ## 1. Làm và đưa lên bản chung
 

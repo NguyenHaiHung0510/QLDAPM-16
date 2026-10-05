@@ -41,9 +41,9 @@ Tất cả các bộ phận, nhân viên có liên quan thuộc các chi nhánh 
 
 ## Giả định nguồn dữ liệu và tài sản phục vụ triển khai
 
-Các giả định dưới đây dùng để lập kế hoạch, được kiểm tra khi khảo sát/SRS; chưa phải kết quả khảo sát hiện trường:
+Các giả định dưới đây là đầu vào lập kế hoạch và được xác nhận khi khảo sát, lập SRS:
 
 - Ba kho đã có thiết bị đo nhiệt độ/độ ẩm môi trường phù hợp các điểm đo được xác nhận trong SRS. Thủ kho nhập thủ công số đo, kho/khu vực, thời điểm và người ghi vào WMS. Độ ẩm môi trường (%RH) được lưu riêng với độ ẩm nguyên liệu/thành phẩm dùng để kiểm chất lượng và tính BOM.
-- Kết quả độ ẩm và cảm quan của lô trà do doanh nghiệp cung cấp từ khâu kiểm chất lượng hiện có, nhập thủ công vào WMS. Không bổ sung hệ thống đo/kiểm chất lượng trà tự động.
-- Kết nối không dây của thiết bị đo được xem xét nếu thiết bị sẵn có cung cấp giao thức tương thích. Nhập thủ công là phương án trong đường cơ sở; bổ sung nhận dữ liệu không dây chỉ được thực hiện sau khi xác nhận giao thức, công tích hợp, chi phí và phê duyệt thay đổi. Không mặc định mọi thiết bị không dây tự kết nối được với WMS.
+- Kết quả độ ẩm và cảm quan của lô trà do doanh nghiệp cung cấp từ khâu kiểm chất lượng hiện có, nhập thủ công vào WMS.
+- Phương án tích hợp thiết bị đo không dây được đánh giá khi khảo sát và xử lý theo quy trình thay đổi phạm vi. Phạm vi hiện tại sử dụng nhập số đo thủ công.
 - Doanh nghiệp cung cấp một máy chấm công sẵn có cho mỗi kho (ba máy), PC văn phòng cho các vai trò quản lý/kế toán, máy in chứng từ văn phòng, điện và Internet. Danh mục mua mới và phân bổ bốn cân, bốn máy in, tám máy quét, bốn PC theo 02. Nếu tài sản sẵn có hoặc khả năng kết nối không đúng giả định, phải đánh giá và phê duyệt phương án điều chỉnh trước triển khai.

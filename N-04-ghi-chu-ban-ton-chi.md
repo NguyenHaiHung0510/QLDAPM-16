@@ -6,7 +6,7 @@ Cập nhật ngày 05/10/2026. Ghi chú làm việc, không ghép vào bài nộ
 
 01–04 cùng tạo thành bộ gốc của dự án. 03 là cơ sở tôn chỉ trước khi tạo [04](04-ton-chi-du-an-day-du.md) theo mẫu bảy mục của giảng viên. Người làm các chương sau phải đối chiếu cả bộ; không bỏ qua điểm khác nhau giữa các bản.
 
-Ngày 05/10/2026, Hưng đồng ý phương án sửa hồi quy và giao cập nhật 01–04/chương 2, tạo PR, ad-review bằng Luna MAX và Gemini Flash HIGH; Hưng sẽ tự merge. Các quyết định/giả định dùng trong bản cập nhật:
+Bản cập nhật ngày 05/10/2026 dùng các thông tin và giả định sau để đồng bộ 01–04 với chương 2:
 
 | Điểm | Cách xử lý |
 | --- | --- |
@@ -16,13 +16,13 @@ Ngày 05/10/2026, Hưng đồng ý phương án sửa hồi quy và giao cập n
 | Nguồn số đo | Thiết bị môi trường và khâu kiểm độ ẩm trà của doanh nghiệp, nhập thủ công. Kết nối đo không dây chỉ là tùy chọn phải thẩm định/phê duyệt; không thêm nghiệp vụ kho ngoài tài liệu gốc. |
 | Server/vận hành | Gói 25 triệu dùng trong 8 tháng dự án; Tech Lead/Backend triển khai/sao lưu/hướng dẫn, Onsite kết nối và đào tạo. Doanh nghiệp nhận quản trị và phí sau bàn giao; bảo trì dài hạn là thỏa thuận riêng. |
 | Lịch huy động | Khảo sát tháng 1 BA/Tech Lead; RS232 từ tháng 2, Onsite từ tháng 5. BA bàn giao tài liệu cuối tháng 5; người còn tham gia cập nhật/đóng gói. QA/Tech Lead tổng hợp nghiệm thu tháng 8 từ biên lai trước vận hành. |
-| Nghiệm thu | AC-01/AC-02 chương 2 xác định ý nghĩa ngưỡng, cỡ mẫu, nhóm lỗi và điều kiện đạt; các tham số nghiệp vụ chốt trong SRS, Test Plan hoàn thiện ở chương 9. Không chỉ điền hai con số vào chỗ trống. |
+| Nghiệm thu | Chương 2 xác định ý nghĩa ngưỡng và điều kiện chấp nhận AC-01/AC-02. SRS chốt tham số nghiệp vụ; chương 9 lập Test Plan, dữ liệu, cỡ mẫu và phương pháp kiểm trước nghiệm thu. |
 
-Không kế thừa dấu PASS cũ cho bản mới. PR và lượt review sau sửa là căn cứ đánh giá phiên bản hiện hành; kiểm tài liệu không chứng minh thiết bị/QA thực tế đã chạy. Nếu một giả định tài sản không đạt, cần đánh giá công/chi phí và xử lý thay đổi trước triển khai.
+Kết quả review gắn với phiên bản tài liệu được kiểm trong PR. Nếu tài sản sẵn có khác giả định, đội dự án đánh giá công/chi phí và trình điều chỉnh trước triển khai. Kiểm tài liệu và nghiệm thu hệ thống thực tế được ghi nhận riêng.
 
 ## 2. Bối cảnh tạo bản 04 ngày 07/09/2026
 
-- Theo chỉ dẫn trực tiếp trong phiên đó, giữ 03 làm cơ sở và tạo 04 theo bảy mục của mẫu giảng viên. Ba ảnh viết tay đã nộp được dùng làm căn cứ ưu tiên khi tạo bản này.
+- Bản 04 được lập ngày 07/09/2026 từ 03, mẫu bảy mục của giảng viên và ba ảnh viết tay đã nộp.
 - Bản 04 dùng PM Bùi Hồng Phú; đơn vị thực hiện là Công ty Cổ phần Công nghệ Raumania, đại diện Nguyễn Đức Công. Chủ đầu tư có đại diện giả định Trần Minh Đức. Đây là vai trò của tình huống, không phải phân công sinh viên làm BTL.
 - Ngày bắt đầu dự án giả định là 03/06/2027; tháng dự án từ ngày 03 đến hết ngày 02 tháng sau. Kho tổng hoạt động chậm nhất 02/12/2027; toàn dự án kết thúc 02/02/2028. Đây không phải deadline làm BTL; các mốc này chưa xác định lịch ngày làm việc hoặc đường găng.
 - Giữ ngân sách hai tỷ, ba kho và ngưỡng cân `<0,1%`, in tem `<2 giây/sản phẩm>` theo bản đã nộp lúc đó. 04 ghi cách đo được thống nhất trong kế hoạch kiểm thử. Nếu điều chỉnh tiêu chí, cần sửa thống nhất bộ gốc và các phần liên quan.
@@ -35,4 +35,4 @@ Hai subagent đã đọc độc lập bản 04 ngày 07/09/2026, SHA256 `8005958
 
 Biên lai này chỉ áp dụng cho các phiên bản đó, không chứng minh bản 04 hiện tại hoặc toàn bộ BTL đã đạt. Đã kiểm Markdown; chưa kiểm bản in Word/PDF, thiết bị hoặc phần mềm thực tế, chưa có xác nhận chấp nhận bài của giảng viên.
 
-Việc commit/push ngày 07/09/2026 được giao trong phiên đó; không tạo quyền duyệt hoặc tích hợp thường trực cho Hưng. Cơ chế làm việc và phân công hiện hành nằm ở [N-02](N-02-cach-lam-viec.md) và [N-03](N-03-phan-cong-va-quyet-dinh.md).
+Cơ chế làm việc và phân công hiện hành nằm ở [N-02](N-02-cach-lam-viec.md) và [N-03](N-03-phan-cong-va-quyet-dinh.md).
