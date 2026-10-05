@@ -38,3 +38,12 @@ Các chức năng mà phía quản lý kho yêu cầu phải có:
 Phần mềm được triển khai dưới dạng website chạy trên hệ điều hành Windows, có khả năng kết nối trực tiếp với các thiết bị ngoại vi như đầu đọc mã vạch/QR code, máy in tem mã lô/hóa đơn, cân điện tử kết nối chuẩn RS232, máy chấm công,...
 
 Tất cả các bộ phận, nhân viên có liên quan thuộc các chi nhánh kho đều tham gia sử dụng phần mềm theo vai trò và quyền hạn được phân công.
+
+## Giả định nguồn dữ liệu và tài sản phục vụ triển khai
+
+Các giả định dưới đây dùng để lập kế hoạch, được kiểm tra khi khảo sát/SRS; chưa phải kết quả khảo sát hiện trường:
+
+- Ba kho đã có thiết bị đo nhiệt độ/độ ẩm môi trường phù hợp các điểm đo được xác nhận trong SRS. Thủ kho nhập thủ công số đo, kho/khu vực, thời điểm và người ghi vào WMS. Độ ẩm môi trường (%RH) được lưu riêng với độ ẩm nguyên liệu/thành phẩm dùng để kiểm chất lượng và tính BOM.
+- Kết quả độ ẩm và cảm quan của lô trà do doanh nghiệp cung cấp từ khâu kiểm chất lượng hiện có, nhập thủ công vào WMS. Không bổ sung hệ thống đo/kiểm chất lượng trà tự động.
+- Kết nối không dây của thiết bị đo được xem xét nếu thiết bị sẵn có cung cấp giao thức tương thích. Nhập thủ công là phương án trong đường cơ sở; bổ sung nhận dữ liệu không dây chỉ được thực hiện sau khi xác nhận giao thức, công tích hợp, chi phí và phê duyệt thay đổi. Không mặc định mọi thiết bị không dây tự kết nối được với WMS.
+- Doanh nghiệp cung cấp một máy chấm công sẵn có cho mỗi kho (ba máy), PC văn phòng cho các vai trò quản lý/kế toán, máy in chứng từ văn phòng, điện và Internet. Danh mục mua mới và phân bổ bốn cân, bốn máy in, tám máy quét, bốn PC theo 02. Nếu tài sản sẵn có hoặc khả năng kết nối không đúng giả định, phải đánh giá và phê duyệt phương án điều chỉnh trước triển khai.

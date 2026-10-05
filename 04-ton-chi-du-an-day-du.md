@@ -2,7 +2,7 @@
 
 **Hệ thống Quản lý Kho Trà và Chuỗi cung ứng Tân Cương (WMS)**
 
-> Bài tập Nhóm 16. Biên soạn: Codex theo chỉ dẫn của người quản lý tài liệu ngày 07/09/2026; đọc chéo: các subagent T3. Trạng thái: bản đề xuất hoàn chỉnh, chờ nhóm duyệt. Căn cứ: ba ảnh viết tay đã nộp, mẫu 7 mục của giảng viên và tài liệu [01](01-mo-ta-de-tai.md), [02](02-du-toan-kinh-phi.md), [03](03-ton-chi-du-an.md). Tên công ty, địa chỉ và thông tin liên hệ được xây dựng cho tình huống giả định của bài tập, không xác nhận danh tính hay trụ sở thực tế.
+> Bài tập Nhóm 16. Biên soạn: Codex theo chỉ dẫn của người quản lý tài liệu ngày 07/09/2026; đọc chéo: các subagent T3. Trạng thái: bản cập nhật hồi quy ngày 05/10/2026 theo chỉ dẫn của Hưng, trình nhóm qua PR để duyệt. Căn cứ: ba ảnh viết tay đã nộp, mẫu 7 mục của giảng viên và tài liệu [01](01-mo-ta-de-tai.md), [02](02-du-toan-kinh-phi.md), [03](03-ton-chi-du-an.md). Tên công ty, địa chỉ và thông tin liên hệ được xây dựng cho tình huống giả định của bài tập, không xác nhận danh tính hay trụ sở thực tế.
 
 ## 1. Thông tin chung
 
@@ -20,7 +20,7 @@
 | Người đại diện | Nguyễn Đức Công |
 | Người quản lý dự án (PM) | Bùi Hồng Phú |
 | Điện thoại | 036 181 3636 |
-| Email | phu.bui@raumania.example |
+| Email | contact@raumania.com |
 
 ## 2. Mục tiêu của dự án
 
@@ -59,7 +59,7 @@ Thời gian dự án tính theo tháng kể từ ngày 03/06/2027: tháng thứ 
 | Độ chính xác và tốc độ | Sai số cân tự động **< 0,1%**; thời gian in tem **< 2 giây/sản phẩm** |
 | Bàn giao | Người dùng được đào tạo; tài liệu và sản phẩm bàn giao đầy đủ; có biên bản nghiệm thu được đại diện chủ đầu tư, đại diện các kho và PM xác nhận |
 
-Cách đo sai số cân và thời gian in tem được thống nhất trong kế hoạch kiểm thử, giữ nguyên các ngưỡng trên.
+Ngưỡng được áp dụng theo AC-01/AC-02 tại chương 2: có đại lượng đo, tập mẫu, nhóm tình huống và quy tắc đạt; không kết luận chỉ từ một số đo trung bình. Dải khối lượng sử dụng, định dạng tem và các tham số nghiệp vụ được xác nhận trong SRS; kế hoạch chất lượng chương 9 hoàn thiện thao tác, dữ liệu cụ thể và biên lai theo bộ điều kiện này.
 
 ## 5. Vai trò, trách nhiệm của các bên liên quan chính
 
@@ -85,7 +85,9 @@ Cách đo sai số cân và thời gian in tem được thống nhất trong k�
 | 4 | Giao thiết bị chậm hoặc điện, Internet tại kho chưa sẵn sàng | Theo dõi lịch cung cấp thiết bị; kiểm tra điều kiện tại kho trước khi lắp đặt |
 | 5 | Người dùng không tham gia kiểm thử, đào tạo đúng lịch | Thống nhất lịch với quản lý kho; bố trí đầu mối tham gia và hướng dẫn trước khi vận hành |
 
-Giả định thực hiện: doanh nghiệp bố trí công nhân và thủ kho tham gia UAT đúng tiến độ; điện và Internet tại 03 kho ổn định; cân điện tử và máy in tem mua mới đạt chuẩn kết nối; dữ liệu cũ được cung cấp dưới dạng bảng tính Excel. Các điều kiện này được kiểm tra trong quá trình lập kế hoạch và triển khai.
+Giả định thực hiện: doanh nghiệp bố trí người dùng tham gia UAT/đào tạo, chuẩn bị điện/Internet và các tài sản sẵn có theo 01/02. Nhật ký nhiệt độ/độ ẩm kho và kết quả kiểm chất lượng trà dùng số đo của doanh nghiệp, nhập thủ công; nhận dữ liệu không dây chỉ là tùy chọn phải xác nhận giao thức và phê duyệt nếu bổ sung. Dữ liệu chuyển đổi gồm danh mục, lô và tồn đầu kỳ theo mẫu Excel đã đối soát; lịch sử giao dịch không mặc nhiên chuyển toàn bộ. Các điều kiện được kiểm trước triển khai.
+
+Gói cloud/VPS trong 02 bao phủ tám tháng dự án, gồm phát triển, kiểm thử và production. Tech Lead/Backend phụ trách triển khai, sao lưu/khôi phục và hướng dẫn vận hành; Onsite kết nối LAN, đầu cuối và ngoại vi, đào tạo trước go-live. Sau bàn giao tháng 8, doanh nghiệp nhận tài khoản và trách nhiệm vận hành/chi phí duy trì; bảo trì dài hạn xác định riêng. Máy chủ, cơ sở dữ liệu, tài liệu vận hành và kết quả bàn giao là đầu ra của triển khai; cấu hình kỹ thuật và lịch/chi phí chi tiết xác định trong các kế hoạch liên quan.
 
 ## 7. Ký phê duyệt của chủ đầu tư
 

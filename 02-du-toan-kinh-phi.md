@@ -9,8 +9,8 @@
 
 ## I. TỔNG QUAN RÀNG BUỘC TIẾN ĐỘ & NGÂN SÁCH
 
-*   **Thời gian thực hiện toàn dự án:** **08 tháng** (35 tuần làm việc).
-*   **Mốc then chốt (Hard Milestone):** **Tháng thứ 6** — Bắt buộc phải hoàn thành Go-live và đưa vào vận hành thực tế tại **Kho tổng chế biến/đóng gói** (Thái Nguyên).
+*   **Thời gian thực hiện toàn dự án:** **08 tháng lịch** (35 tuần lịch theo khoảng 03/06/2027–02/02/2028; lịch ngày làm việc/ngày nghỉ xác định ở chương 3).
+*   **Mốc then chốt (Hard Milestone):** **Chậm nhất cuối tháng thứ 6** — Bắt buộc phải hoàn thành Go-live và đưa vào vận hành thực tế tại **Kho tổng chế biến/đóng gói** (Thái Nguyên).
 *   **Tháng 7 – 8:** Triển khai tiếp nối cho **2 Kho chi nhánh**, đào tạo người dùng, nghiệm thu và đóng gói dự án.
 *   **Tổng ngân sách phê duyệt (BAC - Budget at Completion):** **2.000.000.000 VNĐ** *(Hai tỷ đồng chẵn)*.
 
@@ -24,8 +24,8 @@
 | STT | Vị trí / Chức danh | Lương Gross/tháng (VNĐ) | Thời gian tham gia | Tổng công (MM) | Căn cứ chuyên môn & Trách nhiệm chính |
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | **1** | **Người quản lý dự án (PM)** | **50.000.000** | Tháng 1 – 8 (8 tháng) | 8.0 | Chịu trách nhiệm toàn diện về tiến độ, chất lượng, chi phí, mốc Go-live tháng 6 và kiểm soát cấu hình tài liệu. |
-| **2** | **Solution Architect / Tech Lead** | **50.000.000** | Tháng 1 – 8 (8 tháng) | 8.0 | Thiết kế kiến trúc phân tán 3 kho, xử lý luồng đồng bộ trực tuyến/ngoại tuyến, bảo mật và thẩm định kỹ thuật. |
-| **3** | **Kỹ sư Tích hợp Phần cứng (RS232/IoT)** | **32.000.000** | Tháng 2 – 7 (6 tháng) | 6.0 | Lập trình giao tiếp cổng COM/RS232 đọc dữ liệu Cân điện tử thời gian thực, điều khiển máy in mã vạch Zebra và máy quét QR. |
+| **2** | **Solution Architect / Tech Lead** | **50.000.000** | Tháng 1 – 8 (8 tháng) | 8.0 | Thiết kế kiến trúc phục vụ 3 kho, xử lý luồng đồng bộ trực tuyến/ngoại tuyến, bảo mật và thẩm định kỹ thuật. |
+| **3** | **Kỹ sư Tích hợp Phần cứng (RS232/IoT)** | **32.000.000** | Tháng 2 – 7 (6 tháng) | 6.0 | Lập trình giao tiếp cổng COM/RS232 đọc dữ liệu Cân điện tử thời gian thực, điều khiển máy in mã vạch theo giao thức tương thích và máy quét QR. |
 | **4** | **Chuyên viên phân tích nghiệp vụ (BA)** | **30.000.000** | Tháng 1 – 5 (5 tháng) | 5.0 | Phân tích nghiệp vụ đặc thù: Định mức chuyển đổi BOM chè búp tươi $\rightarrow$ chè khô $\rightarrow$ thành phẩm, quy tắc xuất kho FEFO và viết User Manual. |
 | **5** | **Backend Developer (Core WMS)** | **27.000.000** | Tháng 2 – 8 (7 tháng) | 7.0 | Lập trình module nghiệp vụ kho, vị trí ô kệ (Bin/Rack), xử lý Transaction luân chuyển hàng giữa các kho. |
 | **6** | **Frontend Developer (Web Dashboard)** | **24.000.000** | Tháng 2 – 7 (6 tháng) | 6.0 | Xây dựng giao diện Web chạy mượt trên máy trạm Windows, tối ưu hóa thao tác chạm/quét mã nhanh cho công nhân. |
@@ -41,7 +41,7 @@
 | :--- | :--- | :---: | :---: |
 | **1. Chi phí Nhân sự trực tiếp** | 50 Man-Month cho 08 nhân sự theo bảng lương trên | **1.667.000.000** | **83.35%** |
 | **2. Mua sắm Thiết bị Phần cứng (3 kho)** | Trang bị đầy đủ cho 1 Kho tổng chế biến và 2 Kho chi nhánh *(chi tiết mục IV)* | **130.000.000** | **6.50%** |
-| **3. Hạ tầng Mạng, Cloud & Bản quyền** | Thuê Cloud Server VPS (8 tháng), Domain, Chứng chỉ SSL, dịch vụ SMS/Email Brandname | **25.000.000** | **1.25%** |
+| **3. Hạ tầng Mạng, Cloud & Bản quyền** | Cloud/VPS trong 8 tháng dự án (phát triển, kiểm thử và production), domain, SSL; SMS/email chỉ khi kênh này được xác nhận trong yêu cầu | **25.000.000** | **1.25%** |
 | **4. Chi phí Công tác & Triển khai thực địa** | Chi phí đi lại, lưu trú của đội kỹ thuật khảo sát & Onsite giữa Hà Nội – Thái Nguyên – Chi nhánh | **35.000.000** | **1.75%** |
 | **5. Dự phòng rủi ro (Contingency Reserve)** | Quỹ dự phòng rủi ro kỹ thuật, thay đổi yêu cầu và biến động thực tế | **143.000.000** | **7.15%** |
 | **TỔNG KINH PHÍ (BAC)** | **Tổng ngân sách toàn diện dự án (8 tháng)** | **2.000.000.000 VNĐ** | **100.00%** |
@@ -54,7 +54,7 @@ Hệ thống triển khai trên nền tảng Web chạy trong môi trường Win
 
 ### 1. Kho tổng chế biến / đóng gói (Thái Nguyên) — 70.000.000 VNĐ
 *   **02 Cân điện tử công nghiệp chuẩn RS232** (tải trọng 30kg - 100kg, cổng COM truyền data): $2 \times 15.000.000 = \mathbf{30.000.000\text{ VNĐ}}$
-*   **02 Máy in mã vạch/tem nhãn công nghiệp Zebra** (in tem thùng, tem hộp trà): $2 \times 8.000.000 = \mathbf{16.000.000\text{ VNĐ}}$
+*   **02 Máy in mã vạch/tem nhãn công nghiệp** (Zebra là ví dụ tham chiếu dự toán, chưa khóa hãng mua) (in tem thùng, tem hộp trà): $2 \times 8.000.000 = \mathbf{16.000.000\text{ VNĐ}}$
 *   **04 Máy quét mã vạch/QR 2D không dây** (quét mã lô, quét vị trí kệ): $4 \times 2.000.000 = \mathbf{8.000.000\text{ VNĐ}}$
 *   **02 Máy trạm PC Windows đặt tại bàn cân & đóng gói:** $2 \times 8.000.000 = \mathbf{16.000.000\text{ VNĐ}}$
 
@@ -64,6 +64,15 @@ Hệ thống triển khai trên nền tảng Web chạy trong môi trường Win
 *   **04 Máy quét mã QR cầm tay:** $4 \times 2.000.000 = \mathbf{8.000.000\text{ VNĐ}}$
 *   **02 Máy trạm PC Windows kiểm kê kho:** $2 \times 8.000.000 = \mathbf{16.000.000\text{ VNĐ}}$
 *   **Vật tư mạng & Thiết bị chuyển mạch phụ trợ 2 kho:** $\mathbf{11.000.000\text{ VNĐ}}$
+
+
+### 3. Tiêu chuẩn sử dụng và nguồn tài sản sẵn có
+
+- Phân bổ mua mới: kho tổng 2 cân, 2 máy in, 4 máy quét, 2 PC; mỗi chi nhánh 1 cân, 1 máy in, 2 máy quét, 1 PC. Hai PC kho tổng đặt tại các trạm nghiệp vụ; PC văn phòng sẵn có phục vụ các vai trò khác. Các thao tác tại một trạm được tổ chức theo lượt; khảo sát phải kiểm giả định này.
+- SRS xác nhận dải khối lượng nghiệp vụ `[m_min, m_max]` (kg), độ chia, tải trọng và giao thức của cân tại từng loại trạm. Chỉ kiểm trong dải được chấp nhận; không suy ra yêu cầu cân gói nhỏ từ chữ “đóng gói”. Dải tải trọng thiết bị nêu trên là đầu vào dự toán, không thay dải sử dụng và tiêu chí nghiệm thu AC-01 của chương 2.
+- Theo giả định tại 01, thiết bị đo môi trường, phương tiện kiểm độ ẩm trà, ba máy chấm công, PC văn phòng và máy in chứng từ do doanh nghiệp cung cấp; không cộng thành mua mới trong 130 triệu. Tương thích thiết bị phải được kiểm trước khi xác nhận giả định.
+- Gói lắp đặt phải xác định phụ kiện kết nối cần thiết (cáp/cổng RS232, bộ chuyển nếu cần), tem/mực ban đầu và nguồn cung của từng khoản; không tự coi đã được bao gồm miễn phí. Chi phí chi tiết được đối chiếu trong chương 4–5; nếu thiếu thì trình phương án điều chỉnh, không mặc nhiên lấy dự phòng bù thiếu sót đã biết.
+- 11 triệu vật tư/switch là tổng cho hai chi nhánh. Khách hàng cung cấp hạ tầng điện, Internet và LAN kho tổng theo giả định; Onsite chịu trách nhiệm kết nối/cấu hình đầu cuối, ngoại vi và WMS. Những phần LAN cần bổ sung phải được kiểm khi khảo sát.
 
 ---
 
@@ -104,7 +113,7 @@ Các giá trị phân bổ ngoài nhân sự là **giả định lập kế ho�
 - Tháng 6: tiếp nhận thiết bị và vật tư của hai chi nhánh, tổng **60 triệu** theo mục IV, để kiểm tra và cấu hình trước đợt lắp đặt tháng 7. Nhóm cần xác định thời gian đặt hàng đủ sớm để đạt mốc tiếp nhận; tháng ghi trong bảng không thay thế kế hoạch đặt hàng.
 - Điều kiện: nhà cung cấp cho phép mua thành các đợt với đơn giá tại mục IV; có nơi giữ và kiểm tra thiết bị trước khi lắp đặt. Đây là giả định cần kiểm tra trong chương mua sắm. Nếu điều kiện không đạt, điều chỉnh lịch hoặc trình lại phương án, không tự tăng tổng thiết bị.
 
-**Hạ tầng, cloud và bản quyền: 25 triệu.** Phân bổ 4 triệu tháng 1 để chuẩn bị môi trường, tên miền và các thiết lập ban đầu; 3 triệu/tháng cho tháng 2–8 để duy trì môi trường phát triển, kiểm thử và vận hành. Đây là phân bổ tổng gói ngân sách tại mục III, không phải báo giá cho một loại máy chủ hay khẳng định mọi dịch vụ được trả hàng tháng. Chương mua sắm/chi phí phải xác định khoản nào trả trước, khoản nào trả định kỳ và tránh cộng trùng khi lập lịch thanh toán.
+**Hạ tầng, cloud và bản quyền: 25 triệu.** Phân bổ 4 triệu tháng 1 để chuẩn bị môi trường, tên miền và các thiết lập ban đầu; 3 triệu/tháng cho tháng 2–8 để duy trì môi trường phát triển, kiểm thử và vận hành. Đây là phân bổ tổng gói ngân sách tại mục III, không phải báo giá cho một loại máy chủ hay khẳng định mọi dịch vụ được trả hàng tháng. Chương mua sắm/chi phí phải xác định khoản nào trả trước, khoản nào trả định kỳ và tránh cộng trùng khi lập lịch thanh toán. Gói này bao phủ tám tháng của dự án, gồm giai đoạn vận hành sau go-live trong dự án; không phải tám tháng kể từ go-live. Sau bàn giao tháng 8, doanh nghiệp nhận quản trị và chịu phí duy trì; bảo trì dài hạn/thuê dịch vụ sau dự án được xác định riêng, không mặc nhiên nằm trong 25 triệu hay ngân sách hai tỷ.
 
 **Công tác, triển khai: 35 triệu.** Phân bổ 3 triệu cho khảo sát tháng 1; 2 triệu cho kiểm tra hiện trường tháng 4; 9 triệu cho lắp đặt kho tổng tháng 5; 8 triệu cho go-live và chuẩn bị triển khai tháng 6; 9 triệu cho hai chi nhánh tháng 7; 4 triệu cho đào tạo bổ sung/nghiệm thu tháng 8. Khảo sát trước tháng 5 do các vai trò đang tham gia như PM/BA/kỹ sư tích hợp thực hiện theo nhiệm vụ phù hợp; không giả định kỹ sư Onsite được huy động trước lịch tại mục II. Đây là chi phí đi lại, lưu trú và triển khai ngoài lương, không cộng lại tiền lương. Địa điểm hai chi nhánh, số chuyến, số người và số ngày chưa xác định; cần bóc tách để kiểm tra tính đủ của 35 triệu trước khi chốt lịch chi tiết.
 
@@ -129,7 +138,9 @@ Trước khi dùng EVM, phải hoàn thiện ngân sách công việc theo thờ
 Không bổ sung nhân sự Technical Writer riêng lẻ; tài liệu được phân bổ đúng chuyên môn của 8 nhân sự hiện có:
 
 *   **Người quản lý dự án (PM):** Chủ trì lập và kiểm soát phiên bản toàn bộ Hồ sơ Quản lý dự án (*Project Charter, WBS Dictionary, Schedule Baseline, Cost Baseline EVM, Risk Register, Biên bản họp*).
-*   **Chuyên viên phân tích nghiệp vụ (BA):** Chủ trì biên soạn *Tài liệu Đặc tả Yêu cầu (SRS/Use Cases)* và chắp bút *Tài liệu Hướng dẫn sử dụng (User Manual) / Quy trình thao tác chuẩn (SOP)* cho thủ kho và công nhân.
-*   **Solution Architect / Tech Lead & Dev:** Chủ trì *Tài liệu Thiết kế Kiến trúc (SAD), Thiết kế CSDL (DB Schema)* và *Đặc tả Giao thức Tích hợp Phần cứng RS232 / Mã vạch Zebra*.
+*   **Chuyên viên phân tích nghiệp vụ (BA):** Chủ trì biên soạn *SRS/Use Cases, User Manual/SOP*; bàn giao bản nghiệp vụ đủ dùng và trách nhiệm cập nhật cho Onsite/PM trước khi kết thúc tháng 5. Không mặc định BA tiếp tục làm ở tháng 7–8 ngoài lịch huy động.
+*   **Solution Architect / Tech Lead & Dev:** Chủ trì *Tài liệu Thiết kế Kiến trúc (SAD), Thiết kế CSDL (DB Schema)* và *Đặc tả Giao thức Tích hợp Phần cứng RS232 / Mã vạch*.
 *   **QA/QC Engineer:** Chủ trì *Kế hoạch Kiểm thử (Test Plan), Kịch bản Test (Test Cases)* và *Biên bản Nghiệm thu UAT*.
 *   **Kỹ sư Triển khai Onsite:** Phối hợp với BA hoàn thiện phụ lục thực địa hướng dẫn thao tác thiết bị vật lý (Cân, máy in, máy quét QR) tại kho.
+
+*   **Tech Lead/Backend:** Chuẩn bị và triển khai môi trường ứng dụng/CSDL, sao lưu/khôi phục, biên soạn hướng dẫn vận hành; bàn giao cho đầu mối doanh nghiệp cuối tháng 8. **Onsite/PM** cập nhật và đóng gói User Manual/SOP sau khi BA bàn giao; Onsite đào tạo trước vận hành tại từng kho. Không bổ sung vai trò DevOps/Technical Writer riêng.

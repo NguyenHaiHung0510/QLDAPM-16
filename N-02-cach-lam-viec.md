@@ -1,93 +1,40 @@
 # N-02 · Cách làm việc
 
-**Ae tự làm phần mình bằng Markdown, gửi lên GitHub để đọc chéo; Hưng duyệt và ghép bản cuối (tạm quyết định thế).** Không cần cùng online hay ngồi viết chung một file.
+Cập nhật ngày 05/10/2026. **Mỗi người tự làm và chịu trách nhiệm phần mình; không có bước bắt buộc Hưng duyệt hoặc merge.**
 
-## 1. Khi nhận việc
+## 1. Làm và đưa lên bản chung
 
-Thống nhất ba điều: **làm ra gì, dùng đầu vào nào, dự kiến khi nào bàn giao**. Người nhận tự cân đối lịch của mình rồi xác nhận với nhóm.
+1. Lấy bản mới nhất, đọc 01–04, hướng dẫn N và nội dung bài giảng liên quan. Hiểu các phần trước đủ để dùng đúng đầu vào cho phần mình.
+2. Viết phần được giao; giữ nguồn bảng tính, công thức và hình có thể chỉnh sửa.
+3. Tự kiểm và dùng **ít nhất một lượt Agent ad-review phần đã làm**. Xử lý góp ý có căn cứ, rồi kiểm lại phần đã sửa.
+4. Commit và đưa lên bản chung bằng PR hoặc commit trực tiếp theo quyền truy cập. **PR là cách khuyến khích, không bắt buộc.** Báo trên nhóm phần đã cập nhật và ảnh hưởng đến người khác.
 
-Giao một bảng hoặc một phần đủ dùng trước cũng được. Ví dụ, ae làm thời gian cần danh sách công việc để lập lịch, không cần đợi chương phạm vi viết xong toàn bộ.
+PR hoặc commit ghi ngắn nội dung thay đổi. Phần chưa hoàn thiện ghi rõ là nháp. Lịch nội bộ, thời điểm bàn giao và việc tiếp theo trao đổi trên nhóm, không lập bảng deadline hay danh sách việc trong repo.
 
-## 2. Khi làm và gửi bài
+## 2. Giữ đúng dữ liệu gốc và sửa hồi quy
 
-1. Lấy bản mới nhất từ `main`, tạo nhánh riêng cho phần việc.
-2. Viết file Markdown; bảng tính và hình có file nguồn đi kèm.
-3. Commit, push nhánh rồi mở **pull request (PR)** — đề nghị đưa phần sửa vào bản chung.
-4. Một người đọc chéo, người viết xử lý góp ý; Ae có thể yêu cầu Hưng hoặc các thành viên khác duyệt hoặc tự merge vào `main` rồi báo nhóm.
+- Đối chiếu đủ [01](01-mo-ta-de-tai.md), [02](02-du-toan-kinh-phi.md), [03](03-ton-chi-du-an.md), [04](04-ton-chi-du-an-day-du.md). Tên vai trò, chức năng, thiết bị, nhân sự, mốc và ngân sách phải thống nhất giữa các chương.
+- Người và Agent đều phải giữ đúng dữ liệu nguồn, phân biệt yêu cầu đã có với giả định/gợi ý. Không bỏ yêu cầu hoặc thêm cam kết chỉ để bài dễ làm; không gắn lời của AI thành yêu cầu của giảng viên.
+- Khi phát hiện sai hoặc thiếu, có thể sửa ngược tài liệu trước và thông báo trên nhóm: sai ở đâu, căn cứ sửa và phần nào bị ảnh hưởng. Thay đổi quyết định chung về phạm vi, ngân sách hoặc ràng buộc cần nhóm thống nhất; sửa lỗi đối chiếu có nguồn không cần một cổng duyệt riêng của Hưng.
+- Nếu các nguồn gốc mâu thuẫn mà chưa có căn cứ phân xử, nêu rõ vấn đề và giả định đang dùng để nhóm giải quyết; chưa kết luận phần phụ thuộc đã hoàn chỉnh.
+- Giữ mã WBS ổn định. Nếu đổi mã/cấu trúc, chỉ rõ ánh xạ cũ–mới và cập nhật các bảng tiến độ, nhân lực, chi phí liên quan.
 
-Trong PR, ghi ngắn: **đã làm gì, cần ae xem gì, còn vướng gì**. Chưa hoàn thiện thì ghi rõ là bản nháp. Phần Hưng viết cũng cần ae đọc chéo.
+## 3. Lượt Agent ad-review tối thiểu
 
-Repo là nơi giữ bản chính. Ba tài liệu [Mô tả](01-mo-ta-de-tai.md), [Dự toán](02-du-toan-kinh-phi.md), [Tôn chỉ](03-ton-chi-du-an.md) đã được thống nhất; nếu thấy cần đổi, nêu vấn đề trước khi sửa dữ liệu gốc.
+Cung cấp cho Agent **bản vừa làm, 01–04, N-01–N-04, các phần trước có liên quan và nội dung học của chương**; PMBOK 6 dùng thêm khi cần. Nếu tài liệu dài, cho Agent truy cập phần nguồn cần thiết và yêu cầu chỉ rõ giới hạn đã đọc.
 
-## 3. Deadline và việc bị chậm
+Yêu cầu Agent kiểm: đúng yêu cầu môn, đúng dữ liệu gốc, logic, độ phủ phạm vi, phép tính, quan hệ với phần khác và chi tiết có căn cứ. Góp ý cần nêu vị trí, nguồn đối chiếu, ảnh hưởng và hướng xử lý; không yêu cầu đủ một số lỗi định trước.
 
-**Ae tự chọn lúc làm, nhưng cần thống nhất lúc bàn giao.** Mốc dự kiến phải sớm hơn lúc phần sau cần dùng, để còn thời gian đọc, sửa và xử lý trục trặc. Khoảng chừa đó là buffer.
+Người làm xem xét và sửa các góp ý hợp lý; có thể bác góp ý sai bằng nguồn. Ghi ngắn bản/phần đã review và kết quả xử lý trong PR, thông tin commit hoặc thông báo nhóm. Một chữ PASS không thay trách nhiệm của người làm; không cần mỗi lần lại ad-review toàn bộ phần đã có.
 
-Nếu thấy có thể trễ, báo sớm: đã có gì, còn thiếu gì, đang chờ ai và đề xuất mốc mới. Không cần chờ đến deadline mới báo. Nhóm sẽ điều chỉnh phần bàn giao hoặc người hỗ trợ theo ảnh hưởng thực tế.
+AI dùng để phản biện bản nháp theo xác nhận của giảng viên được ghi ở [N-01](N-01-khung-btl.md), không viết thay bài nộp.
 
-Không bắt buộc họp sau mỗi buổi học. Ae phụ trách phần nào thì cập nhật yêu cầu mới liên quan phần đó; có ảnh hưởng phần khác thì trao đổi với người phụ trách. Chỉ họp khi trao đổi viết chưa giải quyết được.
+## 4. Kiểm trước khi gửi/nộp
 
-## 4. Khi ghép báo cáo
+- Nội dung đúng nguồn, không mâu thuẫn các phần liên quan; giả định và điểm chưa chốt được ghi rõ.
+- Bảng có đơn vị, cách tính và số tổng đúng; hình có chú thích và nguồn. Không dùng ảnh chụp thay file nguồn của bảng cần tính lại.
+- Markdown UTF-8, tiêu đề rõ, thuật ngữ được giải thích; link dùng được. Khi đổi tên/di chuyển file, cập nhật các tham chiếu.
+- Bản chung mới nhất được giữ; không ghi đè công việc đang làm của người khác hoặc xóa lịch sử chung.
+- Khi ghép nộp: đủ chín chương, đóng góp rõ, PDF và slide thống nhất; bảng, hình, công thức và mục lục đọc được. Người ghép và người gửi do nhóm thống nhất, không mặc định Hưng.
 
-**Ghép thử sớm, chỉnh trình bày ở cuối.** Nhóm sẽ thử xuất một phần nhỏ có chữ, bảng, hình và công thức để biết cách xuất có dùng được không. Công cụ và template cụ thể chưa chọn.
-
-Khi nội dung đã ổn, Hưng thống nhất format và ghép PDF. Ae vẫn sửa và chịu trách nhiệm phần mình, đồng thời chuẩn bị slide và tập trình bày. Bản PDF phải ghi rõ đóng góp của từng người và được gửi trước ngày báo cáo **23/11**.
-
-Xem [phân công và việc tiếp theo](N-03-phan-cong-va-quyet-dinh.md). Nếu chưa rõ một phần cần làm ra gì, quay lại [Khung BTL](N-01-khung-btl.md).
-
----
-
-## Phụ lục · Quy cách chi tiết để kiểm tra
-
-<details>
-<summary>Ae không cần đọc hết phần này để bắt đầu. Hưng, người review hoặc AI có thể dùng để kiểm tra phần việc.</summary>
-
-### File và Markdown
-
-- Nội dung BTL dùng các file gốc `01–03`; hướng dẫn nhóm dùng `N-01` đến `N-03`. Khi viết chương, tổ chức theo chương/sản phẩm thay vì chỉ chia thư mục theo tên người.
-- Các thư mục dự kiến: `bao-cao/` cho chương Markdown; `du-lieu/` cho bảng nguồn; `hinh/` cho hình và file chỉnh sửa; `xuat-ban/` cho cấu hình/thứ tự ghép và bản xuất. Chưa có nghĩa các thư mục hoặc pipeline này đã tồn tại.
-- File UTF-8, tên không dấu có nghĩa; một tiêu đề `#`, các mục `##`/`###` theo thứ bậc. Đầu file ghi người làm, người đọc chéo đã nhận việc, trạng thái và đầu vào đang dùng.
-- Liên kết tương đối; không dùng đường dẫn máy cá nhân. Khi đổi tên/di chuyển file phải tìm và sửa mọi tham chiếu.
-- Bảng có đơn vị và cách tính. Phần viết mới dùng dấu chấm phân tách hàng nghìn, dấu phẩy phân tách thập phân; nếu theo quy ước khác của nguồn thì chú thích. Trong bảng “triệu VNĐ”, `1.667` nghĩa là một nghìn sáu trăm sáu mươi bảy triệu.
-- Hình có chú thích, nguồn và bản sửa được; bảng tính có dữ liệu/công thức để tính lại, không chỉ có ảnh chụp. Kiểm cả cách hiển thị trong bản xuất thử.
-- Thuật ngữ viết tắt được giải thích khi dùng. Dùng “Tôn chỉ dự án”, “Người quản lý dự án (PM)”. Chưa thống nhất thì không tự áp một hệ mã công việc mới.
-- Mã công việc giữ ổn định. Nếu đổi cấu trúc, có ánh xạ mã cũ/mới và chỉ rõ phần chịu ảnh hưởng. Bảng lặp lại số liệu phải dẫn nguồn và được đối chiếu khi nguồn đổi.
-
-### Mẫu thông tin của một việc
-
-| Cần ghi | Nội dung |
-| --- | --- |
-| Đầu ra | File/bảng/sơ đồ cần bàn giao; thế nào là đủ dùng |
-| Đầu vào | Tài liệu, mục và phiên bản; câu hỏi còn mở |
-| Người làm / đọc chéo | Người đã xác nhận nhận vai |
-| Phạm vi | Điều được sửa và điều cần xin quyết định trước |
-| Mốc dự kiến | Người làm dự kiến bàn giao lúc nào |
-| Mốc báo nguy cơ | Muộn nhất lúc nào cần báo khả năng trễ; phát hiện sớm thì báo ngay |
-| Ngày cần đầu vào | Khi nào người phụ thuộc cần bản đã đủ dùng |
-
-Giờ công khác thời gian lịch. Buffer phải chừa đủ đọc và sửa giữa các lần bàn giao; ngoài ra có khoảng riêng cho ghép bài, sửa lỗi, PDF, slide và tập trình bày. Các mốc và độ dài buffer chưa được nhóm xác nhận thì không ghi thành deadline đã chốt.
-
-Việc được theo dõi bằng issue hoặc PR sau khi tạo; bảng phân công dẫn tới nơi đang dùng. Không để hai bảng deadline khác nhau cùng có hiệu lực hoặc tạo link đến issue chưa tồn tại.
-
-### Thay đổi, Git và review
-
-- Mỗi PR tập trung một đầu ra/nhóm thay đổi liên quan. Không ghi đè bản mới bằng bản cũ; không tự sửa phần người khác đang làm. Không force-push `main`, xóa lịch sử hoặc nhánh của người khác.
-- Quy trình PR ở trên là quy ước nhóm, chưa phải xác nhận branch protection đã bật. Các lượt thiết lập và chỉnh tài liệu theo duyệt trực tiếp của Hưng có thể theo phạm vi commit/push Hưng giao; không thay quy trình thường lệ của ae.
-- Người viết sửa sau review; Hưng duyệt tích hợp. Trạng thái: đang làm → chờ review → cần sửa (nếu có) → đã duyệt. Bị chặn thì ghi điều kiện cần giải quyết.
-- Kiểm: đúng yêu cầu/phạm vi, nguồn rõ, phép tính đúng, link mở được, nội dung dễ hiểu, không mâu thuẫn phần khác, không thiếu đầu vào/bàn giao. Có đủ tiêu đề hoặc số trang chưa có nghĩa đã xong.
-- Sửa sai phép tính theo dữ liệu gốc được giữ cố định. Đổi lương, lịch tham gia, ngân sách hoặc phạm vi đã chốt phải đưa ra quyết định trước. Khi hai nguồn khác nhau, ghi vấn đề và dừng phần phụ thuộc, không tự chọn số tiện dùng.
-- Yêu cầu mới của thầy phải ghi nguồn và ảnh hưởng; việc chưa có người phụ trách do Hưng ghi nhận để phân tiếp. Quyết định nhóm không đổi được yêu cầu của thầy. Thay quyết định phải giữ dấu vết: ai chốt, vì sao, thay điều nào, ảnh hưởng đâu.
-- T3/AI chỉ có kết luận trong phạm vi đã kiểm, theo phiên bản cụ thể; không thay người viết chịu trách nhiệm, nhóm chốt việc hay thầy chấp nhận bài. Quy định AI của thầy vẫn áp dụng; xem phụ lục Khung BTL.
-
-### Trước khi xuất và nộp
-
-- Chín chương đúng thứ tự, đóng góp từng người rõ; số liệu và nguồn khớp; PDF/slide nhất quán; bảng/hình/mục lục đọc được; ae đã chuẩn bị trình bày.
-- Ghi commit nguồn và danh sách file được ghép. Không tự ghép file `N-` hoặc ghi chú review vào bài nộp. Bản đã xuất/nộp là snapshot, không đồng bộ ngược thành bản gốc để sửa song song.
-- Đối chiếu người gửi, email/cú pháp và mốc nội bộ từ hướng dẫn môn trước khi gửi. Agent chưa được giao gửi email hay thông báo cho nhóm.
-- Chưa xuất thử thì không nói pipeline đã chạy được. Không có CI hoặc chưa chạy thì ghi đúng; kiểm tài liệu không chứng minh dự án phần mềm đã thực thi.
-
-### Nguồn
-
-[Khung BTL](N-01-khung-btl.md) dẫn tên slide/trang. Quy cách GitHub, Markdown, đọc chéo, buffer và ghép thử là các quyết định tổ chức đã được Hưng đồng ý ngày 06/09/2026. Hướng dẫn thao tác tham khảo: [GitHub — PR review](https://docs.github.com/en/pull-requests/reference/pull-request-reviews).
-
-</details>
+Các file `N-` và ghi chú review là tài liệu làm việc, không tự ghép vào quyển nộp. Chưa kiểm bản xuất hoặc hệ thống thực tế thì ghi đúng giới hạn đã kiểm.
