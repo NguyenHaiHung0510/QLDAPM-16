@@ -46,7 +46,7 @@ Thời gian dự án tính theo tháng kể từ ngày 03/06/2027: tháng thứ 
 | 4 | Hệ thống và thiết bị được lắp đặt tại kho tổng, hoàn thành chạy thử và kiểm thử chấp nhận của người dùng (UAT), kèm kết quả kiểm thử | 02/11/2027 — cuối tháng 5 |
 | 5 | Hệ thống chính thức vận hành tại kho tổng; người dùng kho tổng được hướng dẫn, đào tạo trước khi sử dụng | **02/12/2027 — cuối tháng 6** |
 | 6 | Hệ thống và thiết bị được triển khai tại 02 kho chi nhánh, kèm hướng dẫn và đào tạo sử dụng | 02/01/2028 — cuối tháng 7 |
-| 7 | Phần mềm hoàn chỉnh, dịch vụ kết nối phần cứng, cơ sở dữ liệu đồng bộ 03 kho; hạ tầng và thiết bị; bộ tài liệu kỹ thuật, quy trình thao tác, hướng dẫn sử dụng; kết quả đào tạo bổ sung và biên bản nghiệm thu tổng thể, bàn giao | **02/02/2028 — cuối tháng 8** |
+| 7 | Phần mềm hoàn chỉnh và mã nguồn, dịch vụ kết nối phần cứng, cơ sở dữ liệu đồng bộ 03 kho; hạ tầng và thiết bị; bộ tài liệu kỹ thuật, quy trình thao tác, hướng dẫn sử dụng; kết quả đào tạo bổ sung và biên bản nghiệm thu tổng thể, bàn giao | **02/02/2028 — cuối tháng 8** |
 
 ## 4. Tiêu chuẩn đánh giá sự thành công
 

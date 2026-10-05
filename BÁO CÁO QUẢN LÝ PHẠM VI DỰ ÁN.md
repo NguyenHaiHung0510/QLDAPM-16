@@ -57,7 +57,7 @@ Ma trận truy vết yêu cầu nối yêu cầu trong 01–04 với gói công 
 | NFR-03 | Chất lượng | Cân <0,1%, in tem <2 giây/sản phẩm; 04 mục 4 | Người vận hành | 1.3.5.1, 1.3.5.2, 1.6.1.1, 1.6.1.2 | QA/RS232 | AC-01/AC-02, đạt ở từng mẫu theo điều kiện xác định |
 | TR-01 | Chuyển đổi | Danh mục, lô và tồn đầu kỳ từ Excel; 03 giả định/04 mục 6 | Kho/kế toán | 1.3.3.4, 1.4.1.3, 1.4.2.1 | BA/Onsite/Backend | AC-03/AC-04; doanh nghiệp chuẩn hóa, đội dự án kiểm/import/đối soát |
 | TR-02 | Chuyển đổi | SRS/SAD/SOP/User Manual, đào tạo trước sử dụng và bổ sung cuối kỳ; 02 mục VI, 04 mục 3 | Người dùng kho | 1.4.1.2, 1.5.3.1, 1.6.2.1 | BA bàn giao; Onsite/PM tiếp nhận | AC-04; danh sách người học và thao tác theo vai trò |
-| TR-03 | Bàn giao | Gói phần mềm/hồ sơ triển khai, tài khoản, CSDL, sao lưu/khôi phục, hướng dẫn vận hành; 04 mục 3 và giả định vận hành | Doanh nghiệp | 1.4.2.1, 1.6.3.2 | Tech Lead/Backend/PM | AC-04; đầu mối nhận và trách nhiệm phí sau dự án rõ |
+| TR-03 | Bàn giao | Gói phần mềm/mã nguồn, hồ sơ triển khai, tài khoản, CSDL, sao lưu/khôi phục, hướng dẫn vận hành; 04 mục 3 và giả định vận hành | Doanh nghiệp | 1.4.2.1, 1.6.3.2 | Tech Lead/Backend/PM | AC-04; đầu mối nhận và trách nhiệm phí sau dự án rõ |
 | PR-01 | Ràng buộc | Hai tỷ/50 MM, kho tổng chậm nhất tháng 6, toàn dự án tám tháng; 01/02/04 | Chủ đầu tư/PM | 1.1.1.1, 1.1.1.3, 1.1.2.2, 1.6.3.1 | PM | Kế hoạch và biên bản đáp ứng mốc/ngân sách gốc |
 
 **3\. TUYÊN BỐ PHẠM VI DỰ ÁN (PROJECT SCOPE STATEMENT)**
@@ -171,7 +171,7 @@ WBS được tổ chức theo hoạt động quản lý và các pha M1–M6; m�
     │   └── 1.6.2.1 Hoàn thiện bộ tài liệu SRS, SAD, SOP & User Manual
     └── 1.6.3 Nghiệm thu Tổng thể & Kết thúc Dự án
         ├── 1.6.3.1 Ký Biên bản UAT & Nghiệm thu Tổng thể với Ban Giám đốc
-        └── 1.6.3.2 Bàn giao hệ thống và đóng dự án
+        └── 1.6.3.2 Bàn giao hệ thống, đóng gói mã nguồn & đóng dự án
 ```
 
 **5. TỪ ĐIỂN WBS**
@@ -542,10 +542,10 @@ Từ điển mô tả 45 gói công việc cấp thấp nhất. Thời lượng,
 - **Sản phẩm đầu ra:** Biên bản Nghiệm thu Tổng thể Dự án (Final Acceptance Sign-off).
 - **Tiêu chí chấp nhận:** Chủ đầu tư, đại diện các kho và PM xác nhận sản phẩm/bộ điều kiện AC-01–AC-04, theo trách nhiệm ở 04.
 
-**Gói công việc 1.6.3.2: Bàn giao Hệ thống và Đóng Dự án**
+**Gói công việc 1.6.3.2: Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án**
 
 - **Mã WBS:** 1.6.3.2
-- **Mô tả công việc:** Bàn giao gói phần mềm/hồ sơ triển khai, CSDL, tài khoản quản trị, sao lưu/biên lai khôi phục và hướng dẫn vận hành cho đầu mối doanh nghiệp; xác nhận trách nhiệm chi phí sau tháng 8, hoàn tất thanh toán/đóng dự án. Bảo trì dài hạn là thỏa thuận riêng.
+- **Mô tả công việc:** Bàn giao phần mềm/mã nguồn, hồ sơ triển khai, CSDL, tài khoản quản trị, sao lưu/biên lai khôi phục và hướng dẫn vận hành cho đầu mối doanh nghiệp; xác nhận trách nhiệm chi phí sau tháng 8, hoàn tất thanh toán/đóng dự án. Bảo trì dài hạn là thỏa thuận riêng.
 - **Người chịu trách nhiệm:** PM / Solution Architect / Backend Developer
 - **Sản phẩm đầu ra:** Hồ sơ bàn giao vận hành và báo cáo đóng dự án.
 - **Tiêu chí chấp nhận:** TR-03 đạt AC-04, đầu mối doanh nghiệp ký nhận và trách nhiệm phí duy trì được ghi rõ, bàn giao toàn bộ chậm nhất 02/02/2028.

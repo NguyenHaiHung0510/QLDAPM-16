@@ -42,7 +42,7 @@
 
 ## 3. Sản phẩm bàn giao & Các bên liên quan
 *   **4 Nhóm sản phẩm bàn giao (Key Deliverables):**
-    1.  *Gói phần mềm WMS:* Web App quản lý kho hoàn chỉnh + Service kết nối phần cứng COM/RS232 + CSDL đồng bộ 3 kho.
+    1.  *Gói phần mềm WMS:* Web App quản lý kho hoàn chỉnh và mã nguồn + Service kết nối phần cứng COM/RS232 + CSDL đồng bộ 3 kho.
     2.  *Hạ tầng & Thiết bị (130 triệu):* 04 Cân RS232, 04 Máy in tem, 08 Máy quét QR, 04 PC Windows (kho tổng: 2/2/4/2; mỗi chi nhánh: 1/1/2/1 theo 02) đã lắp đặt và cấu hình sẵn sàng tại 3 kho.
     3.  *Bộ tài liệu kỹ thuật & quy trình:* Đặc tả yêu cầu (SRS), Thiết kế kiến trúc (SAD), Quy trình thao tác chuẩn (SOP), Sổ tay hướng dẫn sử dụng (User Manual).
     4.  *Nghiệm thu & Vận hành:* Dữ liệu danh mục trà khởi tạo thành công, Biên bản kiểm thử UAT có chữ ký xác nhận của đại diện 3 kho.
