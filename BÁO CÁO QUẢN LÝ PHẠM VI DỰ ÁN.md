@@ -39,7 +39,7 @@ Ma trận nối yêu cầu trong 01–04 với sản phẩm/gói công việc v�
 
 | Mã YC | Loại | Yêu cầu và nguồn | Đối tượng | WBS | Trách nhiệm | Điều kiện chấp nhận |
 | --- | --- | --- | --- | --- | --- | --- |
-| FR-01 | Chức năng | Nhập/xuất/kiểm kê, tự sinh Batch ID, ghi chất lượng lô, vị trí và FEFO; 01 mục nhập–xuất, 04 mục 2 | Thủ kho/quản lý | 1.3.1.1, 1.3.1.2 | Devs/BA | AC-03; xuất ưu tiên lô còn hạn được phép xuất; mã lô không trùng |
+| FR-01 | Chức năng | Nhập/xuất/kiểm kê/điều chuyển giữa ba kho, tự sinh Batch ID, ghi chất lượng lô, vị trí và FEFO; 01 mục nhập–xuất, 04 mục 2 | Thủ kho/quản lý | 1.3.1.1, 1.3.1.2 | Devs/BA | AC-03; xuất ưu tiên lô còn hạn được phép xuất; mã lô không trùng |
 | FR-02 | Chức năng | BOM, độ ẩm trà và hao hụt theo công thức đã xác nhận; 01 mục thông tin trà/BOM, 04 mục 2 | Kho/công nhân | 1.3.2.1 | Devs/BA | AC-03; nguồn độ ẩm trà riêng với %RH môi trường |
 | FR-03 | Chức năng | Cảnh báo cận hạn/hết hạn, tồn tối thiểu và Aging; 01 mục tồn/bảo quản, 04 mục 2 | Quản lý/lãnh đạo | 1.3.2.2 | Devs | AC-03; kiểm trước/đúng/sau ngưỡng và ngày hết hạn |
 | FR-04 | Tích hợp | Đọc cân RS232 theo dải sử dụng được chấp nhận; 01 mục ngoại vi, 02 mục IV, 04 mục 4 | Công nhân/thủ kho | 1.3.3.1, 1.3.5.1 | RS232/QA | AC-01 |
@@ -57,7 +57,7 @@ Ma trận nối yêu cầu trong 01–04 với sản phẩm/gói công việc v�
 | NFR-03 | Chất lượng | Cân <0,1%, in tem <2 giây/sản phẩm; 04 mục 4 | Người vận hành | 1.3.5.1, 1.3.5.2, 1.6.1.1, 1.6.1.2 | QA/RS232 | AC-01/AC-02, đạt ở từng mẫu theo điều kiện xác định |
 | TR-01 | Chuyển đổi | Danh mục, lô và tồn đầu kỳ từ Excel; 03 giả định/04 mục 6 | Kho/kế toán | 1.3.3.4, 1.4.1.3, 1.4.2.1 | BA/Onsite/Backend | AC-03/AC-04; doanh nghiệp chuẩn hóa, đội dự án kiểm/import/đối soát |
 | TR-02 | Chuyển đổi | SRS/SAD/SOP/User Manual, đào tạo trước sử dụng và bổ sung cuối kỳ; 02 mục VI, 04 mục 3 | Người dùng kho | 1.4.1.4, 1.5.3.1, 1.6.2.1 | BA bàn giao; Onsite/PM tiếp nhận | AC-04; danh sách người học và thao tác theo vai trò |
-| TR-03 | Bàn giao | Tài khoản, mã nguồn, CSDL, sao lưu/khôi phục, hướng dẫn vận hành; 04 mục 3 và giả định vận hành | Doanh nghiệp | 1.4.2.1, 1.6.3.2 | Tech Lead/Backend/PM | AC-04; đầu mối nhận và trách nhiệm phí sau dự án rõ |
+| TR-03 | Bàn giao | Gói phần mềm/hồ sơ triển khai, tài khoản, CSDL, sao lưu/khôi phục, hướng dẫn vận hành; 04 mục 3 và giả định vận hành | Doanh nghiệp | 1.4.2.1, 1.6.3.2 | Tech Lead/Backend/PM | AC-04; đầu mối nhận và trách nhiệm phí sau dự án rõ |
 | PR-01 | Ràng buộc | Hai tỷ/50 MM, kho tổng chậm nhất tháng 6, toàn dự án tám tháng; 01/02/04 | Chủ đầu tư/PM | 1.1.1.1, 1.1.1.3, 1.1.2.2, 1.6.3.1 | PM | Kế hoạch và biên bản đáp ứng mốc/ngân sách gốc |
 
 **3\. TUYÊN BỐ PHẠM VI DỰ ÁN (PROJECT SCOPE STATEMENT)**
@@ -102,7 +102,7 @@ Kho tổng vận hành chậm nhất 02/12/2027, toàn dự án bàn giao chậm
 
 ### AC-03 Độ phủ chức năng và dữ liệu
 
-Tập QA có ba kho, đủ sáu vai trò và dữ liệu đối soát thống nhất. Mỗi FR trong RTM có ít nhất một trường hợp hợp lệ và một trường hợp không hợp lệ/không được phép; yêu cầu có ngưỡng/ngày có thêm ca ngay trước, đúng và ngay sau biên. Các nhóm bắt buộc trong Test Plan: mã lô/danh mục; nhập–xuất–tồn/đối soát; FEFO lô còn hạn và không xuất lô hết hạn; BOM với độ ẩm trà; cận hạn/hết hạn/tồn tối thiểu; nhật ký môi trường nhập thủ công; lịch ca/chấm công/phân quyền; tài sản/vật tư; nhà cung cấp/đơn hàng/trạng thái; tài chính/báo cáo; Excel sai trường và đối soát tồn đầu kỳ; mất/khôi phục mạng trong nghiệp vụ offline SRS. Mỗi ca có đầu vào, kết quả mong đợi và kết quả thực tế; không dùng câu “100% chức năng đạt” khi chưa có danh sách ca phủ yêu cầu.
+Tập QA có ba kho, đủ sáu vai trò và dữ liệu đối soát thống nhất. Mỗi FR trong RTM có ít nhất một trường hợp hợp lệ và một trường hợp không hợp lệ/không được phép; yêu cầu có ngưỡng/ngày có thêm ca ngay trước, đúng và ngay sau biên. Các nhóm bắt buộc trong Test Plan: mã lô/danh mục; nhập–xuất–tồn/đối soát; điều chuyển giữa kho (giao dịch hợp lệ, ca sai/không được phép và đối soát số lượng/trạng thái tại kho gửi–kho nhận); FEFO lô còn hạn và không xuất lô hết hạn; BOM với độ ẩm trà; cận hạn/hết hạn/tồn tối thiểu; nhật ký môi trường nhập thủ công; lịch ca/chấm công/phân quyền; tài sản/vật tư; nhà cung cấp/đơn hàng/trạng thái; tài chính/báo cáo; Excel sai trường và đối soát tồn đầu kỳ; mất/khôi phục mạng trong nghiệp vụ offline SRS. Mỗi ca có đầu vào, kết quả mong đợi và kết quả thực tế; không dùng câu “100% chức năng đạt” khi chưa có danh sách ca phủ yêu cầu.
 
 ### AC-04 Triển khai đào tạo và bàn giao
 
@@ -169,7 +169,7 @@ Cây WBS được phân rã chi tiết **4 cấp**, bám sát **6 Mốc tiến �
 │   └── 1.4.2 M4: Go-live kho tổng chậm nhất cuối tháng 6
 │       ├── 1.4.2.1 Triển khai production và chuyển dữ liệu mở kho
 │       ├── 1.4.2.2 Đưa kho tổng vào vận hành chậm nhất cuối tháng 6
-│       └── 1.4.2.3 Onsite hỗ trợ kỹ thuật trực tiếp tại Thái Nguyên
+│       └── 1.4.2.3 Thực hiện hỗ trợ kỹ thuật trực tiếp tại Thái Nguyên
 ├── 1.5 M5: Triển khai & Triển khai đồng bộ cho 02 Kho Chi nhánh (Tháng 7)
 │   ├── 1.5.1 Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối
 │   │   └── 1.5.1.1 Lắp đặt PC, Trạm cân, Máy in theo chuẩn tương thích tại 2 chi nhánh
@@ -185,7 +185,7 @@ Cây WBS được phân rã chi tiết **4 cấp**, bám sát **6 Mốc tiến �
     │   └── 1.6.2.1 Hoàn thiện bộ tài liệu SRS, SAD, SOP & User Manual
     └── 1.6.3 Nghiệm thu Tổng thể & Kết thúc Dự án
         ├── 1.6.3.1 Ký Biên bản UAT & Nghiệm thu Tổng thể với Ban Giám đốc
-        └── 1.6.3.2 Bàn giao hệ thống, đóng gói mã nguồn & đóng dự án
+        └── 1.6.3.2 Bàn giao hệ thống và đóng dự án
 ```
 
 **5. TỪ ĐIỂN WBS**
@@ -504,7 +504,7 @@ Từ điển bao phủ 47 gói cấp thấp nhất. Giữ mã gói gốc; năm g
 - **Sản phẩm đầu ra:** Biên bản Xác nhận Go-live Kho Tổng Thái Nguyên.
 - **Tiêu chí chấp nhận:** Kho tổng vận hành thực tế chậm nhất 02/12/2027; có hồ sơ đạt, người dùng được đào tạo trước sử dụng và xác nhận của chủ đầu tư/đại diện kho.
 
-**Gói công việc 1.4.2.3: Onsite Hỗ trợ Kỹ thuật Trực tiếp tại Thái Nguyên**
+**Gói công việc 1.4.2.3: Thực hiện hỗ trợ kỹ thuật trực tiếp tại Thái Nguyên**
 
 - **Mã WBS:** 1.4.2.3
 - **Mô tả công việc:** Túc trực trực tiếp tại Kho tổng Thái Nguyên trong 2 tuần đầu Go-live để xử lý sự cố phát sinh.
@@ -572,10 +572,10 @@ Từ điển bao phủ 47 gói cấp thấp nhất. Giữ mã gói gốc; năm g
 - **Sản phẩm đầu ra:** Biên bản Nghiệm thu Tổng thể Dự án (Final Acceptance Sign-off).
 - **Tiêu chí chấp nhận:** Chủ đầu tư, đại diện các kho và PM xác nhận sản phẩm/bộ điều kiện AC-01–AC-04, theo trách nhiệm ở 04.
 
-**Gói công việc 1.6.3.2: Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án**
+**Gói công việc 1.6.3.2: Bàn giao Hệ thống và Đóng Dự án**
 
 - **Mã WBS:** 1.6.3.2
-- **Mô tả công việc:** Bàn giao mã nguồn, CSDL, tài khoản quản trị, sao lưu/biên lai khôi phục và hướng dẫn vận hành cho đầu mối doanh nghiệp; xác nhận trách nhiệm chi phí sau tháng 8, hoàn tất thanh toán/đóng dự án. Bảo trì dài hạn là thỏa thuận riêng.
+- **Mô tả công việc:** Bàn giao gói phần mềm/hồ sơ triển khai, CSDL, tài khoản quản trị, sao lưu/biên lai khôi phục và hướng dẫn vận hành cho đầu mối doanh nghiệp; xác nhận trách nhiệm chi phí sau tháng 8, hoàn tất thanh toán/đóng dự án. Bảo trì dài hạn là thỏa thuận riêng.
 - **Người chịu trách nhiệm:** PM / Solution Architect / Backend Developer
 - **Sản phẩm đầu ra:** Hồ sơ bàn giao vận hành và báo cáo đóng dự án.
 - **Tiêu chí chấp nhận:** TR-03 đạt AC-04, đầu mối doanh nghiệp ký nhận và trách nhiệm phí duy trì được ghi rõ, bàn giao toàn bộ chậm nhất 02/02/2028.
