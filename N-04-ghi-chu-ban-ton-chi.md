@@ -1,22 +1,38 @@
-# Ghi chú bản tôn chỉ đầy đủ — 07/09/2026
+# N-04 · Bối cảnh tài liệu gốc và bản tôn chỉ đầy đủ
 
-Ghi chú làm việc, không ghép vào bài nộp.
+Cập nhật ngày 05/10/2026. Ghi chú làm việc, không ghép vào bài nộp; không dùng để quản lý deadline hoặc việc tiếp theo của nhóm.
 
-- Theo chỉ dẫn trực tiếp của người quản lý tài liệu trong phiên ngày 07/09/2026: giữ 03 làm cơ sở, tạo [04-ton-chi-du-an-day-du.md](04-ton-chi-du-an-day-du.md) theo 7 mục của mẫu giảng viên. Ba ảnh viết tay đã nộp là căn cứ ưu tiên; tài liệu dự án có thể điều chỉnh khi cần, tránh chốt chi tiết quá sớm.
-- Bản 04 dùng PM Bùi Hồng Phú; công ty thực hiện là Công ty Cổ phần Công nghệ Raumania, đại diện Nguyễn Đức Công. Chủ đầu tư có đại diện giả định Trần Minh Đức để tách hai bên; người quản lý tài liệu đã giao quyền lựa chọn này. Vai trò trong tình huống dự án không thay đổi phân công làm bài thực tế của nhóm.
-- Ngày bắt đầu 03/06/2027; quy ước tháng dự án từ ngày 03 đến hết ngày 02 tháng sau. Hoàn thành kho tổng chậm nhất 02/12/2027; toàn dự án hết 02/02/2028. Đã kiểm phép cộng tháng bằng DateTime.AddMonths; không suy ra lịch ngày làm việc hoặc đường găng từ các mốc này.
-- Giữ 2 tỷ đồng, ba kho, các chức năng và ngưỡng sai số cân < 0,1%, in tem < 2 giây/sản phẩm theo bản đã nộp. Diễn đạt yêu cầu RS232 theo khả năng đáp ứng thao tác nghiệp vụ; không hứa độ trễ bằng không.
-- Bản 04 không khóa số lượng thiết bị, hãng thiết bị, kiến trúc ngoại tuyến, lịch nhân sự hoặc phân bổ dự phòng. Các điểm lệch số lượng trong 02/03 và nguồn máy chấm công vẫn cần giải quyết khi lập kế hoạch chi tiết; không tự coi đã đóng các vấn đề O01/O02 trong N-03.
-- Thông tin liên hệ được điền theo yêu cầu bài tập; số điện thoại tự đặt có thể trùng số thật, không dùng để liên hệ. Email dùng miền .example. Địa chỉ số 128 là giả định; tên đường/phường tham khảo [cổng thông tin phường Hà Đông](https://hadong.hanoi.gov.vn/van-hoa-xa-hoi/thong-bao-dieu-chinh-to-chuc-giao-thong-duong-tran-phu-duong-phung-hung-phuong-ha-dong-2809250907095757588.htm). Không xác nhận trụ sở doanh nghiệp thực tế.
+## 1. Cách sử dụng 01–04
 
-## Kiểm tra tài liệu
+01–04 cùng tạo thành bộ gốc của dự án. 03 là cơ sở tôn chỉ trước khi tạo [04](04-ton-chi-du-an-day-du.md) theo mẫu bảy mục của giảng viên. Người làm các chương sau phải đối chiếu cả bộ; không bỏ qua điểm khác nhau giữa các bản.
 
-- Hai subagent T3 đọc độc lập bản 04 có SHA256 `8005958D46B3308C3D5B13288A7E2117363AF24F61427F312FBC3DFFB4774241`: một lượt kiểm tính đúng đắn/ảnh nguồn; một lượt kiểm logic, ngày tháng, annotation và mức độ chi tiết.
-- T3 logic: PASS. T3 tính đúng đắn: một P2 về câu FEFO có thể bị hiểu là xuất hàng đã hết hạn. Đã sửa thành ưu tiên lô còn hạn sử dụng có ngày hết hạn gần nhất; không đổi yêu cầu.
-- T3 đã kiểm lại đúng delta và đóng P2: PASS. SHA256 bản 04 cuối: `05C3293D4D67AA591691BC0F00B773933C8DDA39EF9696859798FAE316567669`.
-- Đã kiểm đủ 7 mục; lịch tháng khớp; 01/02/03 không có diff so với HEAD. Các sửa đổi sẵn có của người dùng ở N-01/N-02 được giữ nguyên.
-- Chỉ kiểm tài liệu Markdown; chưa xuất Word/PDF, chưa kiểm bố cục bản in, chưa có xác nhận của nhóm hoặc giảng viên. Không có kiểm thử phần mềm hay thiết bị thực tế trong công việc này.
+Bản cập nhật ngày 05/10/2026 dùng các thông tin và giả định sau để đồng bộ 01–04 với chương 2:
 
-## Lưu lên GitHub
+| Điểm | Cách xử lý |
+| --- | --- |
+| PM và đơn vị thực hiện | Bùi Hồng Phú / công ty Raumania theo 04; 03 và chương 2 đã đồng bộ. Phân công sinh viên giữ riêng ở N-03. |
+| O01 · Cân/PC | Theo 02: kho tổng 2 cân, 2 PC; mỗi chi nhánh 1 cân, 1 PC; tổng 4 cân/4 PC. Các bảng/WBS/đầu ra được đối chiếu cùng cấu hình. |
+| O02 · Máy chấm công | Giả định doanh nghiệp cung cấp 1 máy/kho (3 máy), kiểm giao thức khi khảo sát; không mua thêm trong 130 triệu. Đây là giả định, chưa xác nhận hiện trường. |
+| Nguồn số đo | Thiết bị môi trường và khâu kiểm độ ẩm trà của doanh nghiệp, nhập thủ công. Kết nối đo không dây chỉ là tùy chọn phải thẩm định/phê duyệt; không thêm nghiệp vụ kho ngoài tài liệu gốc. |
+| Server/vận hành | Gói 25 triệu dùng trong 8 tháng dự án; Tech Lead/Backend triển khai/sao lưu/hướng dẫn, Onsite kết nối và đào tạo. Doanh nghiệp nhận quản trị và phí sau bàn giao; bảo trì dài hạn là thỏa thuận riêng. |
+| Lịch huy động | Khảo sát tháng 1 BA/Tech Lead; RS232 từ tháng 2, Onsite từ tháng 5. BA bàn giao tài liệu cuối tháng 5; người còn tham gia cập nhật/đóng gói. QA/Tech Lead tổng hợp nghiệm thu tháng 8 từ biên lai trước vận hành. |
+| Nghiệm thu | Chương 2 xác định ý nghĩa ngưỡng và điều kiện chấp nhận AC-01/AC-02. SRS chốt tham số nghiệp vụ; chương 9 lập Test Plan, dữ liệu, cỡ mẫu và phương pháp kiểm trước nghiệm thu. |
 
-Người quản lý tài liệu yêu cầu push kết quả cùng các file vừa copy: 7 PDF trong tai-lieu và các chỉnh sửa đang có ở N-01/N-02. Kết quả commit/push được ghi bằng mã commit trong phản hồi kết thúc phiên; không gửi thông báo cho người khác.
+Kết quả review gắn với phiên bản tài liệu được kiểm trong PR. Nếu tài sản sẵn có khác giả định, đội dự án đánh giá công/chi phí và trình điều chỉnh trước triển khai. Kiểm tài liệu và nghiệm thu hệ thống thực tế được ghi nhận riêng.
+
+## 2. Bối cảnh tạo bản 04 ngày 07/09/2026
+
+- Bản 04 được lập ngày 07/09/2026 từ 03, mẫu bảy mục của giảng viên và ba ảnh viết tay đã nộp.
+- Bản 04 dùng PM Bùi Hồng Phú; đơn vị thực hiện là Công ty Cổ phần Công nghệ Raumania, đại diện Nguyễn Đức Công. Chủ đầu tư có đại diện giả định Trần Minh Đức. Đây là vai trò của tình huống, không phải phân công sinh viên làm BTL.
+- Ngày bắt đầu dự án giả định là 03/06/2027; tháng dự án từ ngày 03 đến hết ngày 02 tháng sau. Kho tổng hoạt động chậm nhất 02/12/2027; toàn dự án kết thúc 02/02/2028. Đây không phải deadline làm BTL; các mốc này chưa xác định lịch ngày làm việc hoặc đường găng.
+- Giữ ngân sách hai tỷ, ba kho và ngưỡng cân `<0,1%`, in tem `<2 giây/sản phẩm>` theo bản đã nộp lúc đó. 04 ghi cách đo được thống nhất trong kế hoạch kiểm thử. Nếu điều chỉnh tiêu chí, cần sửa thống nhất bộ gốc và các phần liên quan.
+- 04 không khóa số lượng/hãng thiết bị, kiến trúc ngoại tuyến, lịch nhân sự hoặc cách phân bổ dự phòng. Những điểm này cần có căn cứ khi chi tiết hóa.
+- Tên tổ chức, bên liên quan và thông tin liên hệ trong tình huống có yếu tố giả định; ghi chú cũ không chứng minh chúng là dữ liệu doanh nghiệp thực tế. Không dùng thông tin tự đặt để liên hệ.
+
+## 3. Biên lai kiểm tra cũ và giới hạn
+
+Hai subagent đã đọc độc lập bản 04 ngày 07/09/2026, SHA256 `8005958D46B3308C3D5B13288A7E2117363AF24F61427F312FBC3DFFB4774241`. Một góp ý P2 về FEFO đã được sửa: ưu tiên lô **còn hạn** có ngày hết hạn gần nhất. Lượt kiểm lại delta ghi PASS; SHA256 bản cuối khi đó là `05C3293D4D67AA591691BC0F00B773933C8DDA39EF9696859798FAE316567669`.
+
+Biên lai này chỉ áp dụng cho các phiên bản đó, không chứng minh bản 04 hiện tại hoặc toàn bộ BTL đã đạt. Đã kiểm Markdown; chưa kiểm bản in Word/PDF, thiết bị hoặc phần mềm thực tế, chưa có xác nhận chấp nhận bài của giảng viên.
+
+Cơ chế làm việc và phân công hiện hành nằm ở [N-02](N-02-cach-lam-viec.md) và [N-03](N-03-phan-cong-va-quyet-dinh.md).

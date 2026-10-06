@@ -1,11 +1,13 @@
-**BÁO CÁO QUẢN LÝ PHẠM VI DỰ ÁN (PROJECT SCOPE MANAGEMENT PLAN)**
+# BÁO CÁO QUẢN LÝ PHẠM VI DỰ ÁN (PROJECT SCOPE MANAGEMENT PLAN)
 
 - **Tên dự án:** Hệ thống Quản lý Kho Trà và Chuỗi cung ứng Tân Cương (WMS)
 - **Mã bài tập:** Bài tập Nhóm 16 (PTIT)
-- **Người quản lý dự án (PM):** Nguyễn Hải Hưng (Mã SV: B23DCCN371)
+- **Người quản lý dự án (PM):** Bùi Hồng Phú
 - **Nhà tài trợ (Project Sponsor):** Ban Giám đốc Doanh nghiệp / Hợp tác xã Trà Tân Cương (Thái Nguyên)
 - **Tổng ngân sách phê duyệt (BAC):** 2.000.000.000 VNĐ (Hai tỷ đồng chẵn)
 - **Thời gian thực hiện:** 08 tháng (50 Man-Month / 8 vị trí chuyên môn)
+- **Tác giả bản phạm vi/WBS ban đầu:** Nguyễn Đức Công.
+- **Căn cứ:** Bộ tài liệu gốc 01–04 và tài liệu tham khảo tại mục Nguồn đối chiếu.
 
 **1\. KẾ HOẠCH QUẢN LÝ PHẠM VI (SCOPE MANAGEMENT PLAN)**
 
@@ -17,39 +19,46 @@
    - Làm việc trực tiếp với **6 nhóm người dùng**: Ban Lãnh đạo, Quản lý kho, Thủ kho, Công nhân chế biến/đóng gói, Kế toán kho và Nhân sự logistics/Tài xế.
    - Tập trung làm rõ các quy trình cốt lõi: Nhập chè búp tươi, quy đổi định mức BOM theo độ ẩm, theo dõi tỷ lệ hao hụt chè, kiểm soát vị trí ô/kệ (Zone/Bin/Rack) và quy tắc xuất kho ưu tiên FEFO (First Expired, First Out).
 2. **Khảo sát kỹ thuật & Giao thức IoT (Technical & Hardware Survey):**
-   - Đội kỹ thuật (_RS232 Engineer_ và _Onsite Engineer_) khảo sát thực tế tại 01 Kho tổng Thái Nguyên và 02 Kho chi nhánh phân phối.
-   - Đo đạc và chốt thông số kỹ thuật chuẩn cổng giao tiếp Serial COM/RS232 của **03 Trạm cân điện tử**, cổng điều khiển **04 Máy in tem Zebra**, **08 Máy quét QR** và kết nối **04 Máy chấm công**.
+   - Tháng 1, BA/Tech Lead khảo sát quy trình, tài sản sẵn có và đặc tả nhà cung cấp tại ba kho. RS232 Engineer kiểm trên bộ mẫu từ tháng 2; Onsite khảo sát/lắp đặt từ tháng 5 theo lịch huy động 02.
+   - Xác nhận yêu cầu sử dụng/giao thức của **04 cân RS232, 04 máy in, 08 máy quét, 04 PC mua mới** và **03 máy chấm công sẵn có** theo 01/02. Dải cân, độ chia và giao thức của từng loại thiết bị được xác nhận trong SRS theo đặc tả nhà cung cấp.
 3. **Rà soát chứng từ & Dữ liệu lịch sử:**
-   - Tiếp nhận các biểu mẫu sổ sách Excel hiện có, danh mục nhà vườn/đối tác (như Cơ sở cung cấp trà Minh Sơn), công thức tính hao hụt chế biến và dữ liệu tồn kho ban đầu do doanh nghiệp bàn giao.
+   - Tiếp nhận các biểu mẫu sổ sách Excel hiện có, danh mục nhà vườn/nhà cung cấp, công thức tính hao hụt chế biến và dữ liệu tồn kho ban đầu do doanh nghiệp bàn giao.
 
 **1.2 Quy trình kiểm soát thay đổi phạm vi (Scope Change Control Process)**
 
-Mọi đề xuất thay đổi phạm vi (Change Request - CR) phải tuân thủ nghiêm ngặt quy trình 4 bước để bảo vệ mốc tiến độ và ngân sách:
+Mọi đề xuất thay đổi phạm vi được ghi nhận và xử lý theo bốn bước:
 
-1. **Ghi nhận phiếu CR:** Thành viên hoặc bên liên quan lập phiếu yêu cầu thay đổi (mô tả lý do, tính năng cần thêm/sửa).
-2. **Phân tích tác động (Impact Analysis):** PM Nguyễn Hải Hưng phối hợp với Solution Architect đánh giá ảnh hưởng đến:
-   - **Mốc găng Go-live Kho tổng Thái Nguyên ở Tháng 6** (mùa vụ chè cao điểm).
-   - **Tổng ngân sách BAC 2.0 Tỷ VNĐ** và Quỹ dự phòng rủi ro 143.000.000 VNĐ (7.15%).
-3. **Phê duyệt:**
-   - _Thay đổi nhỏ:_ Thuộc hạn mức điều phối công việc của PM Nguyễn Hải Hưng.
-   - _Thay đổi lớn (vượt ngân sách/trễ mốc Go-live):_ Bắt buộc trình **Project Sponsor (Ban Giám đốc Trà Tân Cương)** phê duyệt bằng văn bản.
-4. **Cập nhật & Thực thi:** Cập nhật WBS, WBS Dictionary, Ma trận TRM và thông báo cho 8 nhân sự triển khai.
+1. **Ghi nhận phiếu CR:** Thành viên hoặc bên liên quan nêu nội dung thay đổi và lý do.
+2. **Phân tích tác động:** PM Bùi Hồng Phú phối hợp với Solution Architect đánh giá ảnh hưởng đến yêu cầu, WBS, tiêu chí nghiệm thu, nguồn lực, tiến độ và ngân sách.
+3. **Phê duyệt:** Chủ đầu tư phê duyệt thay đổi phạm vi, tiêu chí chấp nhận và đường cơ sở; PM điều phối sửa lỗi và công việc trong phạm vi đã duyệt. Các phương án được đánh giá theo hạn kho tổng vận hành chậm nhất tháng 6, toàn dự án tám tháng và ngân sách hai tỷ.
+4. **Cập nhật và thực thi:** Cập nhật RTM, WBS, WBS Dictionary và kế hoạch liên quan; thông báo cho đội dự án. Nguồn chi cho thay đổi được xác định trong kế hoạch chi phí/rủi ro.
 
 **2\. MA TRẬN TRUY XUẤT YÊU CẦU (REQUIREMENTS TRACEABILITY MATRIX - RTM)**
 
-| **Mã YC**  | **Loại YC**  | **Nội dung chi tiết yêu cầu**                                            | **Đối tượng sử dụng chính** | **Mã WBS tương ứng** | **Người chịu trách nhiệm** |
-| ---------- | ------------ | ------------------------------------------------------------------------ | --------------------------- | -------------------- | -------------------------- |
-| **FR-01**  | Chức năng    | Quản lý Mã Lô, định vị ô/kệ (Zone/Bin/Rack) & Xuất kho ưu tiên **FEFO**  | Thủ kho, Quản lý kho        | 1.3.1.1, 1.3.1.2     | Devs / BA                  |
-| **FR-02**  | Chức năng    | Định mức chuyển đổi **BOM** theo độ ẩm & Tính tỷ lệ hao hụt chè chế biến | Quản lý kho, Công nhân      | 1.3.2.1              | Devs / BA                  |
-| **FR-03**  | Chức năng    | Cảnh báo tự động tồn kho dưới ngưỡng & Báo cáo tuổi hàng (Aging)         | Quản lý kho, Ban Lãnh đạo   | 1.3.2.2              | Devs                       |
-| **FR-04**  | Tích hợp IoT | Đọc trực tiếp dữ liệu Cân điện tử qua cổng **COM/RS232** (không trễ)     | Công nhân chế biến/đóng gói | 1.3.3.1              | RS232 Engineer             |
-| **FR-05**  | Tích hợp IoT | In tem QR bằng **máy in Zebra** (s/sp) & Quét mã QR kiểm kê              | Công nhân, Thủ kho          | 1.3.3.2, 1.3.3.3     | RS232 Engineer             |
-| **FR-06**  | Tích hợp     | Tích hợp dữ liệu điểm danh từ máy chấm công công nhân                    | Kế toán, Quản lý kho        | 1.3.3.3              | Devs                       |
-| **FR-07**  | Chức năng    | Quản lý Nhà cung cấp (Trà Minh Sơn), Đơn hàng, Kế toán kho & Tài xế      | Kế toán, Tài xế, Logistics  | 1.3.4.2              | Devs                       |
-| **FR-08**  | Chức năng    | Dashboard KPI, báo cáo doanh thu, giá vốn lô trà & tài chính kho         | Ban Lãnh đạo, Kế toán       | 1.3.4.1              | Devs / Solution Architect  |
-| **NFR-01** | Kỹ thuật     | Ứng dụng Web chạy ổn định trên máy trạm Windows tại 3 cơ sở              | Tất cả người dùng           | 1.2.3.1, 1.3.1.1     | Solution Architect         |
-| **NFR-02** | Kỹ thuật     | Cơ chế đệm dữ liệu ngoại tuyến (Offline Mode) & Tự đồng bộ dữ liệu 3 kho | Thủ kho 3 chi nhánh         | 1.2.3.2, 1.5.2.1     | Solution Architect         |
-| **NFR-03** | Chất lượng   | Sai số cân tự động qua RS232 , Thời gian in tem Zebra giây               | Công nhân, Thủ kho          | 1.3.5.1, 1.6.1.1     | QA / RS232 Engineer        |
+Ma trận truy vết yêu cầu nối yêu cầu trong 01–04 với gói công việc và điều kiện chấp nhận. Tham khảo: Bài giảng Quản lý dự án phần mềm — Quản lý phạm vi dự án, [4-scope.pdf](tai-lieu/4-scope.pdf#page=17), trang 17; PMBOK 6 §5.2.3.2, trang 148–149.
+
+| Mã YC | Loại | Yêu cầu và nguồn | Đối tượng | WBS | Trách nhiệm | Điều kiện chấp nhận |
+| --- | --- | --- | --- | --- | --- | --- |
+| FR-01 | Chức năng | Nhập/xuất/kiểm kê/điều chuyển giữa ba kho, tự sinh Batch ID, ghi chất lượng lô, vị trí và FEFO; 01 mục nhập–xuất, 04 mục 2 | Thủ kho/quản lý | 1.3.1.1, 1.3.1.2 | Devs/BA | AC-03; xuất ưu tiên lô còn hạn được phép xuất; mã lô không trùng |
+| FR-02 | Chức năng | BOM, độ ẩm trà và hao hụt theo công thức đã xác nhận; 01 mục thông tin trà/BOM, 04 mục 2 | Kho/công nhân | 1.3.2.1 | Devs/BA | AC-03; nguồn độ ẩm trà riêng với %RH môi trường |
+| FR-03 | Chức năng | Cảnh báo cận hạn/hết hạn, tồn tối thiểu và Aging; 01 mục tồn/bảo quản, 04 mục 2 | Quản lý/lãnh đạo | 1.3.2.2 | Devs | AC-03; kiểm trước/đúng/sau ngưỡng và ngày hết hạn |
+| FR-04 | Tích hợp | Đọc cân RS232 theo dải sử dụng được chấp nhận; 01 mục ngoại vi, 02 mục IV, 04 mục 4 | Công nhân/thủ kho | 1.3.3.1, 1.3.5.1 | RS232/QA | AC-01 |
+| FR-05 | Tích hợp | In tem/phiếu và quét barcode/QR; 01 mục ngoại vi, 02 mục IV | Công nhân/thủ kho | 1.3.3.2, 1.3.3.3, 1.3.5.2 | RS232/QA | AC-02 và AC-03 |
+| FR-06 | Tích hợp | Chấm công từ máy sẵn có; 01 mục nhân sự/giả định, 04 mục 2 | Kho/kế toán | 1.3.3.3 | Devs/RS232 | AC-03; đối soát dữ liệu máy, không nhập trùng |
+| FR-07 | Chức năng | Nhà cung cấp, lịch sử nhập, đơn hàng xuất và trạng thái vận chuyển; 01 mục nhà cung cấp/đơn hàng | Kho/kế toán/logistics | 1.3.4.2 | Devs | AC-03; nhân sự logistics hoặc đầu mối kho cập nhật trên máy Windows |
+| FR-08 | Chức năng | Chi phí nguyên liệu, giá thành lô, doanh thu, công nợ, phí vận hành; 01 mục tài chính | Kế toán/lãnh đạo | 1.3.4.2, 1.3.4.1 | Devs/BA | AC-03; số nhập bổ sung và số tổng đối soát |
+| FR-09 | Chức năng | Nhật ký nhiệt độ/%RH môi trường, nguồn đo sẵn có và nhập thủ công; 01 mục tồn/giả định, 04 mục 2 | Thủ kho | 1.3.2.3 | Devs/BA | AC-03; có kho/khu vực, thời điểm, số đo và người ghi |
+| FR-10 | Chức năng | Lịch ca và phân quyền theo vai trò; 01 mục nhân sự | Kho/kế toán/người dùng | 1.3.4.3 | Devs/BA | AC-03; kiểm cho phép/từ chối của cả sáu vai trò |
+| FR-11 | Chức năng | Danh mục cơ sở vật chất, dụng cụ, máy móc, bao bì/tem; 01 mục tài sản/vật tư | Kho/kế toán | 1.3.4.4 | Devs/BA | AC-03; lưu/tra cứu/cập nhật theo quyền |
+| FR-12 | Chức năng | Danh mục trà, loại, nguồn gốc, ngày sản xuất/hạn, quy cách; 01 mục thông tin trà | Kho/kế toán | 1.3.1.1, 1.3.3.4 | Devs/BA | AC-03; trường bắt buộc và dữ liệu nhập được kiểm |
+| FR-13 | Chức năng | Báo cáo nhập–xuất–tồn, hao hụt, bán chạy/tồn lâu; 01 mục thống kê | Kho/lãnh đạo | 1.3.4.1, 1.3.2.2 | Devs | AC-03; số liệu và bộ lọc khớp tập đối soát |
+| NFR-01 | Kỹ thuật | Web trên máy Windows, môi trường ứng dụng/CSDL; 01 mục triển khai, 02 khoản cloud | Các vai trò | 1.2.3.1, 1.4.2.1 | Tech Lead/Backend | AC-04; cấu hình kỹ thuật trong SAD |
+| NFR-02 | Kỹ thuật | Đồng bộ ba kho, đệm dữ liệu khi mất mạng; 02 vai Tech Lead, 03 giả định | Ba kho | 1.2.3.2, 1.5.2.1 | Tech Lead/Devs | AC-03; ngắt/khôi phục và đối soát, không trùng/mất giao dịch trong phạm vi offline SRS |
+| NFR-03 | Chất lượng | Cân <0,1%, in tem <2 giây/sản phẩm; 04 mục 4 | Người vận hành | 1.3.5.1, 1.3.5.2, 1.6.1.1, 1.6.1.2 | QA/RS232 | AC-01/AC-02, đạt ở từng mẫu theo điều kiện xác định |
+| TR-01 | Chuyển đổi | Danh mục, lô và tồn đầu kỳ từ Excel; 03 giả định/04 mục 6 | Kho/kế toán | 1.3.3.4, 1.4.1.3, 1.4.2.1 | BA/Onsite/Backend | AC-03/AC-04; doanh nghiệp chuẩn hóa, đội dự án kiểm/import/đối soát |
+| TR-02 | Chuyển đổi | SRS/SAD/SOP/User Manual, đào tạo trước sử dụng và bổ sung cuối kỳ; 02 mục VI, 04 mục 3 | Người dùng kho | 1.4.1.2, 1.5.3.1, 1.6.2.1 | BA bàn giao; Onsite/PM tiếp nhận | AC-04; danh sách người học và thao tác theo vai trò |
+| TR-03 | Bàn giao | Gói phần mềm/mã nguồn, hồ sơ triển khai, tài khoản, CSDL, sao lưu/khôi phục, hướng dẫn vận hành; 04 mục 3 và giả định vận hành | Doanh nghiệp | 1.4.2.1, 1.6.3.2 | Tech Lead/Backend/PM | AC-04; đầu mối nhận và trách nhiệm phí sau dự án rõ |
+| PR-01 | Ràng buộc | Hai tỷ/50 MM, kho tổng chậm nhất tháng 6, toàn dự án tám tháng; 01/02/04 | Chủ đầu tư/PM | 1.1.1.1, 1.1.1.3, 1.1.2.2, 1.6.3.1 | PM | Kế hoạch và biên bản đáp ứng mốc/ngân sách gốc |
 
 **3\. TUYÊN BỐ PHẠM VI DỰ ÁN (PROJECT SCOPE STATEMENT)**
 
@@ -60,201 +69,130 @@ Triển khai thành công Hệ thống Quản lý Kho Trà và Chuỗi cung ứn
 **3.2 Phạm vi công việc BAO GỒM (In-Scope)**
 
 - **Nghiên cứu & Thiết kế:** Khảo sát quy trình, lập tài liệu Đặc tả Yêu cầu (SRS), Thiết kế Kiến trúc (SAD), Quy trình thao tác chuẩn (SOP) và Sổ tay hướng dẫn sử dụng (User Manual).
-- **Phát triển Phần mềm Web App:** Xây dựng ứng dụng Web chạy trên môi trường máy trạm Windows quản lý Nhập - Xuất - Tồn theo mã lô, sơ đồ ô/kệ Zone/Bin/Rack, thuật toán FEFO, công thức BOM quy đổi độ ẩm/hao hụt, cảnh báo tồn kho, công nợ nhà cung cấp, vận tải và Dashboard KPI.
-- **Phát triển Module Service IoT:** Lập trình phần mềm dịch vụ chạy ngầm kết nối chuẩn COM/RS232 cho **03 Trạm cân điện tử**, điều khiển **04 Máy in tem Zebra**, **08 Máy quét QR** và tích hợp **04 Máy chấm công**.
-- **Triển khai & Vận hành:**
-  - Lắp đặt thiết bị (130 triệu VNĐ), chạy thử UAT và **Go-live Kho tổng Thái Nguyên ở Tháng 6 (MỐC CỨNG)**.
-  - Nhân bản hạ tầng và đồng bộ CSDL cho 02 Kho chi nhánh phân phối ở Tháng 7.
-  - Đào tạo người dùng, bàn giao dữ liệu khởi tạo từ Excel và Nghiệm thu tổng thể ở Tháng 8.
+- **Phát triển Phần mềm Web App:** Quản lý nhập–xuất–tồn/điều chuyển theo mã lô và vị trí, FEFO, BOM/hao hụt, cảnh báo, nhật ký môi trường, nhà cung cấp/đơn hàng, ca làm/phân quyền, tài chính kho, tài sản/vật tư và báo cáo theo FR-01–FR-13 trong RTM.
+- **Tích hợp ngoại vi:** Dịch vụ kết nối bốn cân RS232, bốn máy in, tám máy quét và ba máy chấm công theo cấu hình của 01/02.
+- **Triển khai & Vận hành:** Chuẩn bị môi trường phát triển, kiểm thử và production; cấu hình ứng dụng/CSDL, sao lưu/khôi phục; lắp đặt thiết bị 130 triệu theo 02. Kho tổng được đào tạo trước sử dụng, go-live chậm nhất cuối tháng 6; hai chi nhánh triển khai/đào tạo tháng 7; đào tạo bổ sung và bàn giao tháng 8.
 
-**3.3 Ngoại vi dự án KHÔNG BAO GỒM (Out-of-Scope)**
+**3.3 Phần không bao gồm và điều kiện triển khai**
 
-- **Không làm Mobile App Native:** Không xây dựng ứng dụng di động iOS/Android (hệ thống chỉ chạy giao diện Web trên máy trạm Windows).
-- **Không thi công hạ tầng điện/mạng cơ bản:** Doanh nghiệp Trà Tân Cương tự chịu trách nhiệm chuẩn bị đường truyền Internet và nguồn điện tại 3 kho.
-- **Không mua sắm phương tiện logistics:** Không mua xe tải hay máy nâng hạ cơ học (chỉ quản lý dữ liệu vận tải và biên bản giao nhận trên phần mềm).
-- **Không nhập liệu lịch sử thủ công:** Doanh nghiệp tự kiểm kê và chuẩn hóa dữ liệu cũ vào mẫu file Excel; nhóm dự án chỉ cung cấp công cụ Import tự động.
+- **Ứng dụng di động:** Không phát triển ứng dụng native iOS/Android. WMS sử dụng đầu cuối Windows; logistics/đầu mối kho xác nhận giao nhận trên đầu cuối được phân quyền.
+- **Hạ tầng:** Doanh nghiệp cung cấp điện, đường Internet và LAN kho tổng. Đội dự án kết nối/cấu hình LAN, PC, ngoại vi và WMS; vật tư mạng hai chi nhánh theo 02. Thi công điện và đường ISP ngoài điểm đấu nối thuộc doanh nghiệp.
+- **Dữ liệu chuyển đổi:** Doanh nghiệp chuẩn hóa Excel danh mục/lô/tồn đầu kỳ; đội dự án kiểm, import và đối soát. Phạm vi chuyển đổi gồm dữ liệu mở kho, không bao gồm nhập tay toàn bộ sổ lịch sử.
+- **Tài sản và số đo:** Theo giả định 01, doanh nghiệp cung cấp thiết bị đo môi trường/chất lượng trà, ba máy chấm công và đầu cuối văn phòng. Số đo được nhập thủ công; tính tương thích thiết bị được xác nhận khi khảo sát. Tích hợp đo không dây được đánh giá và phê duyệt qua CR khi bổ sung.
+- **Vận hành sau dự án:** Chi phí hạ tầng bao phủ tám tháng dự án. Doanh nghiệp tiếp nhận quản trị và phí duy trì sau bàn giao; dịch vụ bảo trì tiếp theo được thỏa thuận riêng.
 
 **3.4 Tiêu chí thành công & Nghiệm thu**
 
-1. **Kho tổng Thái Nguyên go-live vận hành thực tế đúng Tháng 6 (mùa vụ cao điểm).**
-2. **Sai số đọc cân tự động qua RS232 .**
-3. **Thời gian tạo và in tem QR Zebra giây / sản phẩm.**
-4. **Tổng chi phí thực tế không vượt quá 2.000.000.000 VNĐ.**
-5. **Biên bản nghiệm thu tổng thể được duyệt bởi Project Sponsor và PM Nguyễn Hải Hưng.**
+Kho tổng vận hành chậm nhất 02/12/2027; toàn dự án bàn giao chậm nhất 02/02/2028; tổng chi phí không vượt hai tỷ. Chủ đầu tư, PM và đại diện các kho xác nhận phần bàn giao theo các tiêu chí sau:
+
+| Mã | Tiêu chí chấp nhận |
+| --- | --- |
+| AC-01 | **Cân và dữ liệu RS232:** Sai số tương đối `abs(m_WMS - m_ref) / m_ref × 100% < 0,1%`, với `m_ref > 0` là khối lượng tham chiếu đã xác nhận, cùng đơn vị kg và trong dải sử dụng/độ chia ghi ở SRS. Giá trị, đơn vị và trạng thái nhận trên WMS khớp dữ liệu hợp lệ từ cân. Mỗi cân tại cả ba kho được nghiệm thu theo tiêu chí này trước sử dụng. |
+| AC-02 | **Tạo và in tem:** Thời gian từ người dùng xác nhận yêu cầu in hợp lệ trên WMS đến khi tem in xong có thể lấy **<2 giây/sản phẩm**; máy sẵn sàng, có giấy/mực và dùng định dạng/cấu hình triển khai đã xác nhận. Tem đúng dữ liệu lô, ngày và trọng lượng; QR quét lại đúng nội dung. Tiêu chí áp dụng cho từng máy in tại ba kho. |
+| AC-03 | **Chức năng:** Các yêu cầu RTM được kiểm trên dữ liệu đối soát ở ba kho và theo quyền của sáu nhóm người dùng. Số liệu nhập–xuất–tồn/điều chuyển ở kho gửi–kho nhận khớp; FEFO, BOM, cảnh báo, nhật ký môi trường, chấm công/ca/quyền, tài sản, tài chính và báo cáo đúng yêu cầu. |
+| AC-04 | **Triển khai và bàn giao:** Môi trường, dữ liệu mở kho và thiết bị sẵn sàng trước go-live; người dùng được đào tạo trước sử dụng. Phần mềm, mã nguồn, bộ tài liệu, tài khoản quản trị, sao lưu/khôi phục và hướng dẫn vận hành được bàn giao cho đầu mối doanh nghiệp, kèm trách nhiệm duy trì sau tháng 8. |
+
+Dải cân/độ chia, định dạng tem và tham số nghiệp vụ được xác nhận trong SRS. Chương 9 lập Test Plan: dữ liệu, số mẫu, số lượt lặp, tình huống hợp lệ/lỗi/biên, cách đo và ghi kết quả. QA, PM và đại diện kho thống nhất kế hoạch này trước nghiệm thu; kết quả từng ca được đối chiếu với các tiêu chí trên. Căn cứ phân định: PMBOK 6 §5.3.3.1 (trang 154), §8.1.3.1–8.1.3.2 (trang 286–287), §8.3.2.1/8.3.2.4 (trang 303).
 
 **4\. CẤU TRÚC PHÂN CHIA CÔNG VIỆC (WORK BREAKDOWN STRUCTURE - WBS)**
 
 Cây WBS được phân rã chi tiết **4 cấp**, bám sát **6 Mốc tiến độ (Milestones)** và bộ sản phẩm bàn giao của dự án:
 
-Plaintext
+WBS được tổ chức theo hoạt động quản lý và các pha M1–M6; mỗi pha được phân rã thành sản phẩm và gói công việc có đầu ra, trách nhiệm và điều kiện chấp nhận. Mức phân rã phục vụ lập lịch, ước lượng nguồn lực/chi phí theo hướng dẫn ở bài giảng Quản lý phạm vi dự án, trang 28–32 và 38.
 
-1\. DỰ ÁN HỆ THỐNG WMS TRÀ TÂN CƯƠNG (BAC: 2.0 TỶ VNĐ)
-
-│
-
+```text
+1. DỰ ÁN WMS TRÀ TÂN CƯƠNG
 ├── 1.1 Quản lý Dự án (PMO)
-
-│ ├── 1.1.1 Khởi tạo & Lập Kế hoạch
-
-│ │ ├── 1.1.1.1 Xây dựng Kế hoạch Quản lý Dự án Tổng thể (PMP)
-
-│ │ ├── 1.1.1.2 Xây dựng Kế hoạch Quản lý Phạm vi & Từ điển WBS
-
-│ │ └── 1.1.1.3 Lập Tiến độ Chi tiết & Phân bổ Ngân sách BAC 2.0 Tỷ
-
-│ ├── 1.1.2 Giám sát & Điều phối Thực thi
-
-│ │ ├── 1.1.2.1 Tổ chức Họp Giao ban Định kỳ Tuần/Tháng
-
-│ │ ├── 1.1.2.2 Theo dõi, Kiểm soát Chi phí & Quỹ Dự phòng (143 triệu)
-
-│ │ └── 1.1.2.3 Báo cáo Tiến độ Định kỳ cho Project Sponsor
-
-│ └── 1.1.3 Quản lý Thay đổi & Đảm bảo Chất lượng
-
-│ ├── 1.1.3.1 Tiếp nhận & Đánh giá Yêu cầu Thay đổi (CR)
-
-│ └── 1.1.3.2 Đảm bảo Chất lượng Quy trình (QA)
-
-│
-
+│   ├── 1.1.1 Khởi tạo & Lập Kế hoạch
+│   │   ├── 1.1.1.1 Xây dựng Kế hoạch Quản lý Dự án Tổng thể (PMP)
+│   │   ├── 1.1.1.2 Xây dựng Kế hoạch Quản lý Phạm vi & Từ điển WBS
+│   │   └── 1.1.1.3 Lập Tiến độ Chi tiết & Phân bổ Ngân sách BAC 2.0 Tỷ
+│   ├── 1.1.2 Giám sát & Điều phối Thực thi
+│   │   ├── 1.1.2.1 Tổ chức Họp Giao ban Định kỳ Tuần/Tháng
+│   │   ├── 1.1.2.2 Theo dõi, Kiểm soát Chi phí & Quỹ Dự phòng (143 triệu)
+│   │   └── 1.1.2.3 Báo cáo Tiến độ Định kỳ cho Project Sponsor
+│   └── 1.1.3 Quản lý Thay đổi & Đảm bảo Chất lượng
+│       ├── 1.1.3.1 Tiếp nhận & Đánh giá Yêu cầu Thay đổi (CR)
+│       └── 1.1.3.2 Đảm bảo Chất lượng Quy trình (QA)
 ├── 1.2 M1: Phân tích Yêu cầu & Thiết kế Kiến trúc (Tháng 1)
-
-│ ├── 1.2.1 Khảo sát Hiện trạng Nghiệp vụ 3 Kho & Thiết bị IoT
-
-│ │ ├── 1.2.1.1 Khảo sát luồng nhập/chế biến/xuất tại Kho tổng Thái Nguyên
-
-│ │ ├── 1.2.1.2 Khảo sát cổng giao tiếp RS232 trạm cân, máy in Zebra & máy chấm công
-
-│ │ └── 1.2.1.3 Thu thập biểu mẫu Excel dữ liệu cũ & định mức BOM
-
-│ ├── 1.2.2 Biên soạn Đặc tả Yêu cầu Phần mềm (SRS)
-
-│ │ ├── 1.2.2.1 Lập đặc tả use-case cho 6 nhóm người dùng
-
-│ │ └── 1.2.2.2 Thống nhất chuẩn giao tiếp RS232/COM & in tem Zebra
-
-│ └── 1.2.3 Thiết kế Kiến trúc Hệ thống (SAD) & CSDL
-
-│ ├── 1.2.3.1 Thiết kế kiến trúc Web App trên máy trạm Windows
-
-│ ├── 1.2.3.2 Thiết kế CSDL đồng bộ 3 kho & cơ chế đệm dữ liệu Offline
-
-│ └── 1.2.3.3 Thiết kế Giao diện (UI/UX) cho Thủ kho, Công nhân & Lãnh đạo
-
-│
-
+│   ├── 1.2.1 Khảo sát Hiện trạng Nghiệp vụ 3 Kho & Thiết bị IoT
+│   │   ├── 1.2.1.1 Khảo sát luồng nhập/chế biến/xuất tại Kho tổng Thái Nguyên
+│   │   ├── 1.2.1.2 Khảo sát Cổng Giao tiếp RS232 Trạm Cân, Máy in & Máy Chấm công
+│   │   └── 1.2.1.3 Thu thập biểu mẫu Excel dữ liệu cũ & định mức BOM
+│   ├── 1.2.2 Biên soạn Đặc tả Yêu cầu Phần mềm (SRS)
+│   │   ├── 1.2.2.1 Lập đặc tả use-case cho 6 nhóm người dùng
+│   │   └── 1.2.2.2 Thống nhất Chuẩn Giao tiếp RS232/COM & In Tem
+│   └── 1.2.3 Thiết kế Kiến trúc Hệ thống (SAD) & CSDL
+│       ├── 1.2.3.1 Thiết kế kiến trúc Web App trên máy trạm Windows
+│       ├── 1.2.3.2 Thiết kế CSDL Đồng bộ 3 Kho & Cơ chế Đệm Dữ liệu Offline
+│       └── 1.2.3.3 Thiết kế Giao diện (UI/UX) cho Thủ kho, Công nhân & Lãnh đạo
 ├── 1.3 M2: Phát triển Phần mềm Lõi & IoT RS232 (Tháng 2 - Tháng 4)
-
-│ ├── 1.3.1 Phát triển Core WMS & Quản lý Kho
-
-│ │ ├── 1.3.1.1 Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack
-
-│ │ └── 1.3.1.2 Lập trình Thuật toán Xuất kho Ưu tiên FEFO
-
-│ ├── 1.3.2 Phát triển Module Định mức BOM & Cảnh báo
-
-│ │ ├── 1.3.2.1 Lập trình công thức quy đổi BOM theo độ ẩm & hao hụt chè
-
-│ │ └── 1.3.2.2 Lập trình Cảnh báo tồn kho dưới ngưỡng & Báo cáo tuổi hàng (Aging)
-
-│ ├── 1.3.3 Phát triển Module Kết nối Thiết bị Phần cứng (IoT)
-
-│ │ ├── 1.3.3.1 Lập trình Service kết nối RS232 đọc dữ liệu cân tự động
-
-│ │ ├── 1.3.3.2 Lập trình Module tạo mã QR & điều khiển máy in tem Zebra
-
-│ │ ├── 1.3.3.3 Lập trình tích hợp Máy quét QR & Máy chấm công
-
-│ │ └── 1.3.3.4 Lập trình công cụ Import/Export danh mục chè từ Excel
-
-│ ├── 1.3.4 Phát triển Dashboard & Chức năng Bổ trợ
-
-│ │ ├── 1.3.4.1 Lập trình Dashboard KPI, báo cáo doanh thu & giá vốn cho Lãnh đạo
-
-│ │ └── 1.3.4.2 Lập trình Module Quản lý Nhà cung cấp, Kế toán kho & Tài xế
-
-│ └── 1.3.5 Kiểm thử Tích hợp Nội bộ (Internal Integration Testing)
-
-│ ├── 1.3.5.1 Kiểm thử luồng dữ liệu Cân RS232 đến Web App
-
-│ └── 1.3.5.2 Kiểm thử tốc độ in tem Zebra (<2s) & thuật toán FEFO/BOM
-
-│
-
+│   ├── 1.3.1 Phát triển Core WMS & Quản lý Kho
+│   │   ├── 1.3.1.1 Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack
+│   │   └── 1.3.1.2 Lập trình Thuật toán Xuất kho Ưu tiên FEFO
+│   ├── 1.3.2 Phát triển Module Định mức BOM & Cảnh báo
+│   │   ├── 1.3.2.1 Lập trình công thức quy đổi BOM theo độ ẩm & hao hụt chè
+│   │   ├── 1.3.2.2 Lập trình Cảnh báo Tồn kho Dưới ngưỡng, Cận hạn/Hết hạn & Báo cáo Tuổi hàng (Aging)
+│   │   └── 1.3.2.3 Phát triển nhật ký nhiệt độ và độ ẩm môi trường
+│   ├── 1.3.3 Phát triển Module Kết nối Thiết bị Phần cứng (IoT)
+│   │   ├── 1.3.3.1 Lập trình Service kết nối RS232 đọc dữ liệu cân tự động
+│   │   ├── 1.3.3.2 Lập trình Module Tạo Mã QR & Điều khiển Máy in Tem
+│   │   ├── 1.3.3.3 Lập trình tích hợp Máy quét QR & Máy chấm công
+│   │   └── 1.3.3.4 Lập trình Công cụ Import/Export Danh mục và Tồn đầu kỳ từ Excel
+│   ├── 1.3.4 Phát triển Dashboard & Chức năng Bổ trợ
+│   │   ├── 1.3.4.1 Lập trình Dashboard KPI, báo cáo doanh thu & giá vốn cho Lãnh đạo
+│   │   ├── 1.3.4.2 Lập trình Module Quản lý Nhà cung cấp, Kế toán kho & Tài xế
+│   │   ├── 1.3.4.3 Phát triển lịch ca và phân quyền vai trò
+│   │   └── 1.3.4.4 Phát triển danh mục tài sản dụng cụ và vật tư
+│   └── 1.3.5 Kiểm thử Tích hợp Nội bộ (Internal Integration Testing)
+│       ├── 1.3.5.1 Kiểm thử luồng dữ liệu Cân RS232 đến Web App
+│       └── 1.3.5.2 Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM
 ├── 1.4 M3 & M4: Triển khai, UAT & Go-Live Kho Tổng Thái Nguyên (Tháng 5 - Tháng 6)
-
-│ ├── 1.4.1 M3: Lắp đặt Thiết bị & Chạy thử UAT Nội bộ (Tháng 5)
-
-│ │ ├── 1.4.1.1 Lắp đặt PC, Trạm cân RS232, Máy in Zebra, Máy quét tại Kho tổng
-
-│ │ ├── 1.4.1.2 Xây dựng kịch bản UAT & Hướng dẫn 6 nhóm người dùng thử nghiệm
-
-│ │ └── 1.4.1.3 Khởi tạo dữ liệu danh mục trà ban đầu từ file Excel
-
-│ └── 1.4.2 M4: GO-LIVE KHO TỔNG THÁI NGUYÊN (MỐC CỨNG - Tháng 6)
-
-│ ├── 1.4.2.1 Chuyển đổi dữ liệu sang môi trường vận hành thực tế
-
-│ ├── 1.4.2.2 Đưa Kho tổng vào vận hành chính thức vụ chè cao điểm
-
-│ └── 1.4.2.3 Onsite hỗ trợ kỹ thuật trực tiếp tại Thái Nguyên
-
-│
-
-├── 1.5 M5: Triển khai & Nhân bản cho 02 Kho Chi nhánh (Tháng 7)
-
-│ ├── 1.5.1 Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối
-
-│ │ └── 1.5.1.1 Lắp đặt PC, Trạm cân, Máy in Zebra tại 2 chi nhánh
-
-│ ├── 1.5.2 Cấu hình Đồng bộ CSDL Liên kho & Cơ chế hoạt động Offline
-
-│ │ └── 1.5.2.1 Thiết lập cơ chế nhân bản CSDL & Tự đồng bộ bù
-
-│ └── 1.5.3 Đào tạo & Chuyển giao tại 02 Chi nhánh
-
-│ └── 1.5.3.1 Đào tạo thao tác phần mềm cho Thủ kho & Nhân sự 2 chi nhánh
-
-│
-
+│   ├── 1.4.1 M3: Lắp đặt, UAT và đào tạo trước vận hành (Tháng 5)
+│   │   ├── 1.4.1.1 Lắp đặt PC, Trạm Cân RS232, Máy in, Máy quét tại Kho Tổng
+│   │   ├── 1.4.1.2 Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng
+│   │   └── 1.4.1.3 Khởi tạo dữ liệu danh mục trà ban đầu từ file Excel
+│   └── 1.4.2 M4: Go-live kho tổng chậm nhất cuối tháng 6
+│       ├── 1.4.2.1 Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế
+│       ├── 1.4.2.2 Đưa Kho Tổng vào Vận hành Chính thức
+│       └── 1.4.2.3 Onsite Hỗ trợ Kỹ thuật Trực tiếp tại Thái Nguyên
+├── 1.5 M5: Triển khai & Triển khai đồng bộ cho 02 Kho Chi nhánh (Tháng 7)
+│   ├── 1.5.1 Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối
+│   │   └── 1.5.1.1 Lắp đặt PC, Trạm cân, Máy in theo chuẩn tương thích tại 2 chi nhánh
+│   ├── 1.5.2 Cấu hình đồng bộ dữ liệu và cơ chế đệm ngoại tuyến
+│   │   └── 1.5.2.1 Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline
+│   └── 1.5.3 Đào tạo & Chuyển giao tại 02 Chi nhánh
+│       └── 1.5.3.1 Đào tạo thao tác phần mềm cho Thủ kho & Nhân sự 2 chi nhánh
 └── 1.6 M6: Đào tạo, Nghiệm thu Tổng thể & Đóng Dự án (Tháng 8)
+    ├── 1.6.1 Tổng hợp và kiểm lại tiêu chí thành công
+    │   ├── 1.6.1.1 Đo đạc sai số cân tự động qua RS232 (< 0,1%)
+    │   └── 1.6.1.2 Đo Thời gian Tạo & In Tem
+    ├── 1.6.2 Hoàn thiện Bộ Tài liệu Dự án
+    │   └── 1.6.2.1 Hoàn thiện bộ tài liệu SRS, SAD, SOP & User Manual
+    └── 1.6.3 Nghiệm thu Tổng thể & Kết thúc Dự án
+        ├── 1.6.3.1 Ký Biên bản UAT & Nghiệm thu Tổng thể với Ban Giám đốc
+        └── 1.6.3.2 Bàn giao hệ thống, đóng gói mã nguồn & đóng dự án
+```
 
-├── 1.6.1 Kiểm định Tiêu chí Thành công
+**5. TỪ ĐIỂN WBS**
 
-│ ├── 1.6.1.1 Đo đạc sai số cân tự động qua RS232 (< 0,1%)
+Từ điển mô tả 45 gói công việc cấp thấp nhất. Thời lượng, nguồn lực và chi phí từng gói được bổ sung khi lập các kế hoạch liên quan, theo PMBOK 6 §5.4.3.1 (trang 161–162).
 
-│ └── 1.6.1.2 Đo thời gian in tem Zebra (< 2 giây/sản phẩm)
-
-├── 1.6.2 Hoàn thiện Bộ Tài liệu Dự án
-
-│ └── 1.6.2.1 Hoàn thiện bộ tài liệu SRS, SAD, SOP & User Manual
-
-└── 1.6.3 Nghiệm thu Tổng thể & Kết thúc Dự án
-
-├── 1.6.3.1 Ký Biên bản UAT & Nghiệm thu Tổng thể với Ban Giám đốc
-
-└── 1.6.3.2 Bàn giao hệ thống, đóng gói mã nguồn & đóng dự án
-
-**5\. BẢNG TỪ ĐIỂN WBS CHI TIẾT (FULL WBS DICTIONARY)**
-
-Dưới đây là mô tả chi tiết cho **100% các gói công việc cấp thấp nhất (Work Packages)** trong cây WBS:
-
-**GIAI ĐOẠN 1: QUẢN LÝ DỰ ÁN (PMO)**
+### Quản lý dự án
 
 **Gói công việc 1.1.1.1: Xây dựng Kế hoạch Quản lý Dự án Tổng thể (PMP)**
 
 - **Mã WBS:** 1.1.1.1
 - **Mô tả công việc:** Lập Kế hoạch Quản lý Dự án tổng hợp đầy đủ các kế hoạch thành phần: phạm vi, tiến độ, chi phí, chất lượng, nhân sự, rủi ro và mua sắm.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú
 - **Sản phẩm đầu ra:** Document Kế hoạch Quản lý Dự án (PMP Document).
 - **Tiêu chí chấp nhận:** Được Ban Giám đốc phê duyệt; khớp 100% mục tiêu 8 tháng và ngân sách BAC 2.0 Tỷ VNĐ.
 
 **Gói công việc 1.1.1.2: Xây dựng Kế hoạch Quản lý Phạm vi & Từ điển WBS**
 
 - **Mã WBS:** 1.1.1.2
-- **Mô tả công việc:** Chi tiết hóa Tuyên bố Phạm vi, Ma trận TRM, phân rã Cây WBS 4 cấp và biên soạn Từ điển WBS toàn diện.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
+- **Mô tả công việc:** Chi tiết hóa Tuyên bố Phạm vi, Ma trận RTM, phân rã Cây WBS 4 cấp và biên soạn Từ điển WBS toàn diện.
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú
 - **Sản phẩm đầu ra:** Báo cáo Scope Management Plan & Full WBS Dictionary.
 - **Tiêu chí chấp nhận:** Phủ kín 100% các yêu cầu nghiệp vụ kho và tích hợp thiết bị IoT của Trà Tân Cương.
 
@@ -262,15 +200,15 @@ Dưới đây là mô tả chi tiết cho **100% các gói công việc cấp th
 
 - **Mã WBS:** 1.1.1.3
 - **Mô tả công việc:** Lập lịch trình làm việc chi tiết cho 8 nhân sự (50 Man-Month); xác định đường găng (Critical Path) hướng tới mốc Go-live Kho tổng Tháng 6; phân bổ ngân sách BAC 2.0 Tỷ VNĐ.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú
 - **Sản phẩm đầu ra:** Biểu đồ Gantt Chart & Bảng phân bổ chi phí chi tiết.
 - **Tiêu chí chấp nhận:** Bảo đảm mốc Go-live Tháng 6 và tổng chi phí không vượt quá 2.000.000.000 VNĐ.
 
 **Gói công việc 1.1.2.1: Tổ chức Họp Giao ban Định kỳ**
 
 - **Mã WBS:** 1.1.2.1
-- **Mô tả công việc:** Tổ chức các buổi họp giao ban tuần/tháng nội bộ nhóm 16 và họp báo cáo định kỳ với Ban Giám đốc Trà Tân Cương.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
+- **Mô tả công việc:** Tổ chức các buổi họp giao ban tuần/tháng của đội dự án và họp báo cáo định kỳ với Ban Giám đốc Trà Tân Cương.
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú
 - **Sản phẩm đầu ra:** Biên bản họp (Meeting Minutes) & Danh sách việc cần làm (Action Items).
 - **Tiêu chí chấp nhận:** 100% các cuộc họp có biên bản và được ghi nhận tiến độ đầy đủ.
 
@@ -278,15 +216,15 @@ Dưới đây là mô tả chi tiết cho **100% các gói công việc cấp th
 
 - **Mã WBS:** 1.1.2.2
 - **Mô tả công việc:** Theo dõi chi phí thực tế (AC) so với kế hoạch (PV), quản lý việc sử dụng Quỹ dự phòng rủi ro 143.000.000 VNĐ (7.15%).
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú
 - **Sản phẩm đầu ra:** Báo cáo theo dõi ngân sách hàng tháng.
-- **Tiêu chí chấp nhận:** Chi phí phát sinh không vượt quá hạn mức dự phòng rủi ro 7.15%.
+- **Tiêu chí chấp nhận:** Việc sử dụng dự phòng có căn cứ và phê duyệt theo kế hoạch chi phí/rủi ro; tổng chi phí trong ngân sách hai tỷ.
 
 **Gói công việc 1.1.2.3: Báo cáo Tiến độ Định kỳ cho Project Sponsor**
 
 - **Mã WBS:** 1.1.2.3
 - **Mô tả công việc:** Tổng hợp báo cáo tiến độ (Monthly Status Report) gửi Ban Giám đốc Doanh nghiệp Trà Tân Cương.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú
 - **Sản phẩm đầu ra:** Báo cáo tiến độ dự án.
 - **Tiêu chí chấp nhận:** Báo cáo gửi đúng hạn vào ngày cuối cùng của mỗi tháng.
 
@@ -294,9 +232,9 @@ Dưới đây là mô tả chi tiết cho **100% các gói công việc cấp th
 
 - **Mã WBS:** 1.1.3.1
 - **Mô tả công việc:** Tiếp nhận, ghi nhận và phân tích tác động của các phiếu CR về chi phí, tiến độ và kỹ thuật trước khi trình duyệt.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng / Solution Architect
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú / Solution Architect
 - **Sản phẩm đầu ra:** Nhật ký thay đổi (Change Log) & Báo cáo đánh giá tác động.
-- **Tiêu chí chấp nhận:** 100% các CR phải có chữ ký duyệt của PM hoặc Sponsor trước khi thực thi.
+- **Tiêu chí chấp nhận:** Thay đổi phạm vi/tiêu chí/đường cơ sở có phê duyệt của chủ đầu tư; sửa lỗi trong nội dung đã duyệt do PM điều phối, theo mục 1.2.
 
 **Gói công việc 1.1.3.2: Đảm bảo Chất lượng Quy trình (QA)**
 
@@ -306,23 +244,23 @@ Dưới đây là mô tả chi tiết cho **100% các gói công việc cấp th
 - **Sản phẩm đầu ra:** Báo cáo kiểm định chất lượng (QA Report).
 - **Tiêu chí chấp nhận:** Không vi phạm các quy trình quản lý chất lượng đã đề ra trong PMP.
 
-**GIAI ĐOẠN 2: M1 - PHÂN TÍCH YÊU CẦU & THIẾT KẾ KHIẾN TRÚC (THÁNG 1)**
+### M1 Phân tích và thiết kế (tháng 1)
 
 **Gói công việc 1.2.1.1: Khảo sát Luồng Nhập/Chế biến/Xuất tại Kho Tổng Thái Nguyên**
 
 - **Mã WBS:** 1.2.1.1
 - **Mô tả công việc:** Phỏng vấn Chị Đại diện Kho tổng và công nhân tại Kho tổng Thái Nguyên về quy trình thu mua búp tươi, chế biến, đóng gói và lưu kho.
-- **Người chịu trách nhiệm:** BA / Onsite Engineer
+- **Người chịu trách nhiệm:** BA / Solution Architect
 - **Sản phẩm đầu ra:** Sơ đồ dòng quy trình nghiệp vụ (Business Process Model) Kho tổng.
-- **Tiêu chí chấp nhận:** Được đại diện Kho tổng ký xác nhận phản ánh 100% thực tế.
+- **Tiêu chí chấp nhận:** Được đại diện Kho tổng ký xác nhận quy trình và nguồn dữ liệu khảo sát.
 
-**Gói công việc 1.2.1.2: Khảo sát Cổng Giao tiếp RS232 Trạm Cân, Máy in Zebra & Máy Chấm công**
+**Gói công việc 1.2.1.2: Khảo sát Cổng Giao tiếp RS232 Trạm Cân, Máy in & Máy Chấm công**
 
 - **Mã WBS:** 1.2.1.2
-- **Mô tả công việc:** Đo đạc cổng kết nối Serial COM của 03 Trạm cân RS232, 04 Máy in Zebra, 08 Máy quét QR và 04 Máy chấm công.
-- **Người chịu trách nhiệm:** RS232 Engineer / Onsite Engineer
-- **Sản phẩm đầu ra:** Báo cáo khảo sát phần cứng & Bảng thông số kỹ thuật Baud Rate/COM Port.
-- **Tiêu chí chấp nhận:** Xác định chính xác giao thức ASCII/Serial để lập trình driver.
+- **Mô tả công việc:** Thu thập đặc tả kết nối của bốn cân RS232, bốn máy in, tám máy quét và ba máy chấm công theo 01/02; xác nhận dải cân, độ chia và nguồn số đo. BA/Tech Lead khảo sát tháng 1; kỹ sư RS232 kiểm bộ mẫu từ tháng 2.
+- **Người chịu trách nhiệm:** Solution Architect / BA
+- **Sản phẩm đầu ra:** Báo cáo khảo sát phần cứng & Bảng thông số giao thức thiết bị.
+- **Tiêu chí chấp nhận:** Danh mục, dải sử dụng và giao thức thiết bị được xác nhận trong SRS; tài sản doanh nghiệp cung cấp được đối chiếu khi khảo sát.
 
 **Gói công việc 1.2.1.3: Thu thập Biểu mẫu Excel Dữ liệu Cũ & Định mức BOM**
 
@@ -336,181 +274,205 @@ Dưới đây là mô tả chi tiết cho **100% các gói công việc cấp th
 
 - **Mã WBS:** 1.2.2.1
 - **Mô tả công việc:** Biên soạn tài liệu chi tiết use-case cho 6 vai trò: Lãnh đạo, Quản lý kho, Thủ kho, Công nhân, Kế toán kho, Tài xế/Logistics.
-- **Người chịu trách nhiệm:** BA / Devs
+- **Người chịu trách nhiệm:** BA / Solution Architect
 - **Sản phẩm đầu ra:** Tài liệu Đặc tả Yêu cầu Phần mềm SRS (Functional SRS).
-- **Tiêu chí chấp nhận:** Mô tả đầy đủ 100% các luồng thao tác trên hệ thống.
+- **Tiêu chí chấp nhận:** SRS mô tả các nhóm yêu cầu 01–04 và luồng thao tác của sáu vai trò, được chủ đầu tư xác nhận.
 
-**Gói công việc 1.2.2.2: Thống nhất Chuẩn Giao tiếp RS232/COM & In Tem Zebra**
+**Gói công việc 1.2.2.2: Thống nhất Chuẩn Giao tiếp RS232/COM & In Tem**
 
 - **Mã WBS:** 1.2.2.2
-- **Mô tả công việc:** Viết tài liệu đặc tả phi chức năng: chuẩn đọc dữ liệu cân không trễ, tốc độ in tem giây/sản phẩm, cơ chế đệm dữ liệu Offline.
-- **Người chịu trách nhiệm:** RS232 Engineer / Solution Architect
+- **Mô tả công việc:** Đặc tả yêu cầu phi chức năng: dải cân/độ chia, sai số cân <0,1%, thời gian tạo và in tem <2 giây/sản phẩm, định dạng tem và cơ chế đệm dữ liệu ngoại tuyến. Kỹ sư RS232 tiếp nhận, kiểm mẫu từ tháng 2.
+- **Người chịu trách nhiệm:** Solution Architect / BA
 - **Sản phẩm đầu ra:** Tài liệu SRS phần Phi chức năng & Chuẩn phần cứng.
-- **Tiêu chí chấp nhận:** Thống nhất các chỉ số sai số cân và tốc độ in tem s.
+- **Tiêu chí chấp nhận:** Thông số phần cứng và tiêu chí AC-01/AC-02 được xác nhận trong SRS.
 
 **Gói công việc 1.2.3.1: Thiết kế Kiến trúc Web App trên Máy trạm Windows**
 
 - **Mã WBS:** 1.2.3.1
-- **Mô tả công việc:** Thiết kế mô hình kiến trúc phần mềm (SAD), mô hình giao tiếp giữa Web Client, Local Service kết nối RS232 và CSDL Server.
+- **Mô tả công việc:** Thiết kế mô hình kiến trúc phần mềm (SAD), giao tiếp Web Client, Local Service RS232 và CSDL Server; chuẩn bị môi trường phát triển/kiểm thử từ gói cloud 02. Tech Lead phụ trách tháng 1, Backend tiếp nhận từ tháng 2.
 - **Người chịu trách nhiệm:** Solution Architect
-- **Sản phẩm đầu ra:** Tài liệu Thiết kế Kiến trúc Hệ thống (SAD).
-- **Tiêu chí chấp nhận:** Tương thích hoàn toàn với hệ điều hành Windows trên máy trạm tại 3 kho.
+- **Sản phẩm đầu ra:** Tài liệu Thiết kế Kiến trúc Hệ thống (SAD) và môi trường phát triển/kiểm thử.
+- **Tiêu chí chấp nhận:** Kiến trúc tương thích Windows tại ba kho; môi trường phát triển/kiểm thử sẵn sàng cho giai đoạn phát triển.
 
 **Gói công việc 1.2.3.2: Thiết kế CSDL Đồng bộ 3 Kho & Cơ chế Đệm Dữ liệu Offline**
 
 - **Mã WBS:** 1.2.3.2
-- **Mô tả công việc:** Thiết kế ERD CSDL quan hệ, thiết lập bảng lưu trữ mã lô, vị trí Zone/Bin/Rack và cơ chế đệm dữ liệu khi mất kết nối Internet.
-- **Người chịu trách nhiệm:** Solution Architect / Devs
+- **Mô tả công việc:** Thiết kế ERD CSDL quan hệ, bảng mã lô/vị trí/nghiệp vụ và cơ chế đệm dữ liệu khi mất Internet; kiến trúc lưu trữ và đồng bộ được xác định trong SAD theo yêu cầu offline của SRS.
+- **Người chịu trách nhiệm:** Solution Architect
 - **Sản phẩm đầu ra:** File thiết kế CSDL (Database Schema Design).
-- **Tiêu chí chấp nhận:** Đảm bảo khả năng mở rộng đồng bộ cho 3 kho mà không gây xung đột mã lô.
+- **Tiêu chí chấp nhận:** CSDL phục vụ đồng bộ ba kho, xử lý trùng/xung đột mã lô và đáp ứng phạm vi hoạt động ngoại tuyến đã xác nhận.
 
 **Gói công việc 1.2.3.3: Thiết kế Giao diện (UI/UX) cho Thủ kho, Công nhân & Lãnh đạo**
 
 - **Mã WBS:** 1.2.3.3
 - **Mô tả công việc:** Thiết kế Wireframe/Prototype giao diện Dashboard KPI, màn hình cân-in tem nút bấm to cho công nhân, màn hình quét QR cho thủ kho.
-- **Người chịu trách nhiệm:** BA / UI-UX Designer
+- **Người chịu trách nhiệm:** BA / Solution Architect
 - **Sản phẩm đầu ra:** Bộ thiết kế Figma/UI Prototype.
-- **Tiêu chí chấp nhận:** Giao diện đơn giản, công nhân thao tác cân/in tem không quá 2 bước.
+- **Tiêu chí chấp nhận:** Giao diện đơn giản, công nhân thao tác cân/in tem không quá hai bước; bản thiết kế được đầu mối nghiệp vụ xác nhận.
 
-**GIAI ĐOẠN 3: M2 - PHÁT TRIỂN PHẦN MỀM LÕI & IOT RS232 (THÁNG 2 - THÁNG 4)**
+### M2 Phát triển và kiểm thử (tháng 2–4)
 
 **Gói công việc 1.3.1.1: Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack**
 
 - **Mã WBS:** 1.3.1.1
-- **Mô tả công việc:** Viết mã nguồn module Nhập kho, Xuất kho, Điều chuyển và sơ đồ định vị vị trí lưu trữ theo ô/kệ (Zone/Bin/Rack).
+- **Mô tả công việc:** Phát triển danh mục trà/nguồn gốc/ngày/hạn/quy cách, tự sinh Batch ID, ghi kết quả chất lượng lô, nhập–xuất–tồn/kiểm kê/điều chuyển và vị trí lưu trữ theo 01.
 - **Người chịu trách nhiệm:** Devs
 - **Sản phẩm đầu ra:** Module Quản lý Kho Lõi (Core WMS).
-- **Tiêu chí chấp nhận:** Định vị chuẩn xác vị trí lô trà trên sơ đồ kho.
+- **Tiêu chí chấp nhận:** FR-01/FR-12 đạt AC-03, mã lô không trùng, số lượng/đơn vị/vị trí khớp tập đối soát.
 
 **Gói công việc 1.3.1.2: Lập trình Thuật toán Xuất kho Ưu tiên FEFO**
 
 - **Mã WBS:** 1.3.1.2
-- **Mô tả công việc:** Viết thuật toán gợi ý xuất kho tự động ưu tiên các lô trà có hạn sử dụng gần nhất (First Expired, First Out).
+- **Mô tả công việc:** Gợi ý xuất ưu tiên lô còn hạn, được phép xuất có ngày hết hạn gần nhất theo 04.
 - **Người chịu trách nhiệm:** Devs
 - **Sản phẩm đầu ra:** Module xử lý FEFO Logic.
-- **Tiêu chí chấp nhận:** Gợi ý xuất kho chính xác 100% theo ngày hết hạn của mã lô.
+- **Tiêu chí chấp nhận:** Đạt AC-03: đúng thứ tự lô còn hạn và không gợi ý xuất lô hết hạn trong tập kiểm.
 
 **Gói công việc 1.3.2.1: Lập trình Công thức Quy đổi BOM theo Độ ẩm & Hao hụt Chè**
 
 - **Mã WBS:** 1.3.2.1
-- **Mô tả công việc:** Lập trình công thức quy đổi khối lượng trà búp tươi sang thành phẩm dựa trên chỉ số độ ẩm đo được và tính toán tỷ lệ hao hụt.
+- **Mô tả công việc:** Lập trình công thức quy đổi khối lượng trà búp tươi sang thành phẩm và tỷ lệ hao hụt theo độ ẩm trà, dùng công thức/số đo do doanh nghiệp xác nhận.
 - **Người chịu trách nhiệm:** Devs / BA
 - **Sản phẩm đầu ra:** Module BOM & Processing Loss.
 - **Tiêu chí chấp nhận:** Tính toán chính xác định mức chế biến trà theo công thức đã phê duyệt.
 
-**Gói công việc 1.3.2.2: Lập trình Cảnh báo Tồn kho Dưới ngưỡng & Báo cáo Tuổi hàng (Aging)**
+**Gói công việc 1.3.2.2: Lập trình Cảnh báo Tồn kho Dưới ngưỡng, Cận hạn/Hết hạn & Báo cáo Tuổi hàng (Aging)**
 
 - **Mã WBS:** 1.3.2.2
-- **Mô tả công việc:** Viết module gửi thông báo cảnh báo tự động khi số lượng trà trong kho rơi xuống dưới ngưỡng an toàn và lập báo cáo thời gian lưu kho của từng lô chè.
+- **Mô tả công việc:** Phát triển cảnh báo tồn dưới ngưỡng, cận hạn/hết hạn và báo cáo tuổi hàng theo ngưỡng/ngày được xác nhận trong SRS.
 - **Người chịu trách nhiệm:** Devs
 - **Sản phẩm đầu ra:** Module Cảnh báo & Aging Report.
-- **Tiêu chí chấp nhận:** Cảnh báo hiển thị thời gian thực trên màn hình Quản lý kho.
+- **Tiêu chí chấp nhận:** Cảnh báo tồn dưới ngưỡng, cận hạn/hết hạn và báo cáo tuổi hàng đúng tham số SRS theo AC-03.
+
+**Gói công việc 1.3.2.3: Phát triển nhật ký nhiệt độ và độ ẩm môi trường**
+
+- **Mã WBS:** 1.3.2.3
+- **Mô tả công việc:** Nhập, lưu và tra cứu thủ công nhiệt độ/độ ẩm môi trường từ thiết bị doanh nghiệp; ghi kho, khu vực, thời điểm và người nhập.
+- **Người chịu trách nhiệm:** Devs / BA
+- **Sản phẩm đầu ra:** Module nhật ký môi trường kho.
+- **Tiêu chí chấp nhận:** Nhật ký môi trường đủ trường dữ liệu, tra cứu theo kho/thời điểm và thực hiện theo quyền người dùng.
 
 **Gói công việc 1.3.3.1: Lập trình Service Kết nối RS232 Đọc Dữ liệu Cân Tự động**
 
 - **Mã WBS:** 1.3.3.1
-- **Mô tả công việc:** Lập trình Windows Service chạy ẩn nhận dữ liệu chuỗi từ 03 trạm cân RS232, tự động điền chỉ số trọng lượng vào ứng dụng Web mà không cần gõ tay.
+- **Mô tả công việc:** Phát triển dịch vụ cục bộ nhận dữ liệu từ bốn cân RS232 theo trạm của 02, chuyển số/đơn vị/trạng thái hợp lệ vào WMS.
 - **Người chịu trách nhiệm:** RS232 Engineer
 - **Sản phẩm đầu ra:** Windows Service IoT RS232 Connector.
-- **Tiêu chí chấp nhận:** Đọc dữ liệu liên tục không gián đoạn, sai số truyền nhận .
+- **Tiêu chí chấp nhận:** Giá trị, đơn vị và trạng thái WMS khớp dữ liệu hợp lệ từ cân; kết quả nghiệm thu đáp ứng AC-01.
 
-**Gói công việc 1.3.3.2: Lập trình Module Tạo Mã QR & Điều khiển Máy in Tem Zebra**
+**Gói công việc 1.3.3.2: Lập trình Module Tạo Mã QR & Điều khiển Máy in Tem**
 
 - **Mã WBS:** 1.3.3.2
-- **Mô tả công việc:** Lập trình thuật toán sinh mã QR chứa thông tin mã lô, ngày đóng gói, trọng lượng; truyền lệnh in đến 04 máy in tem Zebra.
+- **Mô tả công việc:** Tạo QR/tem theo dữ liệu lô/ngày/trọng lượng đã xác nhận, kết nối bốn máy in theo giao thức tương thích; chứng từ văn phòng dùng máy in sẵn có hoặc đầu ra PDF theo SRS.
 - **Người chịu trách nhiệm:** RS232 Engineer
-- **Sản phẩm đầu ra:** Module QRCode & Zebra Printer Driver Integration.
-- **Tiêu chí chấp nhận:** Tem QR in ra sắc nét, tốc độ xử lý và in giây/sản phẩm.
+- **Sản phẩm đầu ra:** Module QRCode & Printer Driver Integration.
+- **Tiêu chí chấp nhận:** Tem QR đúng nội dung, quét lại được; thời gian tạo và in <2 giây/sản phẩm theo AC-02.
 
 **Gói công việc 1.3.3.3: Lập trình Tích hợp Máy quét QR & Máy chấm công**
 
 - **Mã WBS:** 1.3.3.3
-- **Mô tả công việc:** Viết module nhận diện dữ liệu từ 08 Máy quét QR kiểm kê và kết nối dữ liệu điểm danh công nhân từ 04 Máy chấm công.
+- **Mô tả công việc:** Tích hợp tám scanner và ba máy chấm công do doanh nghiệp cung cấp theo đặc tả; đối soát dữ liệu chấm công với ca làm việc.
 - **Người chịu trách nhiệm:** Devs / RS232 Engineer
 - **Sản phẩm đầu ra:** Sub-module Barcode Scanner & Timekeeper Sync.
-- **Tiêu chí chấp nhận:** Quét mã QR chính xác 100%; dữ liệu chấm công đồng bộ theo ca làm việc.
+- **Tiêu chí chấp nhận:** FR-05/FR-06 đạt AC-03; không lẫn dữ liệu nhân viên, không nhập trùng sau đồng bộ.
 
-**Gói công việc 1.3.3.4: Lập trình Công cụ Import/Export Danh mục Chè từ Excel**
+**Gói công việc 1.3.3.4: Lập trình Công cụ Import/Export Danh mục và Tồn đầu kỳ từ Excel**
 
 - **Mã WBS:** 1.3.3.4
-- **Mô tả công việc:** Viết công cụ cho phép tải file Excel danh mục trà tươi, nhà vườn, giá vốn nhập thẳng vào CSDL.
+- **Mô tả công việc:** Cung cấp công cụ nhập/xuất danh mục trà/nhà cung cấp/bao bì, lô và tồn đầu kỳ theo mẫu Excel đã xác nhận.
 - **Người chịu trách nhiệm:** Devs
 - **Sản phẩm đầu ra:** Tool Import/Export Excel.
-- **Tiêu chí chấp nhận:** Báo lỗi chi tiết dòng/cột nếu file Excel sai định dạng.
+- **Tiêu chí chấp nhận:** Báo lỗi dòng/cột sai định dạng; mã lô, đơn vị và số lượng nhập khớp dữ liệu đối soát, dữ liệu nhập lại được kiểm tra trùng.
 
 **Gói công việc 1.3.4.1: Lập trình Dashboard KPI, Báo cáo Doanh thu & Giá vốn cho Lãnh đạo**
 
 - **Mã WBS:** 1.3.4.1
-- **Mô tả công việc:** Lập trình giao diện Dashboard báo cáo KPI xuất nhập kho, tỷ lệ hao hụt chè, doanh thu xuất kho và biểu đồ giá vốn cho Ban Lãnh đạo.
+- **Mô tả công việc:** Phát triển Dashboard và các báo cáo nhập–xuất–tồn, Aging, hao hụt, doanh thu/giá vốn, bán chạy/tồn lâu theo RTM.
 - **Người chịu trách nhiệm:** Devs / Solution Architect
 - **Sản phẩm đầu ra:** Module Executive Dashboard.
-- **Tiêu chí chấp nhận:** Biểu đồ trực quan, số liệu cập nhật tự động theo thời gian thực.
+- **Tiêu chí chấp nhận:** FR-08/FR-13 đạt AC-03, bộ lọc và số tổng khớp tập đối soát.
 
 **Gói công việc 1.3.4.2: Lập trình Module Quản lý Nhà cung cấp, Kế toán Kho & Tài xế**
 
 - **Mã WBS:** 1.3.4.2
-- **Mô tả công việc:** Xây dựng module quản lý công nợ nhà cung cấp trà búp tươi, chi phí vật tư bao bì cho Kế toán kho và xác nhận biên bản giao nhận hàng cho Tài xế.
+- **Mô tả công việc:** Phát triển nhà cung cấp/lịch sử nhập, đơn hàng xuất/trạng thái vận chuyển; chi phí nguyên liệu/đóng gói, công nợ và phí vận hành do người có quyền nhập hoặc lấy từ giao dịch. Logistics/đầu mối kho cập nhật biên bản giao nhận trên máy Windows.
 - **Người chịu trách nhiệm:** Devs
 - **Sản phẩm đầu ra:** Module Partner, Accounting & Transport Management.
-- **Tiêu chí chấp nhận:** Quản lý chính xác công nợ và trạng thái các chuyến xe điều chuyển giữa 3 kho.
+- **Tiêu chí chấp nhận:** Quản lý chính xác công nợ và trạng thái giao nhận/điều chuyển; dữ liệu tài chính khớp tập đối soát theo AC-03.
+
+**Gói công việc 1.3.4.3: Phát triển lịch ca và phân quyền vai trò**
+
+- **Mã WBS:** 1.3.4.3
+- **Mô tả công việc:** Quản lý ca làm việc và quyền thao tác/tra cứu theo sáu nhóm người dùng; liên kết dữ liệu chấm công từ module đã có.
+- **Người chịu trách nhiệm:** Devs / BA
+- **Sản phẩm đầu ra:** Module lịch ca và phân quyền.
+- **Tiêu chí chấp nhận:** Lịch ca và dữ liệu chấm công khớp đối soát; mỗi vai trò thực hiện đúng quyền thao tác/tra cứu.
+
+**Gói công việc 1.3.4.4: Phát triển danh mục tài sản dụng cụ và vật tư**
+
+- **Mã WBS:** 1.3.4.4
+- **Mô tả công việc:** Quản lý danh mục kệ/khu vực, máy móc, dụng cụ và vật tư bao bì/tem theo yêu cầu 01.
+- **Người chịu trách nhiệm:** Devs / BA
+- **Sản phẩm đầu ra:** Module danh mục tài sản/dụng cụ/vật tư.
+- **Tiêu chí chấp nhận:** FR-11 đạt AC-03: nhập/tra cứu/cập nhật theo quyền và dữ liệu đối soát.
 
 **Gói công việc 1.3.5.1: Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App**
 
 - **Mã WBS:** 1.3.5.1
-- **Mô tả công việc:** Tiến hành Test giả lập dữ liệu cân truyền từ trạm cân RS232 về giao diện Web App.
+- **Mô tả công việc:** Kiểm thử luồng dữ liệu RS232 trên bộ mẫu từ tháng 3; nghiệm thu từng cân tại kho trước sử dụng, kết hợp kiểm lỗi kết nối và khôi phục.
 - **Người chịu trách nhiệm:** QA / RS232 Engineer
 - **Sản phẩm đầu ra:** Báo cáo Integration Test - RS232 Data Flow.
-- **Tiêu chí chấp nhận:** Sai số cân ; không bị đứt kết nối khi cân liên tục 100 lần.
+- **Tiêu chí chấp nhận:** Sai số cân <0,1% theo AC-01; dữ liệu cân/WMS khớp; có hồ sơ kết quả và kiểm lại lỗi.
 
-**Gói công việc 1.3.5.2: Kiểm thử Tốc độ In Tem Zebra & Thuật toán FEFO/BOM**
+**Gói công việc 1.3.5.2: Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM**
 
 - **Mã WBS:** 1.3.5.2
-- **Mô tả công việc:** Kiểm thử hiệu năng in tem QR Zebra và tính chính xác của công thức quy đổi BOM, quy tắc FEFO.
+- **Mô tả công việc:** Kiểm thử hiệu năng in tem, FEFO/BOM và các chức năng RTM; nghiệm thu từng máy in trước sử dụng tại kho.
 - **Người chịu trách nhiệm:** QA / Devs
 - **Sản phẩm đầu ra:** Báo cáo Integration Test - Performance & Business Logic.
-- **Tiêu chí chấp nhận:** Thời gian in tem s; tính toán BOM và FEFO đạt chính xác 100%.
+- **Tiêu chí chấp nhận:** Thời gian tạo và in tem <2 giây/sản phẩm theo AC-02; chức năng và dữ liệu đối soát đáp ứng AC-03.
 
-**GIAI ĐOẠN 4: M3 & M4 - TRIỂN KHAI & GO-LIVE KHO TỔNG THÁI NGUYÊN (THÁNG 5 - THÁNG 6)**
+### M3–M4 Triển khai và vận hành kho tổng (tháng 5–6)
 
-**Gói công việc 1.4.1.1: Lắp đặt PC, Trạm Cân RS232, Máy in Zebra, Máy quét tại Kho Tổng**
+**Gói công việc 1.4.1.1: Lắp đặt PC, Trạm Cân RS232, Máy in, Máy quét tại Kho Tổng**
 
 - **Mã WBS:** 1.4.1.1
-- **Mô tả công việc:** Vận chuyển, lắp đặt phần cứng (01 PC Windows, 01 Trạm cân RS232, 02 Máy in Zebra, 04 Máy quét QR, 02 Máy chấm công) tại Kho tổng Thái Nguyên.
+- **Mô tả công việc:** Lắp hai PC, hai cân RS232, hai máy in và bốn scanner mua mới tại kho tổng; kết nối một máy chấm công sẵn có và các đầu cuối văn phòng do doanh nghiệp cung cấp.
 - **Người chịu trách nhiệm:** Onsite Engineer / RS232 Engineer
 - **Sản phẩm đầu ra:** Hạ tầng phần cứng hoàn chỉnh tại Kho tổng Thái Nguyên.
-- **Tiêu chí chấp nhận:** Tất cả thiết bị lên nguồn, kết nối thông suốt với mạng và phần mềm.
+- **Tiêu chí chấp nhận:** Danh mục/vị trí khớp 02, phụ kiện và nguồn tài sản sẵn có được xác nhận; kết nối/cấu hình LAN–ngoại vi–WMS thông suốt, đạt bộ kiểm trước vận hành.
 
-**Gói công việc 1.4.1.2: Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng Thử nghiệm**
+**Gói công việc 1.4.1.2: Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng**
 
 - **Mã WBS:** 1.4.1.2
-- **Mô tả công việc:** Lập tài liệu Test Case UAT và hướng dẫn trực tiếp Chị Đại diện Kho tổng, thủ kho, công nhân Thái Nguyên thao tác thử nghiệm.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng / BA / Onsite Engineer
-- **Sản phẩm đầu ra:** Kịch bản UAT & Biên bản UAT Nội bộ Kho tổng.
-- **Tiêu chí chấp nhận:** Được đại diện người dùng Kho tổng ký nghiệm thu UAT.
+- **Mô tả công việc:** Lập kịch bản UAT, hướng dẫn người dùng thử nghiệm và đào tạo thao tác vận hành tại kho tổng trước go-live. BA bàn giao SOP/User Manual cho Onsite/PM trước cuối tháng 5.
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú / BA / Onsite Engineer
+- **Sản phẩm đầu ra:** Kịch bản/biên bản UAT Kho tổng, tài liệu hướng dẫn, danh sách và kết quả thực hành của người học.
+- **Tiêu chí chấp nhận:** Đại diện Kho tổng xác nhận UAT; người dùng được đào tạo trước vận hành, có hồ sơ thực hành theo AC-04.
 
 **Gói công việc 1.4.1.3: Khởi tạo Dữ liệu Danh mục Trà Ban đầu từ File Excel**
 
 - **Mã WBS:** 1.4.1.3
-- **Mô tả công việc:** Sử dụng công cụ Import để đưa danh mục trà tươi, nhà vườn, danh mục bao bì ban đầu vào CSDL Kho tổng.
+- **Mô tả công việc:** Kiểm/import danh mục trà/nhà cung cấp/bao bì, lô và tồn đầu kỳ từ Excel chuẩn hóa của doanh nghiệp vào môi trường chạy thử; đối soát trước chuyển production.
 - **Người chịu trách nhiệm:** Onsite Engineer / BA
 - **Sản phẩm đầu ra:** CSDL Kho tổng được khởi tạo đầy đủ dữ liệu ban đầu.
-- **Tiêu chí chấp nhận:** Dữ liệu khởi tạo khớp 100% với bảng đối soát của Doanh nghiệp.
+- **Tiêu chí chấp nhận:** TR-01 đạt AC-03; dữ liệu mở kho/lô/vị trí/đơn vị và số lượng khớp bảng doanh nghiệp xác nhận.
 
 **Gói công việc 1.4.2.1: Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế**
 
 - **Mã WBS:** 1.4.2.1
-- **Mô tả công việc:** Khóa dữ liệu kiểm thử, thực hiện chốt sổ tồn kho thực tế và chuyển sang môi trường Production tại Kho tổng.
-- **Người chịu trách nhiệm:** Solution Architect / Devs
-- **Sản phẩm đầu ra:** Hệ thống WMS Production sẵn sàng vận hành.
-- **Tiêu chí chấp nhận:** Dữ liệu tồn kho ban đầu chính xác, không còn dữ liệu rác từ quá trình UAT.
+- **Mô tả công việc:** Triển khai môi trường ứng dụng/CSDL production, cấu hình kết nối ngoại vi, kiểm sao lưu/khôi phục và chuyển danh mục/lô/tồn đầu kỳ đã đối soát; loại dữ liệu thử.
+- **Người chịu trách nhiệm:** Solution Architect / Backend Developer
+- **Sản phẩm đầu ra:** Môi trường production, dữ liệu mở kho, bản sao lưu và hướng dẫn vận hành đủ dùng.
+- **Tiêu chí chấp nhận:** Môi trường production và dữ liệu mở kho sẵn sàng theo AC-04; có hồ sơ thử khôi phục và đối soát.
 
-**Gói công việc 1.4.2.2: Đưa Kho Tổng vào Vận hành Chính thức Vụ Chè Cao điểm**
+**Gói công việc 1.4.2.2: Đưa Kho Tổng vào Vận hành Chính thức**
 
 - **Mã WBS:** 1.4.2.2
-- **Mô tả công việc:** Kích hoạt hệ thống chính thức (Go-live) tại Kho tổng Thái Nguyên phục vụ nhập chè tươi, đóng gói, lưu kho trong mùa vụ cao điểm.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng & Onsite Engineer
+- **Mô tả công việc:** Kích hoạt sử dụng chính thức sau khi dữ liệu, ngoại vi và người dùng đáp ứng AC-01–AC-04.
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú & Onsite Engineer
 - **Sản phẩm đầu ra:** Biên bản Xác nhận Go-live Kho Tổng Thái Nguyên.
-- **Tiêu chí chấp nhận:** **MỐC CỨNG - Phải hoàn thành đúng Tháng 6**; hệ thống vận hành thực tế không trễ, nghẽn.
+- **Tiêu chí chấp nhận:** Kho tổng vận hành thực tế chậm nhất 02/12/2027; có hồ sơ đạt, người dùng được đào tạo trước sử dụng và xác nhận của chủ đầu tư/đại diện kho.
 
 **Gói công việc 1.4.2.3: Onsite Hỗ trợ Kỹ thuật Trực tiếp tại Thái Nguyên**
 
@@ -518,151 +480,102 @@ Dưới đây là mô tả chi tiết cho **100% các gói công việc cấp th
 - **Mô tả công việc:** Túc trực trực tiếp tại Kho tổng Thái Nguyên trong 2 tuần đầu Go-live để xử lý sự cố phát sinh.
 - **Người chịu trách nhiệm:** Onsite Engineer / RS232 Engineer
 - **Sản phẩm đầu ra:** Báo cáo nhật ký hỗ trợ Go-live (Onsite Support Log).
-- **Tiêu chí chấp nhận:** Xử lý 100% sự cố kỹ thuật trong vòng 15 phút từ khi phát sinh.
+- **Tiêu chí chấp nhận:** Có đầu mối tiếp nhận, nhật ký sự cố, trạng thái xử lý và kết quả hỗ trợ.
 
-**GIAI ĐOẠN 5: M5 - TRIỂN KHAI 02 KHO CHI NHÁNH (THÁNG 7)**
+### M5 Triển khai hai chi nhánh (tháng 7)
 
 **Gói công việc 1.5.1.1: Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối**
 
 - **Mã WBS:** 1.5.1.1
-- **Mô tả công việc:** Vận chuyển, cài đặt 03 PC Windows, 02 Trạm cân RS232, 02 Máy in Zebra, 04 Máy quét QR, 02 Máy chấm công tại 02 Kho chi nhánh phân phối.
+- **Mô tả công việc:** Mỗi chi nhánh lắp một PC, một cân, một máy in và hai scanner mua mới; kết nối một máy chấm công sẵn có/kho. Tổng hai chi nhánh: hai PC, hai cân, hai máy in, bốn scanner, hai máy chấm công khách hàng cung cấp.
 - **Người chịu trách nhiệm:** Onsite Engineer
 - **Sản phẩm đầu ra:** Bàn giao hạ tầng phần cứng hoàn chỉnh tại 02 Kho chi nhánh.
-- **Tiêu chí chấp nhận:** Toàn bộ thiết bị kết nối thành công với máy trạm và mạng.
+- **Tiêu chí chấp nhận:** Danh mục khớp 02 và giả định 01; tại mỗi kho, AC-01/AC-02 và kết nối đầu cuối đạt trước sử dụng.
 
 **Gói công việc 1.5.2.1: Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline**
 
 - **Mã WBS:** 1.5.2.1
-- **Mô tả công việc:** Cấu hình đường truyền đồng bộ CSDL giữa 02 Chi nhánh với Kho tổng trung tâm; bật tính năng lưu dữ liệu Offline khi mất mạng.
+- **Mô tả công việc:** Cấu hình đồng bộ dữ liệu giữa hai chi nhánh và kho tổng theo SAD; bật đệm ngoại tuyến cho các nghiệp vụ được xác nhận trong SRS.
 - **Người chịu trách nhiệm:** Solution Architect / Devs
 - **Sản phẩm đầu ra:** Hệ thống CSDL Đồng bộ 3 Kho (Multi-site Database Sync).
-- **Tiêu chí chấp nhận:** Dữ liệu tự động đồng bộ bù ngay khi có kết nối Internet trở lại.
+- **Tiêu chí chấp nhận:** Dữ liệu được đồng bộ khi Internet khôi phục; số liệu khớp đối soát, xử lý trùng/xung đột theo AC-03.
 
 **Gói công việc 1.5.3.1: Đào tạo Thao tác Phần mềm cho Thủ kho & Nhân sự 2 Chi nhánh**
 
 - **Mã WBS:** 1.5.3.1
 - **Mô tả công việc:** Tổ chức các lớp hướng dẫn sử dụng phần mềm, quét mã QR kiểm kê, nhận hàng điều chuyển cho nhân sự tại 02 chi nhánh.
-- **Người chịu trách nhiệm:** Onsite Engineer / BA
+- **Người chịu trách nhiệm:** Onsite Engineer / PM
 - **Sản phẩm đầu ra:** Báo cáo kết quả đào tạo & Danh sách điểm danh.
-- **Tiêu chí chấp nhận:** 100% thủ kho và nhân sự 2 chi nhánh đạt bài kiểm tra thao tác thực hành.
+- **Tiêu chí chấp nhận:** Người dùng hai chi nhánh được đào tạo trước vận hành và đạt bài thực hành theo vai trò.
 
-**GIAI ĐOẠN 6: M6 - NGHIỆM THU TỔNG THỂ & ĐÓNG DỰ ÁN (THÁNG 8)**
+### M6 Tổng hợp nghiệm thu và bàn giao (tháng 8)
 
 **Gói công việc 1.6.1.1: Đo đạc Sai số Cân Tự động qua RS232**
 
 - **Mã WBS:** 1.6.1.1
-- **Mô tả công việc:** Tiến hành nghiệm thu kỹ thuật, đo đạc sai số thực tế khi cân trà tự động qua cổng RS232 tại 3 kho.
-- **Người chịu trách nhiệm:** RS232 Engineer / QA
+- **Mô tả công việc:** Tổng hợp hồ sơ nghiệm thu độ chính xác bốn cân tại ba kho; đo lại phần thiết bị/phần mềm thay đổi nếu có. Kỹ sư RS232 bàn giao đặc tả/hồ sơ trước cuối tháng 7.
+- **Người chịu trách nhiệm:** QA / Solution Architect
 - **Sản phẩm đầu ra:** Biên bản kiểm định Tiêu chí Cân tự động.
-- **Tiêu chí chấp nhận:** **Sai số cân tự động** .
+- **Tiêu chí chấp nhận:** Đủ hồ sơ nghiệm thu bốn cân theo AC-01; sai số cân <0,1% trong điều kiện đã xác nhận.
 
-**Gói công việc 1.6.1.2: Đo Thời gian Tạo & In Tem Zebra**
+**Gói công việc 1.6.1.2: Đo Thời gian Tạo & In Tem**
 
 - **Mã WBS:** 1.6.1.2
-- **Mô tả công việc:** Đo đạc tốc độ xử lý tạo mã QR và in tem nhãn Zebra thực tế trên dây chuyền.
-- **Người chịu trách nhiệm:** RS232 Engineer / QA
-- **Sản phẩm đầu ra:** Biên bản kiểm định Tiêu chí In tem Zebra.
-- **Tiêu chí chấp nhận:** **Thời gian in tem giây/sản phẩm**.
+- **Mô tả công việc:** Tổng hợp hồ sơ đo thời gian tạo/in tem của bốn máy; đo lại phần thay đổi nếu có. Kỹ sư RS232 bàn giao hồ sơ trước cuối tháng 7.
+- **Người chịu trách nhiệm:** QA / Solution Architect
+- **Sản phẩm đầu ra:** Biên bản kiểm định Tiêu chí In tem.
+- **Tiêu chí chấp nhận:** Đủ hồ sơ nghiệm thu bốn máy in theo AC-02; thời gian tạo và in <2 giây/sản phẩm.
 
 **Gói công việc 1.6.2.1: Hoàn thiện Bộ Tài liệu Dự án**
 
 - **Mã WBS:** 1.6.2.1
-- **Mô tả công việc:** Đóng gói toàn bộ bộ tài liệu: Đặc tả SRS, Thiết kế SAD, Quy trình thao tác chuẩn SOP và Sổ tay hướng dẫn sử dụng User Manual.
-- **Người chịu trách nhiệm:** BA / PM Nguyễn Hải Hưng
+- **Mô tả công việc:** Đóng gói SRS, SAD, SOP, User Manual và hướng dẫn vận hành/sao lưu. BA bàn giao tài liệu nghiệp vụ trước cuối tháng 5; PM/Onsite và Tech Lead/Backend cập nhật phần thuộc trách nhiệm của mình.
+- **Người chịu trách nhiệm:** PM / Onsite Engineer / Solution Architect
 - **Sản phẩm đầu ra:** Bộ hồ sơ tài liệu dự án hoàn chỉnh (Project Documentation Package).
-- **Tiêu chí chấp nhận:** Đầy đủ 4 bộ tài liệu chuẩn format, dễ đọc, dễ chuyển giao.
+- **Tiêu chí chấp nhận:** Đủ bộ tài liệu đúng phiên bản, dễ đọc và chuyển giao theo AC-04.
 
 **Gói công việc 1.6.3.1: Ký Biên bản UAT & Nghiệm thu Tổng thể với Project Sponsor**
 
 - **Mã WBS:** 1.6.3.1
 - **Mô tả công việc:** Tổ chức họp tổng kết với Ban Giám đốc Doanh nghiệp Trà Tân Cương, trình bày kết quả vận hành 3 kho và tiến hành ký Biên bản Nghiệm thu Tổng thể.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
+- **Người chịu trách nhiệm:** PM Bùi Hồng Phú
 - **Sản phẩm đầu ra:** Biên bản Nghiệm thu Tổng thể Dự án (Final Acceptance Sign-off).
-- **Tiêu chí chấp nhận:** Đủ chữ ký của Project Sponsor (Ban Giám đốc) và PM Nguyễn Hải Hưng.
+- **Tiêu chí chấp nhận:** Chủ đầu tư, đại diện các kho và PM xác nhận sản phẩm/bộ điều kiện AC-01–AC-04, theo trách nhiệm ở 04.
 
 **Gói công việc 1.6.3.2: Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án**
 
 - **Mã WBS:** 1.6.3.2
-- **Mô tả công việc:** Bàn giao bản quyền phần mềm, tài khoản quản trị CSDL, mã nguồn (Source code), giải ngân thanh toán tài chính và giải thể nhóm dự án.
-- **Người chịu trách nhiệm:** PM Nguyễn Hải Hưng
-- **Sản phẩm đầu ra:** Báo cáo Tổng kết Đóng Dự án (Project Closure Report).
-- **Tiêu chí chấp nhận:** Hoàn tất bàn giao tài sản, thanh toán hợp đồng, không còn khiếu nại hay tồn đọng rủi ro.
+- **Mô tả công việc:** Bàn giao phần mềm/mã nguồn, hồ sơ triển khai, CSDL, tài khoản quản trị, sao lưu/biên lai khôi phục và hướng dẫn vận hành cho đầu mối doanh nghiệp; xác nhận trách nhiệm chi phí sau tháng 8, hoàn tất thanh toán/đóng dự án. Bảo trì dài hạn là thỏa thuận riêng.
+- **Người chịu trách nhiệm:** PM / Solution Architect / Backend Developer
+- **Sản phẩm đầu ra:** Hồ sơ bàn giao vận hành và báo cáo đóng dự án.
+- **Tiêu chí chấp nhận:** TR-03 đạt AC-04, đầu mối doanh nghiệp ký nhận và trách nhiệm phí duy trì được ghi rõ, bàn giao toàn bộ chậm nhất 02/02/2028.
 
-6. XÁC NHẬN & KIỂM SOÁT PHẠM VI (SCOPE VALIDATION & CONTROL)
+## 6. Xác nhận và kiểm soát phạm vi
 
-6.1 Quy trình Nghiệm thu & Xác nhận Phạm vi (Scope Validation Process)
-Xác nhận phạm vi là quá trình nghiệm thu chính thức các sản phẩm bàn giao (Deliverables) từng phần và toàn phần giữa Đơn vị thi công, Người quản lý dự án (PM) với Đại diện Chủ đầu tư và Đại diện các kho sử dụng.
+### 6.1 Nghiệm thu theo đầu ra và mốc
 
-6.1.1 Quy trình 4 bước nghiệm thu sản phẩm bàn giao
-1. Bước 1: Kiểm định Chất lượng Nội bộ (Internal QA/QC Check)
-   * Trước mỗi mốc bàn giao 05 ngày, Bộ phận QA và PM tiến hành kiểm tra nội bộ toàn bộ tính năng phần mềm, kịch bản đệm dữ liệu Offline và đo đạc các tiêu chí kỹ thuật (sai số cân tự động qua RS232 < 0,1%, thời gian tạo và in tem Zebra < 2 giây/sản phẩm).
-2. Bước 2: Gửi Hồ sơ & Sản phẩm Bàn giao (Deliverable Submission)
-   * PM gửi Hồ sơ bàn giao (Mã nguồn, Tài liệu SRS, SAD, SOP, Sổ tay hướng dẫn sử dụng, Báo cáo kết quả kiểm thử nội bộ) cho Đại diện Chủ đầu tư và Đại diện các kho liên quan (Đại diện Kho tổng, Đại diện Kho chi nhánh 1 & 2).
-3. Bước 3: Đánh giá & Kiểm thử Chấp nhận Người dùng (UAT)
-   * Các nhóm người dùng trực tiếp (Lãnh đạo, Quản lý kho, Thủ kho, Công nhân chế biến/đóng gói, Kế toán kho, Nhân sự logistics/Tài xế) thực hiện thao tác kiểm thử thực tế trên giao diện máy trạm Windows và thiết bị IoT dưới sự hướng dẫn của Đội Kỹ thuật Onsite.
-4. Bước 4: Ký Biên bản Nghiệm thu Chính thức (Official Sign-off)
-   * Nếu sản phẩm đạt 100% tiêu chí chấp nhận đã quy định trong WBS Dictionary, Đại diện Chủ đầu tư, PM và Đại diện các kho tiến hành ký Biên bản Nghiệm thu Chuyển giao từng phần hoặc Biên bản Nghiệm thu Tổng thể.
+1. QA/PM kiểm nội bộ phần bàn giao theo RTM và AC-01–AC-04; lưu kết quả, lỗi và kiểm lại theo Test Plan.
+2. Đội dự án gửi sản phẩm và hồ sơ cho chủ đầu tư/đại diện kho liên quan, gồm kết quả kiểm, tài liệu và điểm chưa đạt nếu có.
+3. Người dùng thực hiện UAT theo vai trò và đối soát dữ liệu/thiết bị, gồm nhật ký môi trường nhập thủ công.
+4. Chủ đầu tư, PM và đại diện kho liên quan xác nhận bàn giao từng phần/tổng thể theo 04 sau khi các tiêu chí đạt; phần chưa đạt được sửa và kiểm lại.
 
-6.1.2 Bảng Danh mục Nghiệm thu Chi tiết theo 6 Mốc Tiến độ (Milestones)
+| Mốc | Hạn hoàn thành | Đầu ra | Điều kiện chấp nhận | Đầu mối xác nhận |
+| --- | --- | --- | --- | --- |
+| M1 | 02/07/2027, cuối tháng 1 | SRS/SAD, yêu cầu dải cân/tem, danh mục tài sản và phương án triển khai | RTM phủ 01–04; dải cân/độ chia, định dạng tem, tài sản sẵn có và phạm vi offline được xác nhận trong SRS/SAD | Chủ đầu tư/PM, đầu mối kho xác nhận nghiệp vụ |
+| M2 | 02/10/2027, cuối tháng 4 | Core WMS, kết nối ngoại vi và các chức năng bổ trợ trong RTM | AC-01/AC-02 trên bộ thiết bị mẫu; AC-03 trên dữ liệu đối soát theo Test Plan | PM/đầu mối kỹ thuật |
+| M3 | 02/11/2027, cuối tháng 5 | Kho tổng: 2 PC, 2 cân, 2 máy in, 4 scanner và 1 máy chấm công sẵn có; UAT/đào tạo | AC-01/AC-02 cho thiết bị kho tổng, AC-03 và đào tạo AC-04; dữ liệu mở kho đối soát | Đại diện kho tổng/PM |
+| M4 | 02/12/2027, chậm nhất cuối tháng 6 | Production và vận hành kho tổng | Môi trường, dữ liệu danh mục/lô/tồn, ngoại vi và người dùng sẵn sàng theo AC-04; kiểm lại delta nếu khác cấu hình đã đạt | Chủ đầu tư/đại diện kho tổng/PM |
+| M5 | 02/01/2028, cuối tháng 7 | Mỗi chi nhánh: 1 PC, 1 cân, 1 máy in, 2 scanner, 1 máy chấm công sẵn có; dữ liệu/đào tạo | AC-01/AC-02 từng thiết bị chi nhánh; AC-03 đồng bộ/ngoại tuyến; AC-04 đào tạo trước sử dụng | Hai đại diện chi nhánh/PM |
+| M6 | 02/02/2028, cuối tháng 8 | Toàn bộ phần mềm, dữ liệu, tài liệu và hồ sơ vận hành/bàn giao | Tổng hợp AC-01–AC-04, kiểm lại phần thay đổi; đầu mối nhận quản trị/phí duy trì được xác nhận | Chủ đầu tư/đại diện các kho/PM; đơn vị thi công bàn giao |
 
-| Mốc | Hạn hoàn thành | Sản phẩm bàn giao chính | Tiêu chí Nghiệm thu Chấp nhận (Acceptance Criteria) | Đầu mối Ký Phê duyệt |
-| :--- | :--- | :--- | :--- | :--- |
-| **M1** | **02/07/2027** (Cuối tháng 1) | Bộ tài liệu Đặc tả Yêu cầu Phần mềm (SRS) & Thiết kế Kiến trúc (SAD) | Phủ kín 100% use-case cho 6 nhóm người dùng; thiết kế CSDL đồng bộ 3 kho; khung bộ tài liệu SOP & User Manual. | Đại diện Chủ đầu tư & Người quản lý dự án (PM) |
-| **M2** | **02/10/2027** (Cuối tháng 4) | Phiên bản Phần mềm WMS Lõi, Service IoT RS232 & Driver In Zebra | Hoàn thành module Nhập/Xuất/Tồn, FEFO, BOM (độ ẩm/hao hụt); Service đọc cân RS232 mượt mà; module in tem Zebra đạt < 2s/sp. | PM & Đầu mối Đội kỹ thuật |
-| **M3** | **02/11/2027** (Cuối tháng 5) | Hạ tầng phần cứng & Kết quả UAT Nội bộ tại Kho tổng Thái Nguyên | Lắp đặt 01 máy trạm, 01 trạm cân RS232, 02 máy in Zebra, 04 máy quét QR, 02 máy chấm công; 100% UAT Test Cases PASSED. | Đại diện Kho tổng & PM |
-| **M4** | **02/12/2027** (**MỐC CỨNG** - Cuối tháng 6) | **Chính thức Go-live & Đưa Kho tổng Thái Nguyên vào vận hành thực tế** | Phần mềm chuyển sang môi trường Production; phục vụ trực tiếp vụ chè cao điểm; đọc cân/in tem trơn tru; import 100% CSDL từ Excel. | Đại diện Chủ đầu tư & Đại diện Kho tổng |
-| **M5** | **02/01/2028** (Cuối tháng 7) | Triển khai Phần cứng & Đồng bộ CSDL tại 02 Kho chi nhánh | Lắp đặt xong thiết bị tại 2 chi nhánh; cơ chế đệm dữ liệu Offline Mode & Tự động đồng bộ bù (Auto-resync) hoạt động chính xác. | Đại diện Kho chi nhánh 1, Đại diện Kho chi nhánh 2 & PM |
-| **M6** | **02/02/2028** (Cuối tháng 8) | Bàn giao Phần mềm Hoàn chỉnh, CSDL Đồng bộ 03 kho & Nghiệm thu Tổng thể | Sai số cân < 0,1%; thời gian in tem < 2s; bàn giao 100% tài liệu (SRS, SAD, SOP, User Manual); ký Biên bản Nghiệm thu Tổng thể & Đóng dự án. | Đại diện Chủ đầu tư, Đại diện Đơn vị thi công & PM |
+### 6.2 Kiểm soát thay đổi
 
----
+Áp dụng quy trình mục 1.2; Change Log ghi yêu cầu, tác động, người duyệt và phiên bản RTM/WBS/tiêu chí/kế hoạch đã cập nhật. Các đề xuất ngoài phạm vi được ghi nhận để xem xét thỏa thuận tiếp theo.
 
-6.2 Cơ chế Kiểm soát & Chống Phình đại Phạm vi (Scope Creep Control)
+Theo dõi biến động phạm vi bằng cách đối chiếu nội dung yêu cầu/sản phẩm bàn giao với đường cơ sở và các CR đã duyệt. Chi phí, tiến độ và nguồn lực chịu ảnh hưởng được cập nhật trong các kế hoạch tương ứng.
 
-Phình đại phạm vi (Scope Creep) là rủi ro lớn nhất làm trễ mốc Go-live Kho tổng (02/12/2027) và vượt Ngân sách phê duyệt (BAC = 2.000.000.000 VNĐ). Dự án áp dụng các nguyên tắc kiểm soát nghiêm ngặt:
+### Nguồn đối chiếu
 
-6.2.1 Nguyên tắc Kiểm soát Yêu cầu Phát sinh
-1. Nguyên tắc "Zero Unauthorized Changes" (Không tự ý thay đổi):
-   * Các lập trình viên và kỹ sư IoT tuyệt đối không tự ý tiếp nhận hoặc phát triển các tính năng theo yêu cầu truyền miệng từ nhân sự tại các nhà kho.
-   * Mọi yêu cầu thay đổi phải được cụ thể hóa bằng văn bản thông qua Phiếu Yêu cầu Thay đổi (Change Request - CR Form).
-2. Tuyên bố Rào cản Phạm vi (Out-of-Scope Enforcement):
-   * Kiên quyết từ chối thực hiện trong giai đoạn này các hạng mục ngoài phạm vi đã cam kết:
-     * *Không phát triển Ứng dụng Di động Native (iOS/Android).*
-     * *Không thi công kéo cáp mạng, sửa chữa hạ tầng điện/Internet tại các kho.*
-     * *Không tích hợp thiết bị định vị GPS cơ học cho xe tải logistics.*
-     * *Không thực hiện nhập liệu thủ công sổ sách lịch sử từ quá khứ.*
-3. Quản lý Danh sách Chờ Giai đoạn 2 (Backlog Management):
-   * Các đề xuất phát sinh hợp lý nhưng ngoài Tuyên bố Phạm vi ban đầu sẽ được PM ghi nhận vào **Danh sách Chờ (Product Backlog)** để xem xét xây dựng hợp đồng nâng cấp riêng sau khi dự án hoàn thành nghiệm thu tổng thể vào ngày 02/02/2028.
-
-6.2.2 Quy trình Xử lý Phiếu Yêu cầu Thay đổi (Change Request - CR)
-
-              [Đề xuất thay đổi mới từ Người dùng / Chủ đầu tư]
-                                     │
-                                     ▼
-                          [Lập Phiếu CR Form chuẩn]
-                                     │
-                                     ▼
-                   [PM & Đầu mối Kỹ thuật Đánh giá Tác động]
-                      ├── 1. Có trễ mốc Go-live 02/12/2027?
-                      ├── 2. Có vượt Ngân sách BAC 2.0 Tỷ VNĐ?
-                      └── 3. Có vượt Quỹ Dự phòng Rủi ro (143 triệu)?
-                                     │
-             ┌───────────────────────┴───────────────────────┐
-      (Có ảnh hưởng)                                  (Không ảnh hưởng)
-             │                                               │
-             ▼                                               ▼
-[Trình Đại diện Chủ đầu tư                     [PM Phê duyệt Thực thi]
-  Phê duyệt Bằng Văn bản]                                    │
-             │                                               │
-             └───────────────────────┬───────────────────────┘
-                                     │
-                                     ▼
-               [Cập nhật WBS, WBS Dictionary & Tiến độ Baseline]
-
-6.2.3 Bảng Chỉ số Đo lường Hiệu quả Kiểm soát Phạm vi (Scope KPIs)
-
-| Chỉ số KPI | Ngưỡng Mục tiêu | Phương pháp Đo lường & Công cụ |
-| :--- | :--- | :--- |
-| **Tỷ lệ biến động Phạm vi (Scope Variance)** | $0\%$ (Không phình đại) | So sánh số lượng Work Packages hoàn thành thực tế với WBS Baseline ban đầu. |
-| **Số lượng CR được phê duyệt** | $\le 3$ phiếu trong suốt dự án | Đánh giá qua Nhật ký Thay đổi (Change Log). |
-| **Tác động Chi phí từ CR** | $\le 143.000.000$ VNĐ | Nằm gọn trong Quỹ dự phòng rủi ro Contingency Reserve ($7,15\%$). |
-| **Tác động Tiến độ từ CR** | $0$ ngày | Không làm dời mốc Go-live Kho tổng (02/12/2027) và mốc Nghiệm thu (02/02/2028). |
+- [01 Mô tả](01-mo-ta-de-tai.md), [02 Dự toán](02-du-toan-kinh-phi.md), [03 Tôn chỉ cơ sở](03-ton-chi-du-an.md), [04 Tôn chỉ đầy đủ](04-ton-chi-du-an-day-du.md).
+- **Bài giảng Quản lý dự án phần mềm — Quản lý phạm vi dự án**, ThS. Ngô Tiến Đức, [tai-lieu/4-scope.pdf](tai-lieu/4-scope.pdf): trang 14 kế hoạch phạm vi; 16–19 yêu cầu/RTM/tuyên bố; 28–32 phân rã; 38 trình bày WBS theo pha; 39–41 nghiệm thu/kiểm soát/bài tập.
+- **Project Management Institute (2017), A Guide to the Project Management Body of Knowledge (PMBOK® Guide), Sixth Edition**: §5.2.3.2 RTM (trang 148–149); §5.3.3.1 tuyên bố phạm vi/tiêu chí chấp nhận (154–155); §5.4.3.1 WBS/Dictionary và quy tắc 100% (161–162); §8.1.3.1–8.1.3.2 kế hoạch/chỉ số chất lượng (286–287); §8.3.2.1/8.3.2.4 cỡ mẫu và kiểm thử (303). Số trang theo bản in.

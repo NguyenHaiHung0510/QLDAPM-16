@@ -2,7 +2,7 @@
 
 **Hệ thống Quản lý Kho Trà và Chuỗi cung ứng Tân Cương (WMS)**
 
-> Bài tập Nhóm 16. Biên soạn: Codex theo chỉ dẫn của người quản lý tài liệu ngày 07/09/2026; đọc chéo: các subagent T3. Trạng thái: bản đề xuất hoàn chỉnh, chờ nhóm duyệt. Căn cứ: ba ảnh viết tay đã nộp, mẫu 7 mục của giảng viên và tài liệu [01](01-mo-ta-de-tai.md), [02](02-du-toan-kinh-phi.md), [03](03-ton-chi-du-an.md). Tên công ty, địa chỉ và thông tin liên hệ được xây dựng cho tình huống giả định của bài tập, không xác nhận danh tính hay trụ sở thực tế.
+> Bản tôn chỉ dự án của Nhóm 16, cập nhật ngày 05/10/2026. Căn cứ: mẫu bảy mục của giảng viên, bản viết tay và tài liệu [01](01-mo-ta-de-tai.md), [02](02-du-toan-kinh-phi.md), [03](03-ton-chi-du-an.md). Tên tổ chức, địa chỉ và thông tin liên hệ dùng cho tình huống giả định của BTL.
 
 ## 1. Thông tin chung
 
@@ -20,7 +20,7 @@
 | Người đại diện | Nguyễn Đức Công |
 | Người quản lý dự án (PM) | Bùi Hồng Phú |
 | Điện thoại | 036 181 3636 |
-| Email | phu.bui@raumania.example |
+| Email | contact@raumania.com |
 
 ## 2. Mục tiêu của dự án
 
@@ -46,7 +46,7 @@ Thời gian dự án tính theo tháng kể từ ngày 03/06/2027: tháng thứ 
 | 4 | Hệ thống và thiết bị được lắp đặt tại kho tổng, hoàn thành chạy thử và kiểm thử chấp nhận của người dùng (UAT), kèm kết quả kiểm thử | 02/11/2027 — cuối tháng 5 |
 | 5 | Hệ thống chính thức vận hành tại kho tổng; người dùng kho tổng được hướng dẫn, đào tạo trước khi sử dụng | **02/12/2027 — cuối tháng 6** |
 | 6 | Hệ thống và thiết bị được triển khai tại 02 kho chi nhánh, kèm hướng dẫn và đào tạo sử dụng | 02/01/2028 — cuối tháng 7 |
-| 7 | Phần mềm hoàn chỉnh, dịch vụ kết nối phần cứng, cơ sở dữ liệu đồng bộ 03 kho; hạ tầng và thiết bị; bộ tài liệu kỹ thuật, quy trình thao tác, hướng dẫn sử dụng; kết quả đào tạo bổ sung và biên bản nghiệm thu tổng thể, bàn giao | **02/02/2028 — cuối tháng 8** |
+| 7 | Phần mềm hoàn chỉnh và mã nguồn, dịch vụ kết nối phần cứng, cơ sở dữ liệu đồng bộ 03 kho; hạ tầng và thiết bị; bộ tài liệu kỹ thuật, quy trình thao tác, hướng dẫn sử dụng; kết quả đào tạo bổ sung và biên bản nghiệm thu tổng thể, bàn giao | **02/02/2028 — cuối tháng 8** |
 
 ## 4. Tiêu chuẩn đánh giá sự thành công
 
@@ -59,7 +59,7 @@ Thời gian dự án tính theo tháng kể từ ngày 03/06/2027: tháng thứ 
 | Độ chính xác và tốc độ | Sai số cân tự động **< 0,1%**; thời gian in tem **< 2 giây/sản phẩm** |
 | Bàn giao | Người dùng được đào tạo; tài liệu và sản phẩm bàn giao đầy đủ; có biên bản nghiệm thu được đại diện chủ đầu tư, đại diện các kho và PM xác nhận |
 
-Cách đo sai số cân và thời gian in tem được thống nhất trong kế hoạch kiểm thử, giữ nguyên các ngưỡng trên.
+Hai chỉ số được định nghĩa tại tiêu chí AC-01/AC-02 của chương 2. Dải sử dụng của cân và định dạng tem được xác nhận trong SRS; phương pháp đo, tập dữ liệu và cỡ mẫu được lập trong kế hoạch chất lượng chương 9 trước nghiệm thu.
 
 ## 5. Vai trò, trách nhiệm của các bên liên quan chính
 
@@ -85,7 +85,9 @@ Cách đo sai số cân và thời gian in tem được thống nhất trong k�
 | 4 | Giao thiết bị chậm hoặc điện, Internet tại kho chưa sẵn sàng | Theo dõi lịch cung cấp thiết bị; kiểm tra điều kiện tại kho trước khi lắp đặt |
 | 5 | Người dùng không tham gia kiểm thử, đào tạo đúng lịch | Thống nhất lịch với quản lý kho; bố trí đầu mối tham gia và hướng dẫn trước khi vận hành |
 
-Giả định thực hiện: doanh nghiệp bố trí công nhân và thủ kho tham gia UAT đúng tiến độ; điện và Internet tại 03 kho ổn định; cân điện tử và máy in tem mua mới đạt chuẩn kết nối; dữ liệu cũ được cung cấp dưới dạng bảng tính Excel. Các điều kiện này được kiểm tra trong quá trình lập kế hoạch và triển khai.
+Giả định thực hiện: doanh nghiệp bố trí người dùng tham gia UAT/đào tạo, chuẩn bị điện/Internet và các tài sản sẵn có theo 01/02. Nhật ký nhiệt độ/độ ẩm kho và kết quả kiểm chất lượng trà dùng số đo của doanh nghiệp, nhập thủ công; phương án nhận dữ liệu không dây được đánh giá khi khảo sát và xử lý theo quy trình thay đổi phạm vi. Dữ liệu chuyển đổi gồm danh mục, lô và tồn đầu kỳ theo mẫu Excel đã đối soát; lịch sử giao dịch không mặc nhiên chuyển toàn bộ. Các điều kiện được kiểm trước triển khai.
+
+Gói cloud/VPS trong 02 bao phủ tám tháng dự án, gồm phát triển, kiểm thử và production. Tech Lead/Backend phụ trách triển khai, sao lưu/khôi phục và hướng dẫn vận hành; Onsite kết nối LAN, đầu cuối và ngoại vi, đào tạo trước go-live. Sau bàn giao tháng 8, doanh nghiệp nhận tài khoản và trách nhiệm vận hành/chi phí duy trì; bảo trì dài hạn xác định riêng. Máy chủ, cơ sở dữ liệu, tài liệu vận hành và kết quả bàn giao là đầu ra của triển khai; cấu hình kỹ thuật và lịch/chi phí chi tiết xác định trong các kế hoạch liên quan.
 
 ## 7. Ký phê duyệt của chủ đầu tư
 
