@@ -224,7 +224,7 @@ các cam kết của Công ty CP Công nghệ Raumania; vai trò này không thu
 **Phạm vi trách nhiệm**
 
 -   Tích hợp trạm cân qua RS232.
--   Tích hợp máy in Zebra và máy quét.
+-   Tích hợp máy in tem/mã vạch và máy quét theo giao thức xác nhận trong SRS.
 -   Kiểm tra protocol và khả năng tương thích thiết bị.
 -   Cấu hình thiết bị phục vụ triển khai.
 -   Hỗ trợ đo đạc sai số cân tự động qua RS232.
@@ -364,13 +364,13 @@ QA/QC bắt đầu tham gia từ T3.
 -   Phát triển các module nghiệp vụ.
 -   Tích hợp thiết bị.
 -   Tích hợp RS232.
--   Tích hợp máy in Zebra và máy quét.
+-   Tích hợp máy in tem/mã vạch và máy quét theo giao thức xác nhận trong SRS.
 -   Phát triển BOM/FEFO.
 -   Integration Test.
 
 **Mốc**
 
--   **M2 — 02/10/2027 (cuối T4):** hoàn thành phần mềm lõi, RS232, Zebra, BOM/FEFO.
+-   **M2 — 02/10/2027 (cuối T4):** hoàn thành phần mềm lõi, RS232, in tem/quét QR–barcode, BOM/FEFO.
 
 ### 5.3. Giai đoạn triển khai kho tổng -- T5--T6
 
@@ -388,7 +388,7 @@ BA tham gia đến hết T5; hoàn tất bàn giao tài liệu vào cuối T5 v�
 
 **Công việc**
 
--   Lắp đặt PC, trạm cân RS232, máy in Zebra và máy quét tại kho tổng.
+-   Lắp đặt PC, trạm cân RS232, máy in tem/mã vạch và máy quét tại kho tổng.
 -   Kiểm thử tích hợp.
 -   Đo đạc sai số cân.
 -   UAT nội bộ kho tổng.
@@ -481,7 +481,7 @@ của dự án.
 
   Tích hợp RS232          Hardware / IoT          Tech Lead, Backend, QA
 
-  Tích hợp Zebra / QR /   Hardware / IoT          Backend, Frontend, QA
+  Tích hợp in tem / QR /  Hardware / IoT          Backend, Frontend, QA
   Barcode                                         
 
   Integration Test        QA/QC                   Backend, Frontend,
@@ -497,8 +497,8 @@ của dự án.
   1.5.1.1 -- Lắp đặt tại  Onsite                  Hardware, Tech Lead, QA
   2 kho chi nhánh                                 
 
-  1.1.1 -- Đo đạc sai   Hardware / IoT          QA, Tech Lead
-  số cân RS232                                    
+  1.6.1.1 -- Tổng hợp     QA/QC / Tech Lead       PM
+  và kiểm lại hồ sơ cân
 
   UAT                     BA / QA                 PM, toàn đội liên quan
 
@@ -507,7 +507,7 @@ của dự án.
 
   Đào tạo                 BA / Onsite             QA, PM
 
-  1.3.2 -- Bàn giao,    PM                      Tech Lead, QA, Backend,
+  1.6.3.2 -- Bàn giao,   PM                      Tech Lead, QA, Backend,
   đóng gói mã nguồn và                            Onsite
   đóng dự án                                      
   -----------------------------------------------------------------------
@@ -536,7 +536,7 @@ của dự án.
 | Core WMS | A | C | C | R | R | I | C | I |
 | BOM/FEFO | A | C | R/C | R | C | I | C | I |
 | RS232 | C | A | C | C | I | R | C | C |
-| Zebra/QR/Barcode | C | A | C | C | C | R | C | R |
+| In tem / QR / Barcode | C | A | C | C | C | R | C | R |
 | Integration Test | C | C | C | R | R | R | A/R | C |
 | Lắp đặt kho tổng | A | C | I | I | I | R | C | R |
 | Đo sai số cân | C | A | I | C | I | R | R | C |
@@ -551,6 +551,22 @@ của dự án.
 RACI được sử dụng để xác định rõ trách nhiệm của từng thành viên đối với
 từng nhóm công việc, tránh tình trạng Work Package không có người chịu
 trách nhiệm hoặc có quá nhiều người cùng chịu trách nhiệm cuối cùng.
+
+**Phạm vi theo giai đoạn:** Bảng phân bổ ở mục 6 và RACI là tổng hợp trách
+nhiệm trong toàn dự án; từng phân công chỉ thực hiện trong kỳ huy động ở
+mục 4 và [02, mục II](02-du-toan-kinh-phi.md). BA tham gia UAT/đào tạo kho
+tổng trong T5, rồi bàn giao tài liệu; đợt chi nhánh T7 do QA/Onsite và đội
+còn huy động thực hiện, Onsite/PM đào tạo theo bộ tài liệu đã nhận. Việc
+tham vấn BA cho nghiệm thu, bàn giao hoặc đóng dự án phải thực hiện trước
+khi BA kết thúc T5; bộ tài liệu dùng ở T8 là đầu vào đã bàn giao, không phải
+tham vấn trực tiếp hoặc huy động BA thêm tháng.
+
+Hardware và QA kiểm cân/in tem trước khi sử dụng tại từng kho. Gói
+`1.6.1.1` ở T8 là tổng hợp hồ sơ và kiểm lại phần thay đổi, do QA/Tech Lead
+thực hiện theo [WBS Dictionary chương 2](BÁO%20CÁO%20QUẢN%20LÝ%20PHẠM%20VI%20DỰ%20ÁN.md);
+Hardware/Frontend bàn giao đặc tả, cấu hình và hồ sơ trước hết T7. Các
+trách nhiệm ở giai đoạn sau được thực hiện bởi người còn trong kỳ huy động,
+không tự kéo dài kỳ của BA, Hardware hoặc Frontend.
 
 ------------------------------------------------------------------------
 

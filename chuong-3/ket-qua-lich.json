@@ -1,0 +1,1438 @@
+{
+  "logical": {
+    "A01": {
+      "es": 0,
+      "ef": 5,
+      "release": 0,
+      "ls": 15,
+      "lf": 20,
+      "total_float": 15
+    },
+    "A02": {
+      "es": 0,
+      "ef": 5,
+      "release": 0,
+      "ls": 4,
+      "lf": 9,
+      "total_float": 4
+    },
+    "A03": {
+      "es": 5,
+      "ef": 8,
+      "release": 0,
+      "ls": 9,
+      "lf": 12,
+      "total_float": 4
+    },
+    "A04": {
+      "es": 5,
+      "ef": 8,
+      "release": 0,
+      "ls": 9,
+      "lf": 12,
+      "total_float": 4
+    },
+    "A05": {
+      "es": 8,
+      "ef": 13,
+      "release": 0,
+      "ls": 12,
+      "lf": 17,
+      "total_float": 4
+    },
+    "A06": {
+      "es": 8,
+      "ef": 12,
+      "release": 0,
+      "ls": 12,
+      "lf": 16,
+      "total_float": 4
+    },
+    "A07": {
+      "es": 12,
+      "ef": 16,
+      "release": 0,
+      "ls": 16,
+      "lf": 20,
+      "total_float": 4
+    },
+    "A08": {
+      "es": 13,
+      "ef": 16,
+      "release": 0,
+      "ls": 17,
+      "lf": 20,
+      "total_float": 4
+    },
+    "A09": {
+      "es": 16,
+      "ef": 18,
+      "release": 0,
+      "ls": 20,
+      "lf": 22,
+      "total_float": 4
+    },
+    "M1": {
+      "es": 18,
+      "ef": 18,
+      "release": 0,
+      "ls": 22,
+      "lf": 22,
+      "total_float": 4
+    },
+    "A10": {
+      "es": 22,
+      "ef": 25,
+      "release": 22,
+      "ls": 23,
+      "lf": 26,
+      "total_float": 1
+    },
+    "G1": {
+      "es": 22,
+      "ef": 23,
+      "release": 22,
+      "ls": 52,
+      "lf": 53,
+      "total_float": 30
+    },
+    "A24": {
+      "es": 43,
+      "ef": 48,
+      "release": 43,
+      "ls": 59,
+      "lf": 64,
+      "total_float": 16
+    },
+    "A11": {
+      "es": 23,
+      "ef": 35,
+      "release": 22,
+      "ls": 24,
+      "lf": 36,
+      "total_float": 1
+    },
+    "A21": {
+      "es": 25,
+      "ef": 34,
+      "release": 22,
+      "ls": 53,
+      "lf": 62,
+      "total_float": 28
+    },
+    "A12": {
+      "es": 35,
+      "ef": 39,
+      "release": 22,
+      "ls": 36,
+      "lf": 40,
+      "total_float": 1
+    },
+    "A22": {
+      "es": 34,
+      "ef": 41,
+      "release": 22,
+      "ls": 62,
+      "lf": 69,
+      "total_float": 28
+    },
+    "A25": {
+      "es": 48,
+      "ef": 53,
+      "release": 43,
+      "ls": 64,
+      "lf": 69,
+      "total_float": 16
+    },
+    "A13": {
+      "es": 39,
+      "ef": 45,
+      "release": 22,
+      "ls": 40,
+      "lf": 46,
+      "total_float": 1
+    },
+    "A23": {
+      "es": 41,
+      "ef": 47,
+      "release": 22,
+      "ls": 69,
+      "lf": 75,
+      "total_float": 28
+    },
+    "A14": {
+      "es": 45,
+      "ef": 49,
+      "release": 22,
+      "ls": 46,
+      "lf": 50,
+      "total_float": 1
+    },
+    "A26": {
+      "es": 53,
+      "ef": 59,
+      "release": 43,
+      "ls": 69,
+      "lf": 75,
+      "total_float": 16
+    },
+    "A15": {
+      "es": 49,
+      "ef": 52,
+      "release": 22,
+      "ls": 50,
+      "lf": 53,
+      "total_float": 1
+    },
+    "A16": {
+      "es": 52,
+      "ef": 56,
+      "release": 22,
+      "ls": 53,
+      "lf": 57,
+      "total_float": 1
+    },
+    "A17": {
+      "es": 56,
+      "ef": 63,
+      "release": 22,
+      "ls": 57,
+      "lf": 64,
+      "total_float": 1
+    },
+    "A18": {
+      "es": 63,
+      "ef": 67,
+      "release": 22,
+      "ls": 64,
+      "lf": 68,
+      "total_float": 1
+    },
+    "A19": {
+      "es": 67,
+      "ef": 70,
+      "release": 22,
+      "ls": 68,
+      "lf": 71,
+      "total_float": 1
+    },
+    "A20": {
+      "es": 70,
+      "ef": 74,
+      "release": 22,
+      "ls": 71,
+      "lf": 75,
+      "total_float": 1
+    },
+    "A27": {
+      "es": 74,
+      "ef": 80,
+      "release": 43,
+      "ls": 75,
+      "lf": 81,
+      "total_float": 1
+    },
+    "R2": {
+      "es": 80,
+      "ef": 84,
+      "release": 43,
+      "ls": 81,
+      "lf": 85,
+      "total_float": 1
+    },
+    "M2": {
+      "es": 84,
+      "ef": 84,
+      "release": 0,
+      "ls": 85,
+      "lf": 85,
+      "total_float": 1
+    },
+    "G2": {
+      "es": 85,
+      "ef": 86,
+      "release": 85,
+      "ls": 90,
+      "lf": 91,
+      "total_float": 5
+    },
+    "A30": {
+      "es": 85,
+      "ef": 90,
+      "release": 85,
+      "ls": 93,
+      "lf": 98,
+      "total_float": 8
+    },
+    "A28": {
+      "es": 86,
+      "ef": 90,
+      "release": 85,
+      "ls": 91,
+      "lf": 95,
+      "total_float": 5
+    },
+    "A29": {
+      "es": 90,
+      "ef": 93,
+      "release": 85,
+      "ls": 95,
+      "lf": 98,
+      "total_float": 5
+    },
+    "A31": {
+      "es": 93,
+      "ef": 97,
+      "release": 85,
+      "ls": 98,
+      "lf": 102,
+      "total_float": 5
+    },
+    "R3": {
+      "es": 97,
+      "ef": 99,
+      "release": 85,
+      "ls": 102,
+      "lf": 104,
+      "total_float": 5
+    },
+    "A32": {
+      "es": 99,
+      "ef": 102,
+      "release": 85,
+      "ls": 104,
+      "lf": 107,
+      "total_float": 5
+    },
+    "M3": {
+      "es": 102,
+      "ef": 102,
+      "release": 0,
+      "ls": 107,
+      "lf": 107,
+      "total_float": 5
+    },
+    "A33": {
+      "es": 107,
+      "ef": 110,
+      "release": 107,
+      "ls": 110,
+      "lf": 113,
+      "total_float": 3
+    },
+    "A34": {
+      "es": 110,
+      "ef": 112,
+      "release": 85,
+      "ls": 113,
+      "lf": 115,
+      "total_float": 3
+    },
+    "A35": {
+      "es": 112,
+      "ef": 113,
+      "release": 85,
+      "ls": 115,
+      "lf": 116,
+      "total_float": 3
+    },
+    "M4": {
+      "es": 113,
+      "ef": 113,
+      "release": 0,
+      "ls": 116,
+      "lf": 116,
+      "total_float": 3
+    },
+    "A36": {
+      "es": 113,
+      "ef": 123,
+      "release": 85,
+      "ls": 116,
+      "lf": 126,
+      "total_float": 3
+    },
+    "G3": {
+      "es": 123,
+      "ef": 126,
+      "release": 107,
+      "ls": 126,
+      "lf": 129,
+      "total_float": 3
+    },
+    "A37": {
+      "es": 129,
+      "ef": 132,
+      "release": 129,
+      "ls": 129,
+      "lf": 132,
+      "total_float": 0
+    },
+    "A38": {
+      "es": 132,
+      "ef": 134,
+      "release": 85,
+      "ls": 132,
+      "lf": 134,
+      "total_float": 0
+    },
+    "A39": {
+      "es": 134,
+      "ef": 136,
+      "release": 85,
+      "ls": 134,
+      "lf": 136,
+      "total_float": 0
+    },
+    "R51": {
+      "es": 136,
+      "ef": 137,
+      "release": 85,
+      "ls": 136,
+      "lf": 137,
+      "total_float": 0
+    },
+    "A40": {
+      "es": 137,
+      "ef": 139,
+      "release": 85,
+      "ls": 137,
+      "lf": 139,
+      "total_float": 0
+    },
+    "A41": {
+      "es": 139,
+      "ef": 142,
+      "release": 85,
+      "ls": 139,
+      "lf": 142,
+      "total_float": 0
+    },
+    "A42": {
+      "es": 142,
+      "ef": 144,
+      "release": 85,
+      "ls": 142,
+      "lf": 144,
+      "total_float": 0
+    },
+    "A43": {
+      "es": 144,
+      "ef": 146,
+      "release": 85,
+      "ls": 144,
+      "lf": 146,
+      "total_float": 0
+    },
+    "R52": {
+      "es": 146,
+      "ef": 147,
+      "release": 85,
+      "ls": 146,
+      "lf": 147,
+      "total_float": 0
+    },
+    "A44": {
+      "es": 147,
+      "ef": 149,
+      "release": 85,
+      "ls": 147,
+      "lf": 149,
+      "total_float": 0
+    },
+    "A45": {
+      "es": 149,
+      "ef": 150,
+      "release": 43,
+      "ls": 149,
+      "lf": 150,
+      "total_float": 0
+    },
+    "M5": {
+      "es": 150,
+      "ef": 150,
+      "release": 0,
+      "ls": 150,
+      "lf": 150,
+      "total_float": 0
+    },
+    "A46": {
+      "es": 150,
+      "ef": 153,
+      "release": 150,
+      "ls": 150,
+      "lf": 153,
+      "total_float": 0
+    },
+    "A48": {
+      "es": 150,
+      "ef": 155,
+      "release": 150,
+      "ls": 150,
+      "lf": 155,
+      "total_float": 0
+    },
+    "A47": {
+      "es": 153,
+      "ef": 155,
+      "release": 43,
+      "ls": 153,
+      "lf": 155,
+      "total_float": 0
+    },
+    "R6": {
+      "es": 155,
+      "ef": 157,
+      "release": 85,
+      "ls": 155,
+      "lf": 157,
+      "total_float": 0
+    },
+    "A49": {
+      "es": 157,
+      "ef": 159,
+      "release": 85,
+      "ls": 157,
+      "lf": 159,
+      "total_float": 0
+    },
+    "A50": {
+      "es": 159,
+      "ef": 161,
+      "release": 85,
+      "ls": 159,
+      "lf": 161,
+      "total_float": 0
+    },
+    "M6": {
+      "es": 161,
+      "ef": 161,
+      "release": 0,
+      "ls": 161,
+      "lf": 161,
+      "total_float": 0
+    }
+  },
+  "scheduled": {
+    "A01": {
+      "start": 0,
+      "end": 5,
+      "start_date": "2027-06-03",
+      "finish_date": "2027-06-09",
+      "shifted": 0
+    },
+    "A02": {
+      "start": 0,
+      "end": 5,
+      "start_date": "2027-06-03",
+      "finish_date": "2027-06-09",
+      "shifted": 0
+    },
+    "A03": {
+      "start": 5,
+      "end": 8,
+      "start_date": "2027-06-10",
+      "finish_date": "2027-06-14",
+      "shifted": 0
+    },
+    "A04": {
+      "start": 5,
+      "end": 8,
+      "start_date": "2027-06-10",
+      "finish_date": "2027-06-14",
+      "shifted": 0
+    },
+    "A05": {
+      "start": 8,
+      "end": 13,
+      "start_date": "2027-06-15",
+      "finish_date": "2027-06-21",
+      "shifted": 0
+    },
+    "A06": {
+      "start": 8,
+      "end": 12,
+      "start_date": "2027-06-15",
+      "finish_date": "2027-06-18",
+      "shifted": 0
+    },
+    "A07": {
+      "start": 12,
+      "end": 16,
+      "start_date": "2027-06-21",
+      "finish_date": "2027-06-24",
+      "shifted": 0
+    },
+    "A08": {
+      "start": 13,
+      "end": 16,
+      "start_date": "2027-06-22",
+      "finish_date": "2027-06-24",
+      "shifted": 0
+    },
+    "A09": {
+      "start": 16,
+      "end": 18,
+      "start_date": "2027-06-25",
+      "finish_date": "2027-06-28",
+      "shifted": 0
+    },
+    "M1": {
+      "start": 18,
+      "end": 18,
+      "start_date": "2027-06-28",
+      "finish_date": "2027-06-28",
+      "shifted": 0
+    },
+    "A10": {
+      "start": 22,
+      "end": 25,
+      "start_date": "2027-07-05",
+      "finish_date": "2027-07-07",
+      "shifted": 0
+    },
+    "G1": {
+      "start": 22,
+      "end": 23,
+      "start_date": "2027-07-05",
+      "finish_date": "2027-07-05",
+      "shifted": 0
+    },
+    "A24": {
+      "start": 43,
+      "end": 48,
+      "start_date": "2027-08-03",
+      "finish_date": "2027-08-09",
+      "shifted": 0
+    },
+    "A11": {
+      "start": 23,
+      "end": 35,
+      "start_date": "2027-07-06",
+      "finish_date": "2027-07-21",
+      "shifted": 0
+    },
+    "A21": {
+      "start": 25,
+      "end": 34,
+      "start_date": "2027-07-08",
+      "finish_date": "2027-07-20",
+      "shifted": 0
+    },
+    "A12": {
+      "start": 35,
+      "end": 39,
+      "start_date": "2027-07-22",
+      "finish_date": "2027-07-27",
+      "shifted": 0
+    },
+    "A22": {
+      "start": 34,
+      "end": 41,
+      "start_date": "2027-07-21",
+      "finish_date": "2027-07-29",
+      "shifted": 0
+    },
+    "A25": {
+      "start": 48,
+      "end": 53,
+      "start_date": "2027-08-10",
+      "finish_date": "2027-08-16",
+      "shifted": 0
+    },
+    "A13": {
+      "start": 39,
+      "end": 45,
+      "start_date": "2027-07-28",
+      "finish_date": "2027-08-04",
+      "shifted": 0
+    },
+    "A23": {
+      "start": 41,
+      "end": 47,
+      "start_date": "2027-07-30",
+      "finish_date": "2027-08-06",
+      "shifted": 0
+    },
+    "A14": {
+      "start": 45,
+      "end": 49,
+      "start_date": "2027-08-05",
+      "finish_date": "2027-08-10",
+      "shifted": 0
+    },
+    "A26": {
+      "start": 53,
+      "end": 59,
+      "start_date": "2027-08-17",
+      "finish_date": "2027-08-24",
+      "shifted": 0
+    },
+    "A15": {
+      "start": 49,
+      "end": 52,
+      "start_date": "2027-08-11",
+      "finish_date": "2027-08-13",
+      "shifted": 0
+    },
+    "A16": {
+      "start": 52,
+      "end": 56,
+      "start_date": "2027-08-16",
+      "finish_date": "2027-08-19",
+      "shifted": 0
+    },
+    "A17": {
+      "start": 56,
+      "end": 63,
+      "start_date": "2027-08-20",
+      "finish_date": "2027-08-30",
+      "shifted": 0
+    },
+    "A18": {
+      "start": 63,
+      "end": 67,
+      "start_date": "2027-08-31",
+      "finish_date": "2027-09-07",
+      "shifted": 0
+    },
+    "A19": {
+      "start": 67,
+      "end": 70,
+      "start_date": "2027-09-08",
+      "finish_date": "2027-09-10",
+      "shifted": 0
+    },
+    "A20": {
+      "start": 70,
+      "end": 74,
+      "start_date": "2027-09-13",
+      "finish_date": "2027-09-16",
+      "shifted": 0
+    },
+    "A27": {
+      "start": 74,
+      "end": 80,
+      "start_date": "2027-09-17",
+      "finish_date": "2027-09-24",
+      "shifted": 0
+    },
+    "R2": {
+      "start": 80,
+      "end": 84,
+      "start_date": "2027-09-27",
+      "finish_date": "2027-09-30",
+      "shifted": 0
+    },
+    "M2": {
+      "start": 84,
+      "end": 84,
+      "start_date": "2027-09-30",
+      "finish_date": "2027-09-30",
+      "shifted": 0
+    },
+    "G2": {
+      "start": 85,
+      "end": 86,
+      "start_date": "2027-10-04",
+      "finish_date": "2027-10-04",
+      "shifted": 0
+    },
+    "A30": {
+      "start": 85,
+      "end": 90,
+      "start_date": "2027-10-04",
+      "finish_date": "2027-10-08",
+      "shifted": 0
+    },
+    "A28": {
+      "start": 86,
+      "end": 90,
+      "start_date": "2027-10-05",
+      "finish_date": "2027-10-08",
+      "shifted": 0
+    },
+    "A29": {
+      "start": 90,
+      "end": 93,
+      "start_date": "2027-10-11",
+      "finish_date": "2027-10-13",
+      "shifted": 0
+    },
+    "A31": {
+      "start": 93,
+      "end": 97,
+      "start_date": "2027-10-14",
+      "finish_date": "2027-10-19",
+      "shifted": 0
+    },
+    "R3": {
+      "start": 97,
+      "end": 99,
+      "start_date": "2027-10-20",
+      "finish_date": "2027-10-21",
+      "shifted": 0
+    },
+    "A32": {
+      "start": 99,
+      "end": 102,
+      "start_date": "2027-10-22",
+      "finish_date": "2027-10-26",
+      "shifted": 0
+    },
+    "M3": {
+      "start": 102,
+      "end": 102,
+      "start_date": "2027-10-26",
+      "finish_date": "2027-10-26",
+      "shifted": 0
+    },
+    "A33": {
+      "start": 107,
+      "end": 110,
+      "start_date": "2027-11-03",
+      "finish_date": "2027-11-05",
+      "shifted": 0
+    },
+    "A34": {
+      "start": 110,
+      "end": 112,
+      "start_date": "2027-11-08",
+      "finish_date": "2027-11-09",
+      "shifted": 0
+    },
+    "A35": {
+      "start": 112,
+      "end": 113,
+      "start_date": "2027-11-10",
+      "finish_date": "2027-11-10",
+      "shifted": 0
+    },
+    "M4": {
+      "start": 113,
+      "end": 113,
+      "start_date": "2027-11-10",
+      "finish_date": "2027-11-10",
+      "shifted": 0
+    },
+    "A36": {
+      "start": 113,
+      "end": 123,
+      "start_date": "2027-11-11",
+      "finish_date": "2027-11-24",
+      "shifted": 0
+    },
+    "G3": {
+      "start": 123,
+      "end": 126,
+      "start_date": "2027-11-25",
+      "finish_date": "2027-11-29",
+      "shifted": 0
+    },
+    "A37": {
+      "start": 129,
+      "end": 132,
+      "start_date": "2027-12-03",
+      "finish_date": "2027-12-07",
+      "shifted": 0
+    },
+    "A38": {
+      "start": 132,
+      "end": 134,
+      "start_date": "2027-12-08",
+      "finish_date": "2027-12-09",
+      "shifted": 0
+    },
+    "A39": {
+      "start": 134,
+      "end": 136,
+      "start_date": "2027-12-10",
+      "finish_date": "2027-12-13",
+      "shifted": 0
+    },
+    "R51": {
+      "start": 136,
+      "end": 137,
+      "start_date": "2027-12-14",
+      "finish_date": "2027-12-14",
+      "shifted": 0
+    },
+    "A40": {
+      "start": 137,
+      "end": 139,
+      "start_date": "2027-12-15",
+      "finish_date": "2027-12-16",
+      "shifted": 0
+    },
+    "A41": {
+      "start": 139,
+      "end": 142,
+      "start_date": "2027-12-17",
+      "finish_date": "2027-12-21",
+      "shifted": 0
+    },
+    "A42": {
+      "start": 142,
+      "end": 144,
+      "start_date": "2027-12-22",
+      "finish_date": "2027-12-23",
+      "shifted": 0
+    },
+    "A43": {
+      "start": 144,
+      "end": 146,
+      "start_date": "2027-12-24",
+      "finish_date": "2027-12-27",
+      "shifted": 0
+    },
+    "R52": {
+      "start": 146,
+      "end": 147,
+      "start_date": "2027-12-28",
+      "finish_date": "2027-12-28",
+      "shifted": 0
+    },
+    "A44": {
+      "start": 147,
+      "end": 149,
+      "start_date": "2027-12-29",
+      "finish_date": "2027-12-30",
+      "shifted": 0
+    },
+    "A45": {
+      "start": 149,
+      "end": 150,
+      "start_date": "2027-12-31",
+      "finish_date": "2027-12-31",
+      "shifted": 0
+    },
+    "M5": {
+      "start": 150,
+      "end": 150,
+      "start_date": "2027-12-31",
+      "finish_date": "2027-12-31",
+      "shifted": 0
+    },
+    "A46": {
+      "start": 150,
+      "end": 153,
+      "start_date": "2028-01-03",
+      "finish_date": "2028-01-05",
+      "shifted": 0
+    },
+    "A48": {
+      "start": 150,
+      "end": 155,
+      "start_date": "2028-01-03",
+      "finish_date": "2028-01-07",
+      "shifted": 0
+    },
+    "A47": {
+      "start": 153,
+      "end": 155,
+      "start_date": "2028-01-06",
+      "finish_date": "2028-01-07",
+      "shifted": 0
+    },
+    "R6": {
+      "start": 155,
+      "end": 157,
+      "start_date": "2028-01-10",
+      "finish_date": "2028-01-11",
+      "shifted": 0
+    },
+    "A49": {
+      "start": 157,
+      "end": 159,
+      "start_date": "2028-01-12",
+      "finish_date": "2028-01-13",
+      "shifted": 0
+    },
+    "A50": {
+      "start": 159,
+      "end": 161,
+      "start_date": "2028-01-14",
+      "finish_date": "2028-01-17",
+      "shifted": 0
+    },
+    "M6": {
+      "start": 161,
+      "end": 161,
+      "start_date": "2028-01-17",
+      "finish_date": "2028-01-17",
+      "shifted": 0
+    }
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "finish": "2027-06-28",
+      "deadline": "2027-07-02",
+      "margin_workdays": 4,
+      "on_time": true
+    },
+    {
+      "id": "M2",
+      "finish": "2027-09-30",
+      "deadline": "2027-10-02",
+      "margin_workdays": 1,
+      "on_time": true
+    },
+    {
+      "id": "M3",
+      "finish": "2027-10-26",
+      "deadline": "2027-11-02",
+      "margin_workdays": 5,
+      "on_time": true
+    },
+    {
+      "id": "M4",
+      "finish": "2027-11-10",
+      "deadline": "2027-12-02",
+      "margin_workdays": 16,
+      "on_time": true
+    },
+    {
+      "id": "M5",
+      "finish": "2027-12-31",
+      "deadline": "2028-01-02",
+      "margin_workdays": 0,
+      "on_time": true
+    },
+    {
+      "id": "M6",
+      "finish": "2028-01-17",
+      "deadline": "2028-02-02",
+      "margin_workdays": 7,
+      "on_time": true
+    }
+  ],
+  "resources": [
+    {
+      "id": "PM",
+      "name": "Người quản lý dự án",
+      "start": "2027-06-03",
+      "finish": "2028-02-02",
+      "available_days": 168,
+      "planned_person_days": 48.55,
+      "peak_units": 0.95
+    },
+    {
+      "id": "TL",
+      "name": "Solution Architect / Tech Lead",
+      "start": "2027-06-03",
+      "finish": "2028-02-02",
+      "available_days": 168,
+      "planned_person_days": 44.9,
+      "peak_units": 0.9
+    },
+    {
+      "id": "HW",
+      "name": "Kỹ sư tích hợp RS232",
+      "start": "2027-07-03",
+      "finish": "2028-01-02",
+      "available_days": 128,
+      "planned_person_days": 33.7,
+      "peak_units": 0.8
+    },
+    {
+      "id": "BA",
+      "name": "Business Analyst – phân tích nghiệp vụ",
+      "start": "2027-06-03",
+      "finish": "2027-11-02",
+      "available_days": 107,
+      "planned_person_days": 23.05,
+      "peak_units": 0.9
+    },
+    {
+      "id": "BE",
+      "name": "Backend Developer",
+      "start": "2027-07-03",
+      "finish": "2028-02-02",
+      "available_days": 146,
+      "planned_person_days": 57.3,
+      "peak_units": 1.0
+    },
+    {
+      "id": "FE",
+      "name": "Frontend Developer",
+      "start": "2027-07-03",
+      "finish": "2028-01-02",
+      "available_days": 128,
+      "planned_person_days": 47.6,
+      "peak_units": 1.0
+    },
+    {
+      "id": "QA",
+      "name": "QA/QC Engineer – kiểm thử",
+      "start": "2027-08-03",
+      "finish": "2028-02-02",
+      "available_days": 125,
+      "planned_person_days": 50.0,
+      "peak_units": 0.9
+    },
+    {
+      "id": "OS",
+      "name": "Onsite Engineer – triển khai",
+      "start": "2027-10-03",
+      "finish": "2028-02-02",
+      "available_days": 83,
+      "planned_person_days": 36.2,
+      "peak_units": 0.9
+    }
+  ],
+  "logical_finish": 161,
+  "phase_cpm": {
+    "M1": {
+      "finish_index": 18,
+      "critical_activities": [
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09",
+        "M1"
+      ],
+      "float": {
+        "M1": 0,
+        "A09": 0,
+        "A08": 0,
+        "A07": 0,
+        "A06": 0,
+        "A05": 0,
+        "A04": 0,
+        "A03": 0,
+        "A02": 0,
+        "A01": 11
+      }
+    },
+    "M2": {
+      "finish_index": 84,
+      "critical_activities": [
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A27",
+        "R2",
+        "M2"
+      ],
+      "float": {
+        "M2": 0,
+        "R2": 0,
+        "A27": 0,
+        "A20": 0,
+        "A19": 0,
+        "A18": 0,
+        "A17": 0,
+        "A16": 0,
+        "A15": 0,
+        "A26": 15,
+        "A14": 0,
+        "A23": 27,
+        "A13": 0,
+        "A25": 15,
+        "A22": 27,
+        "A12": 0,
+        "A21": 27,
+        "A11": 0,
+        "A24": 15,
+        "G1": 29,
+        "A10": 0,
+        "M1": 4,
+        "A09": 4,
+        "A08": 4,
+        "A07": 4,
+        "A06": 4,
+        "A05": 4,
+        "A04": 4,
+        "A03": 4,
+        "A02": 4,
+        "A01": 15
+      }
+    },
+    "M3": {
+      "finish_index": 102,
+      "critical_activities": [
+        "G2",
+        "A28",
+        "A29",
+        "A31",
+        "R3",
+        "A32",
+        "M3"
+      ],
+      "float": {
+        "M3": 0,
+        "A32": 0,
+        "R3": 0,
+        "A31": 0,
+        "A29": 0,
+        "A28": 0,
+        "A30": 3,
+        "G2": 0,
+        "M2": 1,
+        "R2": 1,
+        "A27": 1,
+        "A20": 1,
+        "A19": 1,
+        "A18": 1,
+        "A17": 1,
+        "A16": 1,
+        "A15": 1,
+        "A26": 16,
+        "A14": 1,
+        "A23": 28,
+        "A13": 1,
+        "A25": 16,
+        "A22": 28,
+        "A12": 1,
+        "A21": 28,
+        "A11": 1,
+        "A24": 16,
+        "G1": 30,
+        "A10": 1,
+        "M1": 5,
+        "A09": 5,
+        "A08": 5,
+        "A07": 5,
+        "A06": 5,
+        "A05": 5,
+        "A04": 5,
+        "A03": 5,
+        "A02": 5,
+        "A01": 16
+      }
+    },
+    "M4": {
+      "finish_index": 113,
+      "critical_activities": [
+        "A33",
+        "A34",
+        "A35",
+        "M4"
+      ],
+      "float": {
+        "M4": 0,
+        "A35": 0,
+        "A34": 0,
+        "A33": 0,
+        "M3": 5,
+        "A32": 5,
+        "R3": 5,
+        "A31": 5,
+        "A29": 5,
+        "A28": 5,
+        "A30": 8,
+        "G2": 5,
+        "M2": 6,
+        "R2": 6,
+        "A27": 6,
+        "A20": 6,
+        "A19": 6,
+        "A18": 6,
+        "A17": 6,
+        "A16": 6,
+        "A15": 6,
+        "A26": 21,
+        "A14": 6,
+        "A23": 33,
+        "A13": 6,
+        "A25": 21,
+        "A22": 33,
+        "A12": 6,
+        "A21": 33,
+        "A11": 6,
+        "A24": 21,
+        "G1": 35,
+        "A10": 6,
+        "M1": 10,
+        "A09": 10,
+        "A08": 10,
+        "A07": 10,
+        "A06": 10,
+        "A05": 10,
+        "A04": 10,
+        "A03": 10,
+        "A02": 10,
+        "A01": 21
+      }
+    },
+    "M5": {
+      "finish_index": 150,
+      "critical_activities": [
+        "A37",
+        "A38",
+        "A39",
+        "R51",
+        "A40",
+        "A41",
+        "A42",
+        "A43",
+        "R52",
+        "A44",
+        "A45",
+        "M5"
+      ],
+      "float": {
+        "M5": 0,
+        "A45": 0,
+        "A44": 0,
+        "R52": 0,
+        "A43": 0,
+        "A42": 0,
+        "A41": 0,
+        "A40": 0,
+        "R51": 0,
+        "A39": 0,
+        "A38": 0,
+        "A37": 0,
+        "G3": 3,
+        "A36": 3,
+        "M4": 3,
+        "A35": 3,
+        "A34": 3,
+        "A33": 3,
+        "M3": 8,
+        "A32": 8,
+        "R3": 8,
+        "A31": 8,
+        "A29": 8,
+        "A28": 8,
+        "A30": 11,
+        "G2": 8,
+        "M2": 9,
+        "R2": 9,
+        "A27": 9,
+        "A20": 9,
+        "A19": 9,
+        "A18": 9,
+        "A17": 9,
+        "A16": 9,
+        "A15": 9,
+        "A26": 24,
+        "A14": 9,
+        "A23": 36,
+        "A13": 9,
+        "A25": 24,
+        "A22": 36,
+        "A12": 9,
+        "A21": 36,
+        "A11": 9,
+        "A24": 24,
+        "G1": 38,
+        "A10": 9,
+        "M1": 13,
+        "A09": 13,
+        "A08": 13,
+        "A07": 13,
+        "A06": 13,
+        "A05": 13,
+        "A04": 13,
+        "A03": 13,
+        "A02": 13,
+        "A01": 24
+      }
+    },
+    "M6": {
+      "finish_index": 161,
+      "critical_activities": [
+        "A37",
+        "A38",
+        "A39",
+        "R51",
+        "A40",
+        "A41",
+        "A42",
+        "A43",
+        "R52",
+        "A44",
+        "A45",
+        "M5",
+        "A46",
+        "A48",
+        "A47",
+        "R6",
+        "A49",
+        "A50",
+        "M6"
+      ],
+      "float": {
+        "M6": 0,
+        "A50": 0,
+        "A49": 0,
+        "R6": 0,
+        "A47": 0,
+        "A48": 0,
+        "A46": 0,
+        "M5": 0,
+        "A45": 0,
+        "A44": 0,
+        "R52": 0,
+        "A43": 0,
+        "A42": 0,
+        "A41": 0,
+        "A40": 0,
+        "R51": 0,
+        "A39": 0,
+        "A38": 0,
+        "A37": 0,
+        "G3": 3,
+        "A36": 3,
+        "M4": 3,
+        "A35": 3,
+        "A34": 3,
+        "A33": 3,
+        "M3": 8,
+        "A32": 8,
+        "R3": 8,
+        "A31": 8,
+        "A29": 8,
+        "A28": 8,
+        "A30": 11,
+        "G2": 8,
+        "M2": 9,
+        "R2": 9,
+        "A27": 9,
+        "A20": 9,
+        "A19": 9,
+        "A18": 9,
+        "A17": 9,
+        "A16": 9,
+        "A15": 9,
+        "A26": 24,
+        "A14": 9,
+        "A23": 36,
+        "A13": 9,
+        "A25": 24,
+        "A22": 36,
+        "A12": 9,
+        "A21": 36,
+        "A11": 9,
+        "A24": 24,
+        "G1": 38,
+        "A10": 9,
+        "M1": 13,
+        "A09": 13,
+        "A08": 13,
+        "A07": 13,
+        "A06": 13,
+        "A05": 13,
+        "A04": 13,
+        "A03": 13,
+        "A02": 13,
+        "A01": 24
+      }
+    }
+  }
+}
