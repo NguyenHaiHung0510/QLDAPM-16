@@ -1,0 +1,1574 @@
+{
+  "project": "WMS kho trà Tân Cương",
+  "start": "2027-06-03",
+  "finish_deadline": "2028-02-02",
+  "hours_per_day": 8,
+  "calendar": {
+    "weekdays": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "exceptions": [
+      "2027-09-02",
+      "2027-09-03",
+      "2028-01-24",
+      "2028-01-25",
+      "2028-01-26",
+      "2028-01-27",
+      "2028-01-28"
+    ],
+    "status": "Lịch giả định BTL; các ngoại lệ 02–03/09 và 24–28/01 là khoảng giữ chỗ cần xác nhận, không phải lịch nghỉ chính thức."
+  },
+  "roles": {
+    "PM": {
+      "name": "Người quản lý dự án",
+      "month_start": 1,
+      "month_finish": 8,
+      "capacity": 1
+    },
+    "TL": {
+      "name": "Solution Architect / Tech Lead",
+      "month_start": 1,
+      "month_finish": 8,
+      "capacity": 1
+    },
+    "HW": {
+      "name": "Kỹ sư tích hợp RS232",
+      "month_start": 2,
+      "month_finish": 7,
+      "capacity": 1
+    },
+    "BA": {
+      "name": "Business Analyst – phân tích nghiệp vụ",
+      "month_start": 1,
+      "month_finish": 5,
+      "capacity": 1
+    },
+    "BE": {
+      "name": "Backend Developer",
+      "month_start": 2,
+      "month_finish": 8,
+      "capacity": 1
+    },
+    "FE": {
+      "name": "Frontend Developer",
+      "month_start": 2,
+      "month_finish": 7,
+      "capacity": 1
+    },
+    "QA": {
+      "name": "QA/QC Engineer – kiểm thử",
+      "month_start": 3,
+      "month_finish": 8,
+      "capacity": 1
+    },
+    "OS": {
+      "name": "Onsite Engineer – triển khai",
+      "month_start": 5,
+      "month_finish": 8,
+      "capacity": 1
+    }
+  },
+  "ongoing": [
+    {
+      "id": "L01",
+      "wbs": "1.1.2.1",
+      "name": "Giao ban tuần/tháng",
+      "resource": "PM",
+      "units": 0.1
+    },
+    {
+      "id": "L02",
+      "wbs": "1.1.2.2",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "resource": "PM",
+      "units": 0.05
+    },
+    {
+      "id": "L03",
+      "wbs": "1.1.2.3",
+      "name": "Báo cáo chủ đầu tư",
+      "resource": "PM",
+      "units": 0.05
+    },
+    {
+      "id": "L04",
+      "wbs": "1.1.3.1",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "resource": "PM",
+      "units": 0.05
+    },
+    {
+      "id": "L05",
+      "wbs": "1.1.3.1",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "resource": "TL",
+      "units": 0.1
+    },
+    {
+      "id": "L06",
+      "wbs": "1.1.3.2",
+      "name": "Đảm bảo chất lượng quy trình",
+      "resource": "QA",
+      "units": 0.1
+    }
+  ],
+  "activities": [
+    {
+      "id": "A01",
+      "name": "Lập PMP, kế hoạch phạm vi/WBS và lịch/ngân sách đề xuất",
+      "wbs": [
+        "1.1.1.1",
+        "1.1.1.2",
+        "1.1.1.3"
+      ],
+      "duration": 5,
+      "predecessors": [],
+      "resources": {
+        "PM": 0.6,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ba hồ sơ kế hoạch được lập từ tôn chỉ và WBS, có vòng thẩm định; ngân sách chi tiết phối hợp chương 4, chưa tạo PV hoàn chỉnh.",
+      "triple": [
+        3,
+        4,
+        9
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A02",
+      "name": "Khảo sát luồng kho tổng và danh mục/giao thức tài sản ba kho",
+      "wbs": [
+        "1.2.1.1",
+        "1.2.1.2"
+      ],
+      "duration": 5,
+      "predecessors": [],
+      "resources": {
+        "BA": 0.7,
+        "TL": 0.2,
+        "PM": 0.1
+      },
+      "release": null,
+      "basis": "Khảo sát chính tại kho tổng, hai chi nhánh cung cấp thông tin/ảnh/đặc tả từ xa; có một vòng xác minh, không huy động HW hoặc Onsite tháng 1.",
+      "triple": [
+        3,
+        4,
+        9
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A03",
+      "name": "Khảo sát Excel, BOM và dữ liệu mở kho",
+      "wbs": [
+        "1.2.1.3"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A02"
+      ],
+      "resources": {
+        "BA": 0.7,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A04",
+      "name": "Chốt giao thức, dải cân, tem và yêu cầu phi chức năng",
+      "wbs": [
+        "1.2.2.2"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A02"
+      ],
+      "resources": {
+        "TL": 0.7,
+        "BA": 0.2
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A05",
+      "name": "Lập SRS/use case và ma trận yêu cầu cho sáu nhóm người dùng",
+      "wbs": [
+        "1.2.2.1"
+      ],
+      "duration": 5,
+      "predecessors": [
+        "A03",
+        "A04"
+      ],
+      "resources": {
+        "BA": 0.7,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        3,
+        4,
+        9
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A06",
+      "name": "Thiết kế kiến trúc và kế hoạch môi trường dev/test",
+      "wbs": [
+        "1.2.3.1"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A04"
+      ],
+      "resources": {
+        "TL": 0.7,
+        "BA": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A07",
+      "name": "Thiết kế dữ liệu, điều chuyển và đệm ngoại tuyến",
+      "wbs": [
+        "1.2.3.2"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A06"
+      ],
+      "resources": {
+        "TL": 0.7,
+        "BA": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A08",
+      "name": "Thiết kế giao diện các luồng theo vai trò",
+      "wbs": [
+        "1.2.3.3"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A05"
+      ],
+      "resources": {
+        "BA": 0.7,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A09",
+      "name": "Thẩm định và xác nhận SRS/SAD, RTM và lịch đề xuất",
+      "wbs": [
+        "1.2.2.1",
+        "1.2.3.1",
+        "1.1.1.3"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A01",
+        "A05",
+        "A07",
+        "A08"
+      ],
+      "resources": {
+        "PM": 0.3,
+        "TL": 0.2,
+        "BA": 0.2
+      },
+      "release": null,
+      "basis": "Hai ngày làm việc đặt trước để rà soát và lấy xác nhận đầu mối doanh nghiệp; thời gian phản hồi là điều kiện lịch.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "M1",
+      "name": "M1 – SRS/SAD được xác nhận",
+      "wbs": [
+        "1.2.2.1",
+        "1.2.3.1"
+      ],
+      "duration": 0,
+      "predecessors": [
+        "A09"
+      ],
+      "resources": {},
+      "release": null,
+      "basis": "",
+      "triple": null,
+      "kind": "milestone"
+    },
+    {
+      "id": "A10",
+      "name": "Dựng môi trường dev/test và bàn giao thiết kế cho Dev",
+      "wbs": [
+        "1.2.3.1"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "M1"
+      ],
+      "resources": {
+        "TL": 0.6,
+        "BE": 0.2,
+        "FE": 0.2
+      },
+      "release": "2027-07-03",
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A11",
+      "name": "Phát triển danh mục/lô, nhập–xuất–tồn, điều chuyển, Zone/Bin/Rack",
+      "wbs": [
+        "1.3.1.1"
+      ],
+      "duration": 12,
+      "predecessors": [
+        "A10"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo. Bắt đầu sau một ngày dựng môi trường (repo/API khung đã sẵn sàng), song song hai ngày hoàn thiện dev/test; A10 dùng 20% và A11 dùng 80% năng lực mỗi Dev, không vượt 100%.",
+      "triple": [
+        10,
+        11,
+        16
+      ],
+      "kind": "work",
+      "relations": {
+        "A10": {
+          "type": "SS",
+          "lag": 1
+        }
+      }
+    },
+    {
+      "id": "A12",
+      "name": "Phát triển FEFO và chặn lô hết hạn",
+      "wbs": [
+        "1.3.1.2"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A11"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "duration": 6,
+      "predecessors": [
+        "A12"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        4,
+        5,
+        10
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A14",
+      "name": "Phát triển cảnh báo và tuổi hàng",
+      "wbs": [
+        "1.3.2.2"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A13"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A15",
+      "name": "Phát triển nhật ký môi trường nhập thủ công",
+      "wbs": [
+        "1.3.2.3"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A14"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A16",
+      "name": "Phát triển import/export danh mục, lô và tồn đầu kỳ",
+      "wbs": [
+        "1.3.3.4"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A15"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A17",
+      "name": "Phát triển nhà cung cấp, công nợ, đơn hàng và vận chuyển",
+      "wbs": [
+        "1.3.4.2"
+      ],
+      "duration": 7,
+      "predecessors": [
+        "A16"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        5,
+        6,
+        11
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A17"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A19",
+      "name": "Phát triển danh mục tài sản, dụng cụ và vật tư",
+      "wbs": [
+        "1.3.4.4"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A18"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A20",
+      "name": "Phát triển dashboard và toàn bộ báo cáo RTM",
+      "wbs": [
+        "1.3.4.1"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A19"
+      ],
+      "resources": {
+        "BE": 0.8,
+        "FE": 0.8,
+        "TL": 0.1,
+        "BA": 0.05
+      },
+      "release": null,
+      "basis": "Một cặp Backend/Frontend làm lần lượt từng module, API/UI được phối hợp cùng hoạt động. Ba điểm phản ánh phạm vi module và lỗi thường gặp; không phải dữ liệu năng suất đã đo.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "G1",
+      "name": "Tiếp nhận bộ mẫu kho tổng: 1 cân, 1 máy in, 1 scanner, 1 PC",
+      "wbs": [
+        "1.3.3.1",
+        "1.3.3.2",
+        "1.3.3.3"
+      ],
+      "duration": 1,
+      "predecessors": [
+        "M1"
+      ],
+      "resources": {
+        "PM": 0.1,
+        "HW": 0.2
+      },
+      "release": "2027-07-03",
+      "basis": "Giả định nhà cung cấp giao bộ 33 triệu ngay đầu tháng 2; PM đặt hàng từ tháng 1. Đây là điểm giao diện mua sắm theo 02 mục V, không thêm số lượng/ngân sách.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A21",
+      "name": "Phát triển service cân RS232 và xử lý mất kết nối",
+      "wbs": [
+        "1.3.3.1"
+      ],
+      "duration": 9,
+      "predecessors": [
+        "A10",
+        "G1"
+      ],
+      "resources": {
+        "HW": 0.8,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        7,
+        8,
+        13
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A22",
+      "name": "Phát triển QR và điều khiển in tem theo giao thức phù hợp",
+      "wbs": [
+        "1.3.3.2"
+      ],
+      "duration": 7,
+      "predecessors": [
+        "A21"
+      ],
+      "resources": {
+        "HW": 0.8,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        5,
+        6,
+        11
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A23",
+      "name": "Tích hợp scanner và ba máy chấm công sẵn có",
+      "wbs": [
+        "1.3.3.3"
+      ],
+      "duration": 6,
+      "predecessors": [
+        "A22"
+      ],
+      "resources": {
+        "HW": 0.8,
+        "BE": 0.1,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        4,
+        5,
+        10
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A24",
+      "name": "Lập Test Plan và dữ liệu đối soát RTM/AC",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "duration": 5,
+      "predecessors": [
+        "M1"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "BA": 0.1,
+        "TL": 0.1
+      },
+      "release": "2027-08-03",
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        3,
+        4,
+        9
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A25",
+      "name": "Kiểm luồng cân tới web và phục hồi trên bộ mẫu",
+      "wbs": [
+        "1.3.5.1"
+      ],
+      "duration": 5,
+      "predecessors": [
+        "A21",
+        "A11",
+        "A24"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "HW": 0.2,
+        "BE": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        3,
+        4,
+        9
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A26",
+      "name": "Kiểm tem, FEFO/BOM và đối soát các module đã sẵn sàng",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "duration": 6,
+      "predecessors": [
+        "A22",
+        "A13",
+        "A25"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "HW": 0.2,
+        "BE": 0.1,
+        "FE": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        4,
+        5,
+        10
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A27",
+      "name": "Kiểm tích hợp đầy đủ 20 dòng RTM, quyền, offline và điều chuyển",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "duration": 6,
+      "predecessors": [
+        "A20",
+        "A23",
+        "A26"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "BE": 0.1,
+        "FE": 0.1,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        4,
+        5,
+        10
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "R2",
+      "name": "Dự phòng xử lý/kiểm lại lỗi tích hợp trước M2",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A27"
+      ],
+      "resources": {
+        "BE": 0.5,
+        "FE": 0.5,
+        "HW": 0.3,
+        "QA": 0.8,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Khối dự phòng thời gian công khai cho lỗi liên module/phần cứng; 4 ngày tương đương khoảng 7% chuỗi phát triển 54 ngày, không cộng thêm 10% từng dòng.",
+      "triple": null,
+      "kind": "reserve"
+    },
+    {
+      "id": "M2",
+      "name": "M2 – Chức năng và bộ mẫu đạt kiểm tích hợp",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "duration": 0,
+      "predecessors": [
+        "R2"
+      ],
+      "resources": {},
+      "release": null,
+      "basis": "",
+      "triple": null,
+      "kind": "milestone"
+    },
+    {
+      "id": "G2",
+      "name": "Nhận phần thiết bị còn lại kho tổng, xác nhận điện/LAN/Excel/người học",
+      "wbs": [
+        "1.4.1.1",
+        "1.4.1.3",
+        "1.4.1.2"
+      ],
+      "duration": 1,
+      "predecessors": [
+        "M2"
+      ],
+      "resources": {
+        "PM": 0.2,
+        "OS": 0.2,
+        "HW": 0.2
+      },
+      "release": "2027-10-03",
+      "basis": "37 triệu còn lại theo 02 mục V: 1 cân, 1 máy in, 3 scanner, 1 PC. PM đặt trước tháng 5; khách hàng bố trí điện/LAN, dữ liệu chuẩn và người học trước lắp đặt.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A28",
+      "name": "Lắp đặt kho tổng và cấu hình toàn bộ đầu cuối/ngoại vi",
+      "wbs": [
+        "1.4.1.1"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "G2"
+      ],
+      "resources": {
+        "OS": 0.8,
+        "HW": 0.6,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A29",
+      "name": "Import và đối soát dữ liệu kho tổng trong môi trường chạy thử",
+      "wbs": [
+        "1.4.1.3"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A28",
+        "A16"
+      ],
+      "resources": {
+        "OS": 0.4,
+        "BA": 0.6,
+        "BE": 0.3
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A30",
+      "name": "Hoàn thiện kịch bản UAT và SOP/User Manual sáu vai trò",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "duration": 5,
+      "predecessors": [
+        "M2"
+      ],
+      "resources": {
+        "BA": 0.7,
+        "QA": 0.2,
+        "OS": 0.1
+      },
+      "release": "2027-10-03",
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        3,
+        4,
+        9
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A31",
+      "name": "UAT kho tổng, đo từng cân/in tem và kiểm toàn bộ luồng",
+      "wbs": [
+        "1.4.1.2",
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "duration": 4,
+      "predecessors": [
+        "A29",
+        "A30"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "BA": 0.2,
+        "OS": 0.4,
+        "HW": 0.2,
+        "BE": 0.1,
+        "FE": 0.1
+      },
+      "release": null,
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "R3",
+      "name": "Dự phòng sửa và kiểm lại phát hiện UAT kho tổng",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A31"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "BE": 0.5,
+        "FE": 0.5,
+        "HW": 0.2,
+        "OS": 0.3
+      },
+      "release": null,
+      "basis": "Dự phòng riêng cho cấu hình/dữ liệu thực địa chưa có trên bộ mẫu; không dùng thay tiêu chí đạt.",
+      "triple": null,
+      "kind": "reserve"
+    },
+    {
+      "id": "A32",
+      "name": "Đào tạo thực hành kho tổng và BA bàn giao hướng dẫn cho PM/Onsite",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "R3"
+      ],
+      "resources": {
+        "OS": 0.7,
+        "BA": 0.3,
+        "PM": 0.1
+      },
+      "release": null,
+      "basis": "Giả định sáu nhóm người dùng học theo các ca trong ba ngày, khách hàng cung cấp người học; mỗi vai trò có kết quả thực hành trước sử dụng.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "M3",
+      "name": "M3 – Kho tổng chạy thử/UAT/đào tạo đạt, BA đã bàn giao",
+      "wbs": [
+        "1.4.1.1",
+        "1.4.1.2",
+        "1.4.1.3"
+      ],
+      "duration": 0,
+      "predecessors": [
+        "A32"
+      ],
+      "resources": {},
+      "release": null,
+      "basis": "",
+      "triple": null,
+      "kind": "milestone"
+    },
+    {
+      "id": "A33",
+      "name": "Cấu hình production, chuyển dữ liệu và thử backup/restore",
+      "wbs": [
+        "1.4.2.1"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "M3"
+      ],
+      "resources": {
+        "TL": 0.5,
+        "BE": 0.7,
+        "OS": 0.2
+      },
+      "release": "2027-11-03",
+      "basis": "Ước lượng giả định BTL: phạm vi đã chốt, một người/vai trò, dành thời gian thực hiện và xử lý lỗi thông thường; cần hiệu chỉnh sau khảo sát.",
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "kind": "work"
+    },
+    {
+      "id": "A34",
+      "name": "Kiểm điều kiện go-live và delta cấu hình/dữ liệu production",
+      "wbs": [
+        "1.4.2.1",
+        "1.4.2.2"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A33"
+      ],
+      "resources": {
+        "QA": 0.6,
+        "TL": 0.2,
+        "OS": 0.3,
+        "PM": 0.2
+      },
+      "release": null,
+      "basis": "Kiểm lại điều kiện AC-01–AC-04 khác môi trường UAT; đại diện kho/chủ đầu tư ký quyết định mở kho.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A35",
+      "name": "Kích hoạt vận hành chính thức kho tổng",
+      "wbs": [
+        "1.4.2.2"
+      ],
+      "duration": 1,
+      "predecessors": [
+        "A34"
+      ],
+      "resources": {
+        "PM": 0.2,
+        "OS": 0.5,
+        "BE": 0.2,
+        "HW": 0.2
+      },
+      "release": null,
+      "basis": "Một ngày chuyển trạng thái sử dụng sau xác nhận sẵn sàng; có phương án quay lại và đầu mối xử lý.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "M4",
+      "name": "M4 – Kho tổng vận hành chính thức",
+      "wbs": [
+        "1.4.2.2"
+      ],
+      "duration": 0,
+      "predecessors": [
+        "A35"
+      ],
+      "resources": {},
+      "release": null,
+      "basis": "",
+      "triple": null,
+      "kind": "milestone"
+    },
+    {
+      "id": "A36",
+      "name": "Hỗ trợ onsite trong hai tuần đầu vận hành kho tổng",
+      "wbs": [
+        "1.4.2.3"
+      ],
+      "duration": 10,
+      "predecessors": [
+        "M4"
+      ],
+      "resources": {
+        "OS": 0.8,
+        "HW": 0.3,
+        "BE": 0.1
+      },
+      "release": null,
+      "basis": "Hai tuần lịch liên tiếp sau go-live tương ứng 10 ngày làm việc trong lịch giả định. Ngoài giờ/cuối tuần kho không giao dịch theo giả định; phải xác nhận nếu kho hoạt động khác.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "G3",
+      "name": "Nhận và tiền cấu hình thiết bị hai chi nhánh, chốt tuyến công tác",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A36"
+      ],
+      "resources": {
+        "OS": 0.3,
+        "HW": 0.6,
+        "PM": 0.1
+      },
+      "release": "2027-11-03",
+      "basis": "Bộ chi nhánh 60 triệu nhận tháng 6 theo 02, kiểm/cấu hình trước tháng 7; địa điểm và thời gian đi lại được giả định trong các hoạt động từng kho.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A37",
+      "name": "Di chuyển và lắp thiết bị tại chi nhánh 1",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "G3"
+      ],
+      "resources": {
+        "OS": 0.8,
+        "HW": 0.3
+      },
+      "release": "2027-12-03",
+      "basis": "Một ngày đi lại và hai ngày lắp: 1 PC, 1 cân, 1 máy in, 2 scanner và máy chấm công khách hàng; giả định tuyến đi mỗi kho tối đa một ngày.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A38",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 1",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A37"
+      ],
+      "resources": {
+        "TL": 0.3,
+        "BE": 0.5,
+        "FE": 0.2,
+        "OS": 0.3
+      },
+      "release": null,
+      "basis": "Cấu hình từ thiết kế đã kiểm, nạp dữ liệu khách hàng và đối soát kho gửi–nhận.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A39",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A38"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "OS": 0.4,
+        "HW": 0.2,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "AC-01/AC-02 từng thiết bị, AC-03 quyền/offline/điều chuyển; chưa đưa vào sử dụng khi chưa đạt.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "R51",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "duration": 1,
+      "predecessors": [
+        "A39"
+      ],
+      "resources": {
+        "OS": 0.6,
+        "QA": 0.6,
+        "HW": 0.3,
+        "BE": 0.3,
+        "FE": 0.2
+      },
+      "release": null,
+      "basis": "Dự phòng tại gate từng kho, xử lý và kiểm lại lỗi trước đào tạo/kích hoạt; lỗi chưa đạt không được bỏ qua để giữ mốc.",
+      "triple": null,
+      "kind": "reserve"
+    },
+    {
+      "id": "A40",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 1",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "R51"
+      ],
+      "resources": {
+        "OS": 0.8,
+        "PM": 0.1,
+        "BE": 0.1
+      },
+      "release": null,
+      "basis": "Ngày đầu đào tạo/thực hành, xác nhận đạt trước kích hoạt; ngày thứ hai hỗ trợ vận hành ban đầu.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A41",
+      "name": "Di chuyển và lắp thiết bị tại chi nhánh 2",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "A40"
+      ],
+      "resources": {
+        "OS": 0.8,
+        "HW": 0.3
+      },
+      "release": null,
+      "basis": "Một kỹ sư Onsite nên hai chi nhánh triển khai lần lượt, cùng cấu hình/số lượng với chi nhánh 1.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A42",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 2",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A41"
+      ],
+      "resources": {
+        "TL": 0.3,
+        "BE": 0.5,
+        "FE": 0.2,
+        "OS": 0.3
+      },
+      "release": null,
+      "basis": "Cấu hình, nạp/đối soát dữ liệu, kiểm liên kho theo bộ kịch bản đã đạt.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A43",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A42"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "OS": 0.4,
+        "HW": 0.2,
+        "TL": 0.1
+      },
+      "release": null,
+      "basis": "AC-01/AC-02 từng thiết bị và AC-03 trước sử dụng, có hồ sơ nghiệm thu.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "R52",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "duration": 1,
+      "predecessors": [
+        "A43"
+      ],
+      "resources": {
+        "OS": 0.6,
+        "QA": 0.6,
+        "HW": 0.3,
+        "BE": 0.3,
+        "FE": 0.2
+      },
+      "release": null,
+      "basis": "Dự phòng một ngày tại gate chi nhánh 2; không kích hoạt khi chưa đạt.",
+      "triple": null,
+      "kind": "reserve"
+    },
+    {
+      "id": "A44",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 2",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "R52"
+      ],
+      "resources": {
+        "OS": 0.8,
+        "PM": 0.1,
+        "BE": 0.1
+      },
+      "release": null,
+      "basis": "Đào tạo/thực hành trước kích hoạt, sau đó hỗ trợ ban đầu như chi nhánh 1.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A45",
+      "name": "Kỹ sư RS232/Frontend bàn giao đặc tả và hồ sơ trước khi rời dự án",
+      "wbs": [
+        "1.6.1.1",
+        "1.6.1.2",
+        "1.6.2.1"
+      ],
+      "duration": 1,
+      "predecessors": [
+        "A44"
+      ],
+      "resources": {
+        "HW": 0.5,
+        "FE": 0.4,
+        "TL": 0.2,
+        "QA": 0.2,
+        "PM": 0.1
+      },
+      "release": null,
+      "basis": "Bàn giao hồ sơ bốn cân/bốn máy in, cấu hình và lỗi còn mở cho QA/Tech Lead; không bố trí HW/FE ở tháng 8.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "M5",
+      "name": "M5 – Hai chi nhánh đạt, được đào tạo; hồ sơ kỹ thuật đã bàn giao",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1",
+        "1.5.3.1"
+      ],
+      "duration": 0,
+      "predecessors": [
+        "A45"
+      ],
+      "resources": {},
+      "release": null,
+      "basis": "",
+      "triple": null,
+      "kind": "milestone"
+    },
+    {
+      "id": "A46",
+      "name": "Tổng hợp hồ sơ bốn cân và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.1"
+      ],
+      "duration": 3,
+      "predecessors": [
+        "M5"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "TL": 0.2,
+        "BE": 0.1
+      },
+      "release": "2028-01-03",
+      "basis": "QA/Tech Lead tổng hợp kiểm tại từng kho và kiểm delta; không lần đầu nghiệm thu thiết bị trong tháng 8.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A47",
+      "name": "Tổng hợp hồ sơ bốn máy in và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.2"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A46"
+      ],
+      "resources": {
+        "QA": 0.8,
+        "TL": 0.2,
+        "BE": 0.1
+      },
+      "release": null,
+      "basis": "Tổng hợp điều kiện đo <2 giây và dữ liệu tem/QR của từng máy; kiểm lại delta nếu cần.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A48",
+      "name": "Hoàn thiện SRS/SAD/SOP/User Manual và đào tạo bổ sung",
+      "wbs": [
+        "1.6.2.1"
+      ],
+      "duration": 5,
+      "predecessors": [
+        "M5"
+      ],
+      "resources": {
+        "PM": 0.2,
+        "OS": 0.6,
+        "TL": 0.2,
+        "BE": 0.1
+      },
+      "release": "2028-01-03",
+      "basis": "PM/Onsite cập nhật từ bản BA đã bàn giao; Tech Lead/Backend cập nhật tài liệu kỹ thuật và vận hành; đào tạo bổ sung theo nhật ký phát sinh.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "R6",
+      "name": "Dự phòng đóng phát hiện nghiệm thu tổng thể",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A47",
+        "A48"
+      ],
+      "resources": {
+        "QA": 0.6,
+        "TL": 0.2,
+        "BE": 0.5,
+        "OS": 0.2
+      },
+      "release": null,
+      "basis": "Hai ngày dự phòng kiểm/cập nhật hồ sơ trước ký; không thay trách nhiệm xử lý lỗi ngăn bàn giao.",
+      "triple": null,
+      "kind": "reserve"
+    },
+    {
+      "id": "A49",
+      "name": "Nghiệm thu tổng thể với chủ đầu tư và các kho",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "R6"
+      ],
+      "resources": {
+        "PM": 0.3,
+        "QA": 0.3,
+        "TL": 0.2,
+        "OS": 0.2
+      },
+      "release": null,
+      "basis": "Lịch họp và hai ngày phản hồi/chốt biên bản giả định đã đặt trước; không coi im lặng là ký nhận.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "A50",
+      "name": "Bàn giao phần mềm/mã nguồn, CSDL, tài khoản, backup và trách nhiệm phí",
+      "wbs": [
+        "1.6.3.2"
+      ],
+      "duration": 2,
+      "predecessors": [
+        "A49"
+      ],
+      "resources": {
+        "PM": 0.3,
+        "TL": 0.3,
+        "BE": 0.5,
+        "OS": 0.2
+      },
+      "release": null,
+      "basis": "Thực hành khôi phục và ký nhận đầu mối quản trị/phí sau tháng 8; tài khoản thực tế không đưa vào báo cáo nhóm.",
+      "triple": null,
+      "kind": "work"
+    },
+    {
+      "id": "M6",
+      "name": "M6 – Nghiệm thu, bàn giao và đóng dự án",
+      "wbs": [
+        "1.6.3.2"
+      ],
+      "duration": 0,
+      "predecessors": [
+        "A50"
+      ],
+      "resources": {},
+      "release": null,
+      "basis": "",
+      "triple": null,
+      "kind": "milestone"
+    }
+  ],
+  "milestones": {
+    "M1": "2027-07-02",
+    "M2": "2027-10-02",
+    "M3": "2027-11-02",
+    "M4": "2027-12-02",
+    "M5": "2028-01-02",
+    "M6": "2028-02-02"
+  }
+}
