@@ -1,0 +1,6847 @@
+{
+  "metadata": {
+    "project": "Hệ thống Quản lý Kho Trà và Chuỗi cung ứng Tân Cương (WMS)",
+    "commit": "bc0593ccee1778c269bc924496b839e8bf28a74c",
+    "currency": "VNĐ",
+    "status": "DE_XUAT_CHUA_DUYET",
+    "start": "2027-06-03",
+    "end": "2028-02-02",
+    "salaryBasis": "Giữ toàn bộ lương huy động 50 MM theo 02. Chi phí mô hình = lương tháng × ngày công mô hình / số ngày làm việc khả dụng trong chính tháng đó; phần còn lại chưa gán hoạt động, không phải tiết kiệm.",
+    "splitAssumption": "Hoạt động có nhiều mã WBS được chia đều MM và chi phí giữa các mã trong cùng vai trò/tháng. Đây là giả định phân bổ mới minh bạch, cần nhóm thẩm định; không nhân bản toàn bộ chi phí cho mỗi mã.",
+    "baseline": "Chưa được phê duyệt thành Cost Baseline/PV hoàn chỉnh. Phần huy động chưa gán và dự phòng cần xử lý trước khi đo EVM. Không có EV/AC thực tế.",
+    "rounding": "Giữ MM và chi phí tính toán đầy đủ độ chính xác; hiển thị VNĐ nguyên. Tổng làm tròn cuối khác tổng làm tròn từng vai trò/tháng 0,03 VNĐ.",
+    "reserveSalary": "Nguồn lực có mặt trong các khối dự phòng thời gian đã nằm trong lương huy động. Không tự cộng lại tiền lương ấy vào quỹ dự phòng 143 triệu."
+  },
+  "periods": [
+    {
+      "label": "T1",
+      "start": "2027-06-03",
+      "end": "2027-07-02",
+      "workdays": 22
+    },
+    {
+      "label": "T2",
+      "start": "2027-07-03",
+      "end": "2027-08-02",
+      "workdays": 21
+    },
+    {
+      "label": "T3",
+      "start": "2027-08-03",
+      "end": "2027-09-02",
+      "workdays": 22
+    },
+    {
+      "label": "T4",
+      "start": "2027-09-03",
+      "end": "2027-10-02",
+      "workdays": 20
+    },
+    {
+      "label": "T5",
+      "start": "2027-10-03",
+      "end": "2027-11-02",
+      "workdays": 22
+    },
+    {
+      "label": "T6",
+      "start": "2027-11-03",
+      "end": "2027-12-02",
+      "workdays": 22
+    },
+    {
+      "label": "T7",
+      "start": "2027-12-03",
+      "end": "2028-01-02",
+      "workdays": 21
+    },
+    {
+      "label": "T8",
+      "start": "2028-01-03",
+      "end": "2028-02-02",
+      "workdays": 18
+    }
+  ],
+  "roles": [
+    {
+      "code": "PM",
+      "name": "Người quản lý dự án",
+      "rate": 50000000,
+      "from": 1,
+      "to": 8
+    },
+    {
+      "code": "TL",
+      "name": "Solution Architect / Tech Lead",
+      "rate": 50000000,
+      "from": 1,
+      "to": 8
+    },
+    {
+      "code": "HW",
+      "name": "Kỹ sư tích hợp RS232",
+      "rate": 32000000,
+      "from": 2,
+      "to": 7
+    },
+    {
+      "code": "BA",
+      "name": "Business Analyst – phân tích nghiệp vụ",
+      "rate": 30000000,
+      "from": 1,
+      "to": 5
+    },
+    {
+      "code": "BE",
+      "name": "Backend Developer",
+      "rate": 27000000,
+      "from": 2,
+      "to": 8
+    },
+    {
+      "code": "FE",
+      "name": "Frontend Developer",
+      "rate": 24000000,
+      "from": 2,
+      "to": 7
+    },
+    {
+      "code": "QA",
+      "name": "QA/QC Engineer – kiểm thử",
+      "rate": 20000000,
+      "from": 3,
+      "to": 8
+    },
+    {
+      "code": "OS",
+      "name": "Onsite Engineer – triển khai",
+      "rate": 18000000,
+      "from": 5,
+      "to": 8
+    }
+  ],
+  "wbs": [
+    {
+      "code": "1.1.1.1",
+      "name": "Xây dựng Kế hoạch Quản lý Dự án Tổng thể (PMP)"
+    },
+    {
+      "code": "1.1.1.2",
+      "name": "Xây dựng Kế hoạch Quản lý Phạm vi & Từ điển WBS"
+    },
+    {
+      "code": "1.1.1.3",
+      "name": "Lập Tiến độ Chi tiết & Phân bổ Ngân sách BAC 2.0 Tỷ"
+    },
+    {
+      "code": "1.1.2.1",
+      "name": "Tổ chức Họp Giao ban Định kỳ"
+    },
+    {
+      "code": "1.1.2.2",
+      "name": "Theo dõi, Kiểm soát Chi phí & Quỹ Dự phòng (143 triệu)"
+    },
+    {
+      "code": "1.1.2.3",
+      "name": "Báo cáo Tiến độ Định kỳ cho Project Sponsor"
+    },
+    {
+      "code": "1.1.3.1",
+      "name": "Tiếp nhận & Đánh giá Yêu cầu Thay đổi (CR)"
+    },
+    {
+      "code": "1.1.3.2",
+      "name": "Đảm bảo Chất lượng Quy trình (QA)"
+    },
+    {
+      "code": "1.2.1.1",
+      "name": "Khảo sát Luồng Nhập/Chế biến/Xuất tại Kho Tổng Thái Nguyên"
+    },
+    {
+      "code": "1.2.1.2",
+      "name": "Khảo sát Cổng Giao tiếp RS232 Trạm Cân, Máy in & Máy Chấm công"
+    },
+    {
+      "code": "1.2.1.3",
+      "name": "Thu thập Biểu mẫu Excel Dữ liệu Cũ & Định mức BOM"
+    },
+    {
+      "code": "1.2.2.1",
+      "name": "Lập Đặc tả Use-case cho 6 Nhóm Người dùng"
+    },
+    {
+      "code": "1.2.2.2",
+      "name": "Thống nhất Chuẩn Giao tiếp RS232/COM & In Tem"
+    },
+    {
+      "code": "1.2.3.1",
+      "name": "Thiết kế Kiến trúc Web App trên Máy trạm Windows"
+    },
+    {
+      "code": "1.2.3.2",
+      "name": "Thiết kế CSDL Đồng bộ 3 Kho & Cơ chế Đệm Dữ liệu Offline"
+    },
+    {
+      "code": "1.2.3.3",
+      "name": "Thiết kế Giao diện (UI/UX) cho Thủ kho, Công nhân & Lãnh đạo"
+    },
+    {
+      "code": "1.3.1.1",
+      "name": "Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack"
+    },
+    {
+      "code": "1.3.1.2",
+      "name": "Lập trình Thuật toán Xuất kho Ưu tiên FEFO"
+    },
+    {
+      "code": "1.3.2.1",
+      "name": "Lập trình Công thức Quy đổi BOM theo Độ ẩm & Hao hụt Chè"
+    },
+    {
+      "code": "1.3.2.2",
+      "name": "Lập trình Cảnh báo Tồn kho Dưới ngưỡng, Cận hạn/Hết hạn & Báo cáo Tuổi hàng (Aging)"
+    },
+    {
+      "code": "1.3.2.3",
+      "name": "Phát triển nhật ký nhiệt độ và độ ẩm môi trường"
+    },
+    {
+      "code": "1.3.3.1",
+      "name": "Lập trình Service Kết nối RS232 Đọc Dữ liệu Cân Tự động"
+    },
+    {
+      "code": "1.3.3.2",
+      "name": "Lập trình Module Tạo Mã QR & Điều khiển Máy in Tem"
+    },
+    {
+      "code": "1.3.3.3",
+      "name": "Lập trình Tích hợp Máy quét QR & Máy chấm công"
+    },
+    {
+      "code": "1.3.3.4",
+      "name": "Lập trình Công cụ Import/Export Danh mục và Tồn đầu kỳ từ Excel"
+    },
+    {
+      "code": "1.3.4.1",
+      "name": "Lập trình Dashboard KPI, Báo cáo Doanh thu & Giá vốn cho Lãnh đạo"
+    },
+    {
+      "code": "1.3.4.2",
+      "name": "Lập trình Module Quản lý Nhà cung cấp, Kế toán Kho & Tài xế"
+    },
+    {
+      "code": "1.3.4.3",
+      "name": "Phát triển lịch ca và phân quyền vai trò"
+    },
+    {
+      "code": "1.3.4.4",
+      "name": "Phát triển danh mục tài sản dụng cụ và vật tư"
+    },
+    {
+      "code": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App"
+    },
+    {
+      "code": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM"
+    },
+    {
+      "code": "1.4.1.1",
+      "name": "Lắp đặt PC, Trạm Cân RS232, Máy in, Máy quét tại Kho Tổng"
+    },
+    {
+      "code": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng"
+    },
+    {
+      "code": "1.4.1.3",
+      "name": "Khởi tạo Dữ liệu Danh mục Trà Ban đầu từ File Excel"
+    },
+    {
+      "code": "1.4.2.1",
+      "name": "Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế"
+    },
+    {
+      "code": "1.4.2.2",
+      "name": "Đưa Kho Tổng vào Vận hành Chính thức"
+    },
+    {
+      "code": "1.4.2.3",
+      "name": "Onsite Hỗ trợ Kỹ thuật Trực tiếp tại Thái Nguyên"
+    },
+    {
+      "code": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối"
+    },
+    {
+      "code": "1.5.2.1",
+      "name": "Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline"
+    },
+    {
+      "code": "1.5.3.1",
+      "name": "Đào tạo Thao tác Phần mềm cho Thủ kho & Nhân sự 2 Chi nhánh"
+    },
+    {
+      "code": "1.6.1.1",
+      "name": "Đo đạc Sai số Cân Tự động qua RS232"
+    },
+    {
+      "code": "1.6.1.2",
+      "name": "Đo Thời gian Tạo & In Tem"
+    },
+    {
+      "code": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án"
+    },
+    {
+      "code": "1.6.3.1",
+      "name": "Ký Biên bản UAT & Nghiệm thu Tổng thể với Project Sponsor"
+    },
+    {
+      "code": "1.6.3.2",
+      "name": "Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án"
+    }
+  ],
+  "laborRows": [
+    {
+      "role": "PM",
+      "wbs": "1.1.1.1",
+      "name": "Xây dựng Kế hoạch Quản lý Dự án Tổng thể (PMP)",
+      "mm": [
+        0.04545454545454545,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.1.1.2",
+      "name": "Xây dựng Kế hoạch Quản lý Phạm vi & Từ điển WBS",
+      "mm": [
+        0.04545454545454545,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.1.1.3",
+      "name": "Lập Tiến độ Chi tiết & Phân bổ Ngân sách BAC 2.0 Tỷ",
+      "mm": [
+        0.054545454545454536,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.1.2.1",
+      "name": "Tổ chức Họp Giao ban Định kỳ",
+      "mm": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.061111111111111116
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.1.2.2",
+      "name": "Theo dõi, Kiểm soát Chi phí & Quỹ Dự phòng (143 triệu)",
+      "mm": [
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.030555555555555558
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.1.2.3",
+      "name": "Báo cáo Tiến độ Định kỳ cho Project Sponsor",
+      "mm": [
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.030555555555555558
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.1.3.1",
+      "name": "Tiếp nhận & Đánh giá Yêu cầu Thay đổi (CR)",
+      "mm": [
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.030555555555555558
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.2.1.1",
+      "name": "Khảo sát Luồng Nhập/Chế biến/Xuất tại Kho Tổng Thái Nguyên",
+      "mm": [
+        0.011363636363636364,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.2.1.2",
+      "name": "Khảo sát Cổng Giao tiếp RS232 Trạm Cân, Máy in & Máy Chấm công",
+      "mm": [
+        0.011363636363636364,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.2.2.1",
+      "name": "Lập Đặc tả Use-case cho 6 Nhóm Người dùng",
+      "mm": [
+        0.00909090909090909,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.2.3.1",
+      "name": "Thiết kế Kiến trúc Web App trên Máy trạm Windows",
+      "mm": [
+        0.00909090909090909,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.3.3.1",
+      "name": "Lập trình Service Kết nối RS232 Đọc Dữ liệu Cân Tự động",
+      "mm": [
+        0.0,
+        0.0015873015873015875,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.3.3.2",
+      "name": "Lập trình Module Tạo Mã QR & Điều khiển Máy in Tem",
+      "mm": [
+        0.0,
+        0.0015873015873015875,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.3.3.3",
+      "name": "Lập trình Tích hợp Máy quét QR & Máy chấm công",
+      "mm": [
+        0.0,
+        0.0015873015873015875,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.4.1.1",
+      "name": "Lắp đặt PC, Trạm Cân RS232, Máy in, Máy quét tại Kho Tổng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0030303030303030307,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.01666666666666667,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.4.1.3",
+      "name": "Khởi tạo Dữ liệu Danh mục Trà Ban đầu từ File Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0030303030303030307,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.4.2.1",
+      "name": "Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009090909090909092,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.4.2.2",
+      "name": "Đưa Kho Tổng vào Vận hành Chính thức",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.018181818181818184,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.01363636363636364,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.5.3.1",
+      "name": "Đào tạo Thao tác Phần mềm cho Thủ kho & Nhân sự 2 Chi nhánh",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.01904761904761905,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.6.1.1",
+      "name": "Đo đạc Sai số Cân Tự động qua RS232",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0015873015873015875,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.6.1.2",
+      "name": "Đo Thời gian Tạo & In Tem",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0015873015873015875,
+        0.0
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0015873015873015875,
+        0.05555555555555555
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.6.3.1",
+      "name": "Ký Biên bản UAT & Nghiệm thu Tổng thể với Project Sponsor",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03333333333333333
+      ]
+    },
+    {
+      "role": "PM",
+      "wbs": "1.6.3.2",
+      "name": "Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03333333333333333
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.1.1.1",
+      "name": "Xây dựng Kế hoạch Quản lý Dự án Tổng thể (PMP)",
+      "mm": [
+        0.007575757575757576,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.1.1.2",
+      "name": "Xây dựng Kế hoạch Quản lý Phạm vi & Từ điển WBS",
+      "mm": [
+        0.007575757575757576,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.1.1.3",
+      "name": "Lập Tiến độ Chi tiết & Phân bổ Ngân sách BAC 2.0 Tỷ",
+      "mm": [
+        0.013636363636363637,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.1.3.1",
+      "name": "Tiếp nhận & Đánh giá Yêu cầu Thay đổi (CR)",
+      "mm": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.061111111111111116
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.1.1",
+      "name": "Khảo sát Luồng Nhập/Chế biến/Xuất tại Kho Tổng Thái Nguyên",
+      "mm": [
+        0.022727272727272728,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.1.2",
+      "name": "Khảo sát Cổng Giao tiếp RS232 Trạm Cân, Máy in & Máy Chấm công",
+      "mm": [
+        0.022727272727272728,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.1.3",
+      "name": "Thu thập Biểu mẫu Excel Dữ liệu Cũ & Định mức BOM",
+      "mm": [
+        0.01363636363636364,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.2.1",
+      "name": "Lập Đặc tả Use-case cho 6 Nhóm Người dùng",
+      "mm": [
+        0.02878787878787879,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.2.2",
+      "name": "Thống nhất Chuẩn Giao tiếp RS232/COM & In Tem",
+      "mm": [
+        0.09545454545454544,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.3.1",
+      "name": "Thiết kế Kiến trúc Web App trên Máy trạm Windows",
+      "mm": [
+        0.13333333333333333,
+        0.0857142857142857,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.3.2",
+      "name": "Thiết kế CSDL Đồng bộ 3 Kho & Cơ chế Đệm Dữ liệu Offline",
+      "mm": [
+        0.12727272727272726,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.2.3.3",
+      "name": "Thiết kế Giao diện (UI/UX) cho Thủ kho, Công nhân & Lãnh đạo",
+      "mm": [
+        0.01363636363636364,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.1.1",
+      "name": "Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack",
+      "mm": [
+        0.0,
+        0.05714285714285715,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.1.2",
+      "name": "Lập trình Thuật toán Xuất kho Ưu tiên FEFO",
+      "mm": [
+        0.0,
+        0.01904761904761905,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.2.1",
+      "name": "Lập trình Công thức Quy đổi BOM theo Độ ẩm & Hao hụt Chè",
+      "mm": [
+        0.0,
+        0.01904761904761905,
+        0.009090909090909092,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.2.2",
+      "name": "Lập trình Cảnh báo Tồn kho Dưới ngưỡng, Cận hạn/Hết hạn & Báo cáo Tuổi hàng (Aging)",
+      "mm": [
+        0.0,
+        0.0,
+        0.018181818181818184,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.2.3",
+      "name": "Phát triển nhật ký nhiệt độ và độ ẩm môi trường",
+      "mm": [
+        0.0,
+        0.0,
+        0.01363636363636364,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.3.1",
+      "name": "Lập trình Service Kết nối RS232 Đọc Dữ liệu Cân Tự động",
+      "mm": [
+        0.0,
+        0.04285714285714286,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.3.2",
+      "name": "Lập trình Module Tạo Mã QR & Điều khiển Máy in Tem",
+      "mm": [
+        0.0,
+        0.03333333333333334,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.3.3",
+      "name": "Lập trình Tích hợp Máy quét QR & Máy chấm công",
+      "mm": [
+        0.0,
+        0.009523809523809525,
+        0.018181818181818184,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.3.4",
+      "name": "Lập trình Công cụ Import/Export Danh mục và Tồn đầu kỳ từ Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.018181818181818184,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.4.1",
+      "name": "Lập trình Dashboard KPI, Báo cáo Doanh thu & Giá vốn cho Lãnh đạo",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.4.2",
+      "name": "Lập trình Module Quản lý Nhà cung cấp, Kế toán Kho & Tài xế",
+      "mm": [
+        0.0,
+        0.0,
+        0.03181818181818182,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.4.3",
+      "name": "Phát triển lịch ca và phân quyền vai trò",
+      "mm": [
+        0.0,
+        0.0,
+        0.009090909090909092,
+        0.01,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.4.4",
+      "name": "Phát triển danh mục tài sản dụng cụ và vật tư",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.015000000000000003,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App",
+      "mm": [
+        0.0,
+        0.0,
+        0.011363636363636364,
+        0.01,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM",
+      "mm": [
+        0.0,
+        0.0,
+        0.011363636363636364,
+        0.04000000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.4.1.1",
+      "name": "Lắp đặt PC, Trạm Cân RS232, Máy in, Máy quét tại Kho Tổng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.018181818181818184,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.4.2.1",
+      "name": "Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.07727272727272727,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.4.2.2",
+      "name": "Đưa Kho Tổng vào Vận hành Chính thức",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009090909090909092,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009523809523809525,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.5.2.1",
+      "name": "Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06666666666666667,
+        0.0
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.6.1.1",
+      "name": "Đo đạc Sai số Cân Tự động qua RS232",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003174603174603175,
+        0.03333333333333334
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.6.1.2",
+      "name": "Đo Thời gian Tạo & In Tem",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003174603174603175,
+        0.022222222222222223
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003174603174603175,
+        0.05555555555555555
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.6.3.1",
+      "name": "Ký Biên bản UAT & Nghiệm thu Tổng thể với Project Sponsor",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.044444444444444446
+      ]
+    },
+    {
+      "role": "TL",
+      "wbs": "1.6.3.2",
+      "name": "Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03333333333333333
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.3.3.1",
+      "name": "Lập trình Service Kết nối RS232 Đọc Dữ liệu Cân Tự động",
+      "mm": [
+        0.0,
+        0.346031746031746,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.3.3.2",
+      "name": "Lập trình Module Tạo Mã QR & Điều khiển Máy in Tem",
+      "mm": [
+        0.0,
+        0.2698412698412699,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.3.3.3",
+      "name": "Lập trình Tích hợp Máy quét QR & Máy chấm công",
+      "mm": [
+        0.0,
+        0.07936507936507937,
+        0.14545454545454548,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App",
+      "mm": [
+        0.0,
+        0.0,
+        0.045454545454545456,
+        0.03,
+        0.012121212121212123,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM",
+      "mm": [
+        0.0,
+        0.0,
+        0.05454545454545456,
+        0.03,
+        0.012121212121212123,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.4.1.1",
+      "name": "Lắp đặt PC, Trạm Cân RS232, Máy in, Máy quét tại Kho Tổng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.11212121212121212,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03333333333333334,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.4.1.3",
+      "name": "Khởi tạo Dữ liệu Danh mục Trà Ban đầu từ File Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0030303030303030307,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.4.2.2",
+      "name": "Đưa Kho Tổng vào Vận hành Chính thức",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009090909090909092,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.4.2.3",
+      "name": "Onsite Hỗ trợ Kỹ thuật Trực tiếp tại Thái Nguyên",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.13636363636363635,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0818181818181818,
+        0.11904761904761904,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.5.2.1",
+      "name": "Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03333333333333333,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.6.1.1",
+      "name": "Đo đạc Sai số Cân Tự động qua RS232",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.007936507936507936,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.6.1.2",
+      "name": "Đo Thời gian Tạo & In Tem",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.007936507936507936,
+        0.0
+      ]
+    },
+    {
+      "role": "HW",
+      "wbs": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.007936507936507936,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.1.1.3",
+      "name": "Lập Tiến độ Chi tiết & Phân bổ Ngân sách BAC 2.0 Tỷ",
+      "mm": [
+        0.0060606060606060615,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.1.1",
+      "name": "Khảo sát Luồng Nhập/Chế biến/Xuất tại Kho Tổng Thái Nguyên",
+      "mm": [
+        0.07954545454545454,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.1.2",
+      "name": "Khảo sát Cổng Giao tiếp RS232 Trạm Cân, Máy in & Máy Chấm công",
+      "mm": [
+        0.07954545454545454,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.1.3",
+      "name": "Thu thập Biểu mẫu Excel Dữ liệu Cũ & Định mức BOM",
+      "mm": [
+        0.09545454545454544,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.2.1",
+      "name": "Lập Đặc tả Use-case cho 6 Nhóm Người dùng",
+      "mm": [
+        0.16515151515151516,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.2.2",
+      "name": "Thống nhất Chuẩn Giao tiếp RS232/COM & In Tem",
+      "mm": [
+        0.02727272727272728,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.3.1",
+      "name": "Thiết kế Kiến trúc Web App trên Máy trạm Windows",
+      "mm": [
+        0.024242424242424246,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.3.2",
+      "name": "Thiết kế CSDL Đồng bộ 3 Kho & Cơ chế Đệm Dữ liệu Offline",
+      "mm": [
+        0.018181818181818184,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.2.3.3",
+      "name": "Thiết kế Giao diện (UI/UX) cho Thủ kho, Công nhân & Lãnh đạo",
+      "mm": [
+        0.09545454545454544,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.1.1",
+      "name": "Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack",
+      "mm": [
+        0.0,
+        0.028571428571428574,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.1.2",
+      "name": "Lập trình Thuật toán Xuất kho Ưu tiên FEFO",
+      "mm": [
+        0.0,
+        0.009523809523809525,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.2.1",
+      "name": "Lập trình Công thức Quy đổi BOM theo Độ ẩm & Hao hụt Chè",
+      "mm": [
+        0.0,
+        0.009523809523809525,
+        0.004545454545454546,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.2.2",
+      "name": "Lập trình Cảnh báo Tồn kho Dưới ngưỡng, Cận hạn/Hết hạn & Báo cáo Tuổi hàng (Aging)",
+      "mm": [
+        0.0,
+        0.0,
+        0.009090909090909092,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.2.3",
+      "name": "Phát triển nhật ký nhiệt độ và độ ẩm môi trường",
+      "mm": [
+        0.0,
+        0.0,
+        0.00681818181818182,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.3.4",
+      "name": "Lập trình Công cụ Import/Export Danh mục và Tồn đầu kỳ từ Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.009090909090909092,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.4.1",
+      "name": "Lập trình Dashboard KPI, Báo cáo Doanh thu & Giá vốn cho Lãnh đạo",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.01,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.4.2",
+      "name": "Lập trình Module Quản lý Nhà cung cấp, Kế toán Kho & Tài xế",
+      "mm": [
+        0.0,
+        0.0,
+        0.01590909090909091,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.4.3",
+      "name": "Phát triển lịch ca và phân quyền vai trò",
+      "mm": [
+        0.0,
+        0.0,
+        0.004545454545454546,
+        0.005,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.4.4",
+      "name": "Phát triển danh mục tài sản dụng cụ và vật tư",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0075000000000000015,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App",
+      "mm": [
+        0.0,
+        0.0,
+        0.011363636363636364,
+        0.0,
+        0.012121212121212123,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM",
+      "mm": [
+        0.0,
+        0.0,
+        0.011363636363636364,
+        0.0,
+        0.012121212121212123,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2121212121212121,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BA",
+      "wbs": "1.4.1.3",
+      "name": "Khởi tạo Dữ liệu Danh mục Trà Ban đầu từ File Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0818181818181818,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.2.3.1",
+      "name": "Thiết kế Kiến trúc Web App trên Máy trạm Windows",
+      "mm": [
+        0.0,
+        0.028571428571428574,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.1.1",
+      "name": "Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack",
+      "mm": [
+        0.0,
+        0.4571428571428572,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.1.2",
+      "name": "Lập trình Thuật toán Xuất kho Ưu tiên FEFO",
+      "mm": [
+        0.0,
+        0.1523809523809524,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.2.1",
+      "name": "Lập trình Công thức Quy đổi BOM theo Độ ẩm & Hao hụt Chè",
+      "mm": [
+        0.0,
+        0.1523809523809524,
+        0.07272727272727274,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.2.2",
+      "name": "Lập trình Cảnh báo Tồn kho Dưới ngưỡng, Cận hạn/Hết hạn & Báo cáo Tuổi hàng (Aging)",
+      "mm": [
+        0.0,
+        0.0,
+        0.14545454545454548,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.2.3",
+      "name": "Phát triển nhật ký nhiệt độ và độ ẩm môi trường",
+      "mm": [
+        0.0,
+        0.0,
+        0.10909090909090911,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.3.3",
+      "name": "Lập trình Tích hợp Máy quét QR & Máy chấm công",
+      "mm": [
+        0.0,
+        0.009523809523809525,
+        0.018181818181818184,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.3.4",
+      "name": "Lập trình Công cụ Import/Export Danh mục và Tồn đầu kỳ từ Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.14545454545454548,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.4.1",
+      "name": "Lập trình Dashboard KPI, Báo cáo Doanh thu & Giá vốn cho Lãnh đạo",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.4.2",
+      "name": "Lập trình Module Quản lý Nhà cung cấp, Kế toán Kho & Tài xế",
+      "mm": [
+        0.0,
+        0.0,
+        0.2545454545454546,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.4.3",
+      "name": "Phát triển lịch ca và phân quyền vai trò",
+      "mm": [
+        0.0,
+        0.0,
+        0.07272727272727274,
+        0.08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.4.4",
+      "name": "Phát triển danh mục tài sản dụng cụ và vật tư",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.12000000000000002,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App",
+      "mm": [
+        0.0,
+        0.0,
+        0.022727272727272728,
+        0.05,
+        0.0060606060606060615,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM",
+      "mm": [
+        0.0,
+        0.0,
+        0.02727272727272728,
+        0.08000000000000002,
+        0.0060606060606060615,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.051515151515151514,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.4.1.3",
+      "name": "Khởi tạo Dữ liệu Danh mục Trà Ban đầu từ File Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0409090909090909,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.4.2.1",
+      "name": "Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.09545454545454544,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.4.2.2",
+      "name": "Đưa Kho Tổng vào Vận hành Chính thức",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009090909090909092,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.4.2.3",
+      "name": "Onsite Hỗ trợ Kỹ thuật Trực tiếp tại Thái Nguyên",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.045454545454545456,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.014285714285714285,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.5.2.1",
+      "name": "Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.10952380952380952,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.5.3.1",
+      "name": "Đào tạo Thao tác Phần mềm cho Thủ kho & Nhân sự 2 Chi nhánh",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.01904761904761905,
+        0.0
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.6.1.1",
+      "name": "Đo đạc Sai số Cân Tự động qua RS232",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.01666666666666667
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.6.1.2",
+      "name": "Đo Thời gian Tạo & In Tem",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.011111111111111112
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.027777777777777776
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.6.3.1",
+      "name": "Ký Biên bản UAT & Nghiệm thu Tổng thể với Project Sponsor",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.05555555555555555
+      ]
+    },
+    {
+      "role": "BE",
+      "wbs": "1.6.3.2",
+      "name": "Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.05555555555555555
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.2.3.1",
+      "name": "Thiết kế Kiến trúc Web App trên Máy trạm Windows",
+      "mm": [
+        0.0,
+        0.028571428571428574,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.1.1",
+      "name": "Lập trình Chức năng Nhập/Xuất/Kiểm kê & Sơ đồ Zone/Bin/Rack",
+      "mm": [
+        0.0,
+        0.4571428571428572,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.1.2",
+      "name": "Lập trình Thuật toán Xuất kho Ưu tiên FEFO",
+      "mm": [
+        0.0,
+        0.1523809523809524,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.2.1",
+      "name": "Lập trình Công thức Quy đổi BOM theo Độ ẩm & Hao hụt Chè",
+      "mm": [
+        0.0,
+        0.1523809523809524,
+        0.07272727272727274,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.2.2",
+      "name": "Lập trình Cảnh báo Tồn kho Dưới ngưỡng, Cận hạn/Hết hạn & Báo cáo Tuổi hàng (Aging)",
+      "mm": [
+        0.0,
+        0.0,
+        0.14545454545454548,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.2.3",
+      "name": "Phát triển nhật ký nhiệt độ và độ ẩm môi trường",
+      "mm": [
+        0.0,
+        0.0,
+        0.10909090909090911,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.3.4",
+      "name": "Lập trình Công cụ Import/Export Danh mục và Tồn đầu kỳ từ Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.14545454545454548,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.4.1",
+      "name": "Lập trình Dashboard KPI, Báo cáo Doanh thu & Giá vốn cho Lãnh đạo",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.4.2",
+      "name": "Lập trình Module Quản lý Nhà cung cấp, Kế toán Kho & Tài xế",
+      "mm": [
+        0.0,
+        0.0,
+        0.2545454545454546,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.4.3",
+      "name": "Phát triển lịch ca và phân quyền vai trò",
+      "mm": [
+        0.0,
+        0.0,
+        0.07272727272727274,
+        0.08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.4.4",
+      "name": "Phát triển danh mục tài sản dụng cụ và vật tư",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.12000000000000002,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.05,
+        0.0060606060606060615,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM",
+      "mm": [
+        0.0,
+        0.0,
+        0.02727272727272728,
+        0.08000000000000002,
+        0.0060606060606060615,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.051515151515151514,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009523809523809525,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.5.2.1",
+      "name": "Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.047619047619047616,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.6.1.1",
+      "name": "Đo đạc Sai số Cân Tự động qua RS232",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.00634920634920635,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.6.1.2",
+      "name": "Đo Thời gian Tạo & In Tem",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.00634920634920635,
+        0.0
+      ]
+    },
+    {
+      "role": "FE",
+      "wbs": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.00634920634920635,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.1.3.2",
+      "name": "Đảm bảo Chất lượng Quy trình (QA)",
+      "mm": [
+        0.0,
+        0.0,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.061111111111111116
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App",
+      "mm": [
+        0.0,
+        0.0,
+        0.2727272727272727,
+        0.08,
+        0.04848484848484849,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM",
+      "mm": [
+        0.0,
+        0.0,
+        0.30909090909090914,
+        0.32000000000000006,
+        0.04848484848484849,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.16666666666666669,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.4.2.1",
+      "name": "Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02727272727272727,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.4.2.2",
+      "name": "Đưa Kho Tổng vào Vận hành Chính thức",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02727272727272727,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.10476190476190478,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.5.2.1",
+      "name": "Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.10476190476190478,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.6.1.1",
+      "name": "Đo đạc Sai số Cân Tự động qua RS232",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003174603174603175,
+        0.13333333333333336
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.6.1.2",
+      "name": "Đo Thời gian Tạo & In Tem",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003174603174603175,
+        0.08888888888888889
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003174603174603175,
+        0.0
+      ]
+    },
+    {
+      "role": "QA",
+      "wbs": "1.6.3.1",
+      "name": "Ký Biên bản UAT & Nghiệm thu Tổng thể với Project Sponsor",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.3.5.1",
+      "name": "Kiểm thử Luồng Dữ liệu Cân RS232 đến Web App",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.024242424242424246,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.3.5.2",
+      "name": "Kiểm thử Tốc độ In Tem & Thuật toán FEFO/BOM",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.024242424242424246,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.4.1.1",
+      "name": "Lắp đặt PC, Trạm Cân RS232, Máy in, Máy quét tại Kho Tổng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1484848484848485,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.4.1.2",
+      "name": "Xây dựng Kịch bản UAT & Hướng dẫn 6 Nhóm Người dùng",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.17272727272727273,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.4.1.3",
+      "name": "Khởi tạo Dữ liệu Danh mục Trà Ban đầu từ File Excel",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.057575757575757586,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.4.2.1",
+      "name": "Chuyển đổi Dữ liệu Sang Môi trường Vận hành Thực tế",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.040909090909090916,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.4.2.2",
+      "name": "Đưa Kho Tổng vào Vận hành Chính thức",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03636363636363636,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.4.2.3",
+      "name": "Onsite Hỗ trợ Kỹ thuật Trực tiếp tại Thái Nguyên",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.36363636363636365,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.5.1.1",
+      "name": "Lắp đặt Phần cứng & Thiết bị tại 02 Kho Chi nhánh Phân phối",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0409090909090909,
+        0.2952380952380953,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.5.2.1",
+      "name": "Cấu hình Đồng bộ CSDL Liên kho & Cơ chế Hoạt động Offline",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.12380952380952381,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.5.3.1",
+      "name": "Đào tạo Thao tác Phần mềm cho Thủ kho & Nhân sự 2 Chi nhánh",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1523809523809524,
+        0.0
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.6.2.1",
+      "name": "Hoàn thiện Bộ Tài liệu Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.16666666666666666
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.6.3.1",
+      "name": "Ký Biên bản UAT & Nghiệm thu Tổng thể với Project Sponsor",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.044444444444444446
+      ]
+    },
+    {
+      "role": "OS",
+      "wbs": "1.6.3.2",
+      "name": "Bàn giao Hệ thống, Đóng gói Mã nguồn & Đóng Dự án",
+      "mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.022222222222222223
+      ]
+    }
+  ],
+  "otherRows": [
+    {
+      "type": "Thiết bị",
+      "item": "Cân RS232 kho tổng",
+      "qty": 1,
+      "unit": "chiếc",
+      "rate": 15000000.0,
+      "month": 2,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Máy in tem kho tổng",
+      "qty": 1,
+      "unit": "chiếc",
+      "rate": 8000000.0,
+      "month": 2,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Máy quét QR kho tổng",
+      "qty": 1,
+      "unit": "chiếc",
+      "rate": 2000000.0,
+      "month": 2,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "PC Windows kho tổng",
+      "qty": 1,
+      "unit": "chiếc",
+      "rate": 8000000.0,
+      "month": 2,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Cân RS232 kho tổng",
+      "qty": 1,
+      "unit": "chiếc",
+      "rate": 15000000.0,
+      "month": 5,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Máy in tem kho tổng",
+      "qty": 1,
+      "unit": "chiếc",
+      "rate": 8000000.0,
+      "month": 5,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Máy quét QR kho tổng",
+      "qty": 3,
+      "unit": "chiếc",
+      "rate": 2000000.0,
+      "month": 5,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "PC Windows kho tổng",
+      "qty": 1,
+      "unit": "chiếc",
+      "rate": 8000000.0,
+      "month": 5,
+      "wbs": "1.4.1.1",
+      "source": "02, IV.1 và V.3; tiếp nhận sớm, không mua trùng"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Cân RS232 chi nhánh",
+      "qty": 2,
+      "unit": "chiếc",
+      "rate": 7500000.0,
+      "month": 6,
+      "wbs": "1.5.1.1",
+      "source": "02, IV.2 và V.3; tổng của cả hai chi nhánh"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Máy in tem chi nhánh",
+      "qty": 2,
+      "unit": "chiếc",
+      "rate": 5000000.0,
+      "month": 6,
+      "wbs": "1.5.1.1",
+      "source": "02, IV.2 và V.3; tổng của cả hai chi nhánh"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Máy quét QR chi nhánh",
+      "qty": 4,
+      "unit": "chiếc",
+      "rate": 2000000.0,
+      "month": 6,
+      "wbs": "1.5.1.1",
+      "source": "02, IV.2 và V.3; tổng của cả hai chi nhánh"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "PC Windows chi nhánh",
+      "qty": 2,
+      "unit": "chiếc",
+      "rate": 8000000.0,
+      "month": 6,
+      "wbs": "1.5.1.1",
+      "source": "02, IV.2 và V.3; tổng của cả hai chi nhánh"
+    },
+    {
+      "type": "Thiết bị",
+      "item": "Vật tư mạng và switch hai chi nhánh",
+      "qty": 1,
+      "unit": "gói",
+      "rate": 11000000.0,
+      "month": 6,
+      "wbs": "1.5.1.1",
+      "source": "02, IV.2 và V.3; tổng của cả hai chi nhánh"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T1",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 4000000.0,
+      "month": 1,
+      "wbs": "1.2.3.1",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T2",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 3000000.0,
+      "month": 2,
+      "wbs": "1.2.3.1",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T3",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 3000000.0,
+      "month": 3,
+      "wbs": "1.2.3.1",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T4",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 3000000.0,
+      "month": 4,
+      "wbs": "1.2.3.1",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T5",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 3000000.0,
+      "month": 5,
+      "wbs": "1.4.2.1",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T6",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 3000000.0,
+      "month": 6,
+      "wbs": "1.4.2.1",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T7",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 3000000.0,
+      "month": 7,
+      "wbs": "1.5.2.1",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Hạ tầng",
+      "item": "Phân bổ cloud và bản quyền T8",
+      "qty": 1,
+      "unit": "phần ngân sách",
+      "rate": 3000000.0,
+      "month": 8,
+      "wbs": "1.6.3.2",
+      "source": "02, V.2–V.3; phân bổ gói 25 triệu, chưa phải báo giá"
+    },
+    {
+      "type": "Công tác",
+      "item": "Khảo sát ban đầu",
+      "qty": 1,
+      "unit": "hạn mức đợt",
+      "rate": 3000000.0,
+      "month": 1,
+      "wbs": "1.2.1.1",
+      "source": "02, V.2–V.3; cần xác nhận số người, chuyến, ngày và địa điểm"
+    },
+    {
+      "type": "Công tác",
+      "item": "Kiểm tra điều kiện kho tổng",
+      "qty": 1,
+      "unit": "hạn mức đợt",
+      "rate": 2000000.0,
+      "month": 4,
+      "wbs": "1.4.1.1",
+      "source": "02, V.2–V.3; cần xác nhận số người, chuyến, ngày và địa điểm"
+    },
+    {
+      "type": "Công tác",
+      "item": "Lắp đặt kho tổng",
+      "qty": 1,
+      "unit": "hạn mức đợt",
+      "rate": 9000000.0,
+      "month": 5,
+      "wbs": "1.4.1.1",
+      "source": "02, V.2–V.3; cần xác nhận số người, chuyến, ngày và địa điểm"
+    },
+    {
+      "type": "Công tác",
+      "item": "Go-live và chuẩn bị triển khai",
+      "qty": 1,
+      "unit": "hạn mức đợt",
+      "rate": 8000000.0,
+      "month": 6,
+      "wbs": "1.4.2.3",
+      "source": "02, V.2–V.3; cần xác nhận số người, chuyến, ngày và địa điểm"
+    },
+    {
+      "type": "Công tác",
+      "item": "Triển khai hai chi nhánh",
+      "qty": 1,
+      "unit": "hạn mức đợt",
+      "rate": 9000000.0,
+      "month": 7,
+      "wbs": "1.5.1.1",
+      "source": "02, V.2–V.3; cần xác nhận số người, chuyến, ngày và địa điểm"
+    },
+    {
+      "type": "Công tác",
+      "item": "Đào tạo bổ sung và nghiệm thu",
+      "qty": 1,
+      "unit": "hạn mức đợt",
+      "rate": 4000000.0,
+      "month": 8,
+      "wbs": "1.6.3.1",
+      "source": "02, V.2–V.3; cần xác nhận số người, chuyến, ngày và địa điểm"
+    }
+  ],
+  "reserves": [
+    {
+      "id": "CP-R01",
+      "name": "Không tương thích cân, máy in hoặc máy chấm công",
+      "amount": 40000000.0,
+      "owner": "Tech Lead / RS232",
+      "trigger": "Biên bản kiểm mẫu chứng minh không đạt; có phương án và dự toán xử lý bổ sung.",
+      "phase": "T2–T5",
+      "wbs": "1.3.3.1–1.3.3.3; 1.4.1.1",
+      "status": "DE_XUAT"
+    },
+    {
+      "id": "CP-R02",
+      "name": "Dữ liệu mở kho sai hoặc thiếu",
+      "amount": 21000000.0,
+      "owner": "Tech Lead / Onsite",
+      "trigger": "Đối soát phát hiện sai lệch cần công hoặc dịch vụ ngoài phần đã phân bổ.",
+      "phase": "T5–T7",
+      "wbs": "1.4.1.3; 1.4.2.1; 1.5.2.1",
+      "status": "DE_XUAT"
+    },
+    {
+      "id": "CP-R03",
+      "name": "Đồng bộ hoặc đệm ngoại tuyến không đạt",
+      "amount": 30000000.0,
+      "owner": "Tech Lead / Backend",
+      "trigger": "Kết quả kiểm ngắt/khôi phục mạng không đạt điều kiện SRS đã duyệt.",
+      "phase": "T4–T7",
+      "wbs": "1.3.5.1; 1.4.2.1; 1.5.2.1",
+      "status": "DE_XUAT"
+    },
+    {
+      "id": "CP-R04",
+      "name": "Giao thiết bị chậm hoặc hiện trường chưa sẵn sàng",
+      "amount": 20000000.0,
+      "owner": "PM / Onsite",
+      "trigger": "Nhà cung cấp báo trễ hoặc khảo sát xác nhận thiếu điều kiện triển khai.",
+      "phase": "T4–T7",
+      "wbs": "1.4.1.1; 1.5.1.1",
+      "status": "DE_XUAT"
+    },
+    {
+      "id": "CP-R05",
+      "name": "Phải kiểm lại hoặc làm lại để đạt yêu cầu đã duyệt",
+      "amount": 20000000.0,
+      "owner": "PM / QA",
+      "trigger": "Biên bản UAT không đạt, có phân tích nguyên nhân và chi phí tăng thêm.",
+      "phase": "T5–T8",
+      "wbs": "1.4.1.2; 1.4.2.3; 1.5.2.1; 1.6.3.1",
+      "status": "DE_XUAT"
+    },
+    {
+      "id": "CP-R06",
+      "name": "Người dùng vắng UAT hoặc đào tạo theo lịch",
+      "amount": 12000000.0,
+      "owner": "PM / Onsite",
+      "trigger": "Đại diện kho xác nhận cần buổi bổ sung ngoài ngân sách công tác đã lập.",
+      "phase": "T5–T8",
+      "wbs": "1.4.1.2; 1.5.3.1; 1.6.2.1",
+      "status": "DE_XUAT"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "description": "Dự toán gốc: 8 vai trò, lương, 50 MM, thiết bị và cơ cấu 2 tỷ; mục II–V.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/02-du-toan-kinh-phi.md"
+    },
+    {
+      "id": "S02",
+      "description": "Tôn chỉ đầy đủ: ràng buộc, mốc bàn giao, thẩm quyền và vận hành sau dự án.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/04-ton-chi-du-an-day-du.md"
+    },
+    {
+      "id": "S03",
+      "description": "Phạm vi: 45 gói WBS, 20 dòng RTM, tiêu chí nghiệm thu và quy trình CR.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/B%C3%81O%20C%C3%81O%20QU%E1%BA%A2N%20L%C3%9D%20PH%E1%BA%A0M%20VI%20D%E1%BB%B0%20%C3%81N.md"
+    },
+    {
+      "id": "S04",
+      "description": "Chương 3, phiên bản 1.1 ngày 13/10/2026: lịch và nỗ lực còn là đề xuất; 50 MM lương toàn kỳ khác ngày công mô hình.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/CHUONG-3-QUAN-LY-THOI-GIAN.md"
+    },
+    {
+      "id": "S05",
+      "description": "Nguồn máy đọc: 64 hoạt động/mốc, 6 LoE, vai trò và tỷ lệ phân công.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/chuong-3/du-lieu-lich.json"
+    },
+    {
+      "id": "S06",
+      "description": "Kết quả lịch hiện hành: ngày thực hiện và 341,3 ngày công mô hình; không phải số liệu thực tế.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/chuong-3/ket-qua-lich.json"
+    },
+    {
+      "id": "S07",
+      "description": "Tải hằng ngày dùng để đối chiếu độc lập nỗ lực từng vai trò và tháng.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/chuong-3/tai-nguon-luc.csv"
+    },
+    {
+      "id": "S08",
+      "description": "Kế hoạch nhân lực bản 03: 8 vị trí, 50 MM và ma trận T1–T8; khác nhóm 4 sinh viên làm BTL.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/K%E1%BA%BF%20ho%E1%BA%A1ch%20qu%E1%BA%A3n%20l%C3%BD%20nh%C3%A2n%20l%E1%BB%B1c.md"
+    },
+    {
+      "id": "S09",
+      "description": "Bài giảng 6-cost.pdf do người dùng đính kèm; trang 9, 11, 20, 31 được đối chiếu trong lượt rà soát: yêu cầu học phần, lập ngân sách và kiểm soát chi phí.",
+      "url": "",
+      "file": "6-cost.pdf",
+      "pages": [
+        9,
+        11,
+        20,
+        31
+      ],
+      "type": "BAI_GIANG"
+    },
+    {
+      "id": "S10",
+      "description": "Bài thuyết trình nhóm 3 do người dùng đính kèm, chỉ dùng tham khảo cách trình bày; không thay yêu cầu của giảng viên.",
+      "url": "",
+      "file": "_Quản lý Chi phí Dự án Phần mềm - Nhóm 3.pdf",
+      "type": "THAM_KHAO"
+    },
+    {
+      "id": "S11",
+      "description": "Bộ bài cũ quản lý chi phí.rar: lấy lại 27 dòng ngoài lương tổng 190 triệu và 6 hạn mức dự phòng tổng 143 triệu; các khoản chi tiết vẫn là đề xuất.",
+      "url": "",
+      "file": "quản lý chi phí.rar",
+      "type": "BAI_CU"
+    },
+    {
+      "id": "S12",
+      "description": "Phân công 4 sinh viên: Dũng quản lý chi phí; khác 8 vai trò trong tình huống dự án.",
+      "url": "https://github.com/NguyenHaiHung0510/QLDAPM-16/blob/bc0593ccee1778c269bc924496b839e8bf28a74c/N-03-phan-cong-va-quyet-dinh.md"
+    }
+  ],
+  "activityRows": [
+    {
+      "id": "A01",
+      "name": "Lập PMP, kế hoạch phạm vi/WBS và lịch/ngân sách đề xuất",
+      "wbs": [
+        "1.1.1.1",
+        "1.1.1.2",
+        "1.1.1.3"
+      ],
+      "role": "PM",
+      "month": 1,
+      "days": 3.0,
+      "mm": 0.13636363636363635,
+      "cost": 6818181.818181817,
+      "kind": "work"
+    },
+    {
+      "id": "A01",
+      "name": "Lập PMP, kế hoạch phạm vi/WBS và lịch/ngân sách đề xuất",
+      "wbs": [
+        "1.1.1.1",
+        "1.1.1.2",
+        "1.1.1.3"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 1136363.6363636365,
+      "kind": "work"
+    },
+    {
+      "id": "A02",
+      "name": "Khảo sát luồng kho tổng và danh mục/giao thức tài sản ba kho",
+      "wbs": [
+        "1.2.1.1",
+        "1.2.1.2"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 3.5,
+      "mm": 0.1590909090909091,
+      "cost": 4772727.2727272725,
+      "kind": "work"
+    },
+    {
+      "id": "A02",
+      "name": "Khảo sát luồng kho tổng và danh mục/giao thức tài sản ba kho",
+      "wbs": [
+        "1.2.1.1",
+        "1.2.1.2"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 1.0,
+      "mm": 0.045454545454545456,
+      "cost": 2272727.272727273,
+      "kind": "work"
+    },
+    {
+      "id": "A02",
+      "name": "Khảo sát luồng kho tổng và danh mục/giao thức tài sản ba kho",
+      "wbs": [
+        "1.2.1.1",
+        "1.2.1.2"
+      ],
+      "role": "PM",
+      "month": 1,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 1136363.6363636365,
+      "kind": "work"
+    },
+    {
+      "id": "A03",
+      "name": "Khảo sát Excel, BOM và dữ liệu mở kho",
+      "wbs": [
+        "1.2.1.3"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 2.0999999999999996,
+      "mm": 0.09545454545454544,
+      "cost": 2863636.3636363633,
+      "kind": "work"
+    },
+    {
+      "id": "A03",
+      "name": "Khảo sát Excel, BOM và dữ liệu mở kho",
+      "wbs": [
+        "1.2.1.3"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 0.30000000000000004,
+      "mm": 0.01363636363636364,
+      "cost": 681818.181818182,
+      "kind": "work"
+    },
+    {
+      "id": "A04",
+      "name": "Chốt giao thức, dải cân, tem và yêu cầu phi chức năng",
+      "wbs": [
+        "1.2.2.2"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 2.0999999999999996,
+      "mm": 0.09545454545454544,
+      "cost": 4772727.2727272725,
+      "kind": "work"
+    },
+    {
+      "id": "A04",
+      "name": "Chốt giao thức, dải cân, tem và yêu cầu phi chức năng",
+      "wbs": [
+        "1.2.2.2"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 0.6000000000000001,
+      "mm": 0.02727272727272728,
+      "cost": 818181.8181818184,
+      "kind": "work"
+    },
+    {
+      "id": "A05",
+      "name": "Lập SRS/use case và ma trận yêu cầu cho sáu nhóm người dùng",
+      "wbs": [
+        "1.2.2.1"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 3.5,
+      "mm": 0.1590909090909091,
+      "cost": 4772727.2727272725,
+      "kind": "work"
+    },
+    {
+      "id": "A05",
+      "name": "Lập SRS/use case và ma trận yêu cầu cho sáu nhóm người dùng",
+      "wbs": [
+        "1.2.2.1"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 1136363.6363636365,
+      "kind": "work"
+    },
+    {
+      "id": "A06",
+      "name": "Thiết kế kiến trúc và kế hoạch môi trường dev/test",
+      "wbs": [
+        "1.2.3.1"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 2.8,
+      "mm": 0.12727272727272726,
+      "cost": 6363636.363636363,
+      "kind": "work"
+    },
+    {
+      "id": "A06",
+      "name": "Thiết kế kiến trúc và kế hoạch môi trường dev/test",
+      "wbs": [
+        "1.2.3.1"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 545454.5454545455,
+      "kind": "work"
+    },
+    {
+      "id": "A07",
+      "name": "Thiết kế dữ liệu, điều chuyển và đệm ngoại tuyến",
+      "wbs": [
+        "1.2.3.2"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 2.8,
+      "mm": 0.12727272727272726,
+      "cost": 6363636.363636363,
+      "kind": "work"
+    },
+    {
+      "id": "A07",
+      "name": "Thiết kế dữ liệu, điều chuyển và đệm ngoại tuyến",
+      "wbs": [
+        "1.2.3.2"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 545454.5454545455,
+      "kind": "work"
+    },
+    {
+      "id": "A08",
+      "name": "Thiết kế giao diện các luồng theo vai trò",
+      "wbs": [
+        "1.2.3.3"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 2.0999999999999996,
+      "mm": 0.09545454545454544,
+      "cost": 2863636.3636363633,
+      "kind": "work"
+    },
+    {
+      "id": "A08",
+      "name": "Thiết kế giao diện các luồng theo vai trò",
+      "wbs": [
+        "1.2.3.3"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 0.30000000000000004,
+      "mm": 0.01363636363636364,
+      "cost": 681818.181818182,
+      "kind": "work"
+    },
+    {
+      "id": "A09",
+      "name": "Thẩm định và xác nhận SRS/SAD, RTM và lịch đề xuất",
+      "wbs": [
+        "1.2.2.1",
+        "1.2.3.1",
+        "1.1.1.3"
+      ],
+      "role": "PM",
+      "month": 1,
+      "days": 0.6,
+      "mm": 0.02727272727272727,
+      "cost": 1363636.3636363635,
+      "kind": "work"
+    },
+    {
+      "id": "A09",
+      "name": "Thẩm định và xác nhận SRS/SAD, RTM và lịch đề xuất",
+      "wbs": [
+        "1.2.2.1",
+        "1.2.3.1",
+        "1.1.1.3"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 909090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A09",
+      "name": "Thẩm định và xác nhận SRS/SAD, RTM và lịch đề xuất",
+      "wbs": [
+        "1.2.2.1",
+        "1.2.3.1",
+        "1.1.1.3"
+      ],
+      "role": "BA",
+      "month": 1,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 545454.5454545455,
+      "kind": "work"
+    },
+    {
+      "id": "A10",
+      "name": "Dựng môi trường dev/test và bàn giao thiết kế cho Dev",
+      "wbs": [
+        "1.2.3.1"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 1.7999999999999998,
+      "mm": 0.0857142857142857,
+      "cost": 4285714.285714285,
+      "kind": "work"
+    },
+    {
+      "id": "A10",
+      "name": "Dựng môi trường dev/test và bàn giao thiết kế cho Dev",
+      "wbs": [
+        "1.2.3.1"
+      ],
+      "role": "BE",
+      "month": 2,
+      "days": 0.6000000000000001,
+      "mm": 0.028571428571428574,
+      "cost": 771428.5714285715,
+      "kind": "work"
+    },
+    {
+      "id": "A10",
+      "name": "Dựng môi trường dev/test và bàn giao thiết kế cho Dev",
+      "wbs": [
+        "1.2.3.1"
+      ],
+      "role": "FE",
+      "month": 2,
+      "days": 0.6000000000000001,
+      "mm": 0.028571428571428574,
+      "cost": 685714.2857142858,
+      "kind": "work"
+    },
+    {
+      "id": "A11",
+      "name": "Phát triển danh mục/lô, nhập–xuất–tồn, điều chuyển, Zone/Bin/Rack",
+      "wbs": [
+        "1.3.1.1"
+      ],
+      "role": "BE",
+      "month": 2,
+      "days": 9.600000000000001,
+      "mm": 0.4571428571428572,
+      "cost": 12342857.142857144,
+      "kind": "work"
+    },
+    {
+      "id": "A11",
+      "name": "Phát triển danh mục/lô, nhập–xuất–tồn, điều chuyển, Zone/Bin/Rack",
+      "wbs": [
+        "1.3.1.1"
+      ],
+      "role": "FE",
+      "month": 2,
+      "days": 9.600000000000001,
+      "mm": 0.4571428571428572,
+      "cost": 10971428.571428573,
+      "kind": "work"
+    },
+    {
+      "id": "A11",
+      "name": "Phát triển danh mục/lô, nhập–xuất–tồn, điều chuyển, Zone/Bin/Rack",
+      "wbs": [
+        "1.3.1.1"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 1.2000000000000002,
+      "mm": 0.05714285714285715,
+      "cost": 2857142.8571428573,
+      "kind": "work"
+    },
+    {
+      "id": "A11",
+      "name": "Phát triển danh mục/lô, nhập–xuất–tồn, điều chuyển, Zone/Bin/Rack",
+      "wbs": [
+        "1.3.1.1"
+      ],
+      "role": "BA",
+      "month": 2,
+      "days": 0.6000000000000001,
+      "mm": 0.028571428571428574,
+      "cost": 857142.8571428573,
+      "kind": "work"
+    },
+    {
+      "id": "A12",
+      "name": "Phát triển FEFO và chặn lô hết hạn",
+      "wbs": [
+        "1.3.1.2"
+      ],
+      "role": "BE",
+      "month": 2,
+      "days": 3.2,
+      "mm": 0.1523809523809524,
+      "cost": 4114285.7142857146,
+      "kind": "work"
+    },
+    {
+      "id": "A12",
+      "name": "Phát triển FEFO và chặn lô hết hạn",
+      "wbs": [
+        "1.3.1.2"
+      ],
+      "role": "FE",
+      "month": 2,
+      "days": 3.2,
+      "mm": 0.1523809523809524,
+      "cost": 3657142.8571428573,
+      "kind": "work"
+    },
+    {
+      "id": "A12",
+      "name": "Phát triển FEFO và chặn lô hết hạn",
+      "wbs": [
+        "1.3.1.2"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 0.4,
+      "mm": 0.01904761904761905,
+      "cost": 952380.9523809524,
+      "kind": "work"
+    },
+    {
+      "id": "A12",
+      "name": "Phát triển FEFO và chặn lô hết hạn",
+      "wbs": [
+        "1.3.1.2"
+      ],
+      "role": "BA",
+      "month": 2,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 285714.28571428574,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "BE",
+      "month": 2,
+      "days": 3.2,
+      "mm": 0.1523809523809524,
+      "cost": 4114285.7142857146,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 1.6,
+      "mm": 0.07272727272727274,
+      "cost": 1963636.363636364,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "FE",
+      "month": 2,
+      "days": 3.2,
+      "mm": 0.1523809523809524,
+      "cost": 3657142.8571428573,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "FE",
+      "month": 3,
+      "days": 1.6,
+      "mm": 0.07272727272727274,
+      "cost": 1745454.5454545456,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 0.4,
+      "mm": 0.01904761904761905,
+      "cost": 952380.9523809524,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 454545.4545454546,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "BA",
+      "month": 2,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 285714.28571428574,
+      "kind": "work"
+    },
+    {
+      "id": "A13",
+      "name": "Phát triển BOM, độ ẩm và hao hụt",
+      "wbs": [
+        "1.3.2.1"
+      ],
+      "role": "BA",
+      "month": 3,
+      "days": 0.1,
+      "mm": 0.004545454545454546,
+      "cost": 136363.63636363638,
+      "kind": "work"
+    },
+    {
+      "id": "A14",
+      "name": "Phát triển cảnh báo và tuổi hàng",
+      "wbs": [
+        "1.3.2.2"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 3.2,
+      "mm": 0.14545454545454548,
+      "cost": 3927272.727272728,
+      "kind": "work"
+    },
+    {
+      "id": "A14",
+      "name": "Phát triển cảnh báo và tuổi hàng",
+      "wbs": [
+        "1.3.2.2"
+      ],
+      "role": "FE",
+      "month": 3,
+      "days": 3.2,
+      "mm": 0.14545454545454548,
+      "cost": 3490909.0909090913,
+      "kind": "work"
+    },
+    {
+      "id": "A14",
+      "name": "Phát triển cảnh báo và tuổi hàng",
+      "wbs": [
+        "1.3.2.2"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 909090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A14",
+      "name": "Phát triển cảnh báo và tuổi hàng",
+      "wbs": [
+        "1.3.2.2"
+      ],
+      "role": "BA",
+      "month": 3,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 272727.27272727276,
+      "kind": "work"
+    },
+    {
+      "id": "A15",
+      "name": "Phát triển nhật ký môi trường nhập thủ công",
+      "wbs": [
+        "1.3.2.3"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 2.4000000000000004,
+      "mm": 0.10909090909090911,
+      "cost": 2945454.545454546,
+      "kind": "work"
+    },
+    {
+      "id": "A15",
+      "name": "Phát triển nhật ký môi trường nhập thủ công",
+      "wbs": [
+        "1.3.2.3"
+      ],
+      "role": "FE",
+      "month": 3,
+      "days": 2.4000000000000004,
+      "mm": 0.10909090909090911,
+      "cost": 2618181.818181819,
+      "kind": "work"
+    },
+    {
+      "id": "A15",
+      "name": "Phát triển nhật ký môi trường nhập thủ công",
+      "wbs": [
+        "1.3.2.3"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.30000000000000004,
+      "mm": 0.01363636363636364,
+      "cost": 681818.181818182,
+      "kind": "work"
+    },
+    {
+      "id": "A15",
+      "name": "Phát triển nhật ký môi trường nhập thủ công",
+      "wbs": [
+        "1.3.2.3"
+      ],
+      "role": "BA",
+      "month": 3,
+      "days": 0.15000000000000002,
+      "mm": 0.00681818181818182,
+      "cost": 204545.4545454546,
+      "kind": "work"
+    },
+    {
+      "id": "A16",
+      "name": "Phát triển import/export danh mục, lô và tồn đầu kỳ",
+      "wbs": [
+        "1.3.3.4"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 3.2,
+      "mm": 0.14545454545454548,
+      "cost": 3927272.727272728,
+      "kind": "work"
+    },
+    {
+      "id": "A16",
+      "name": "Phát triển import/export danh mục, lô và tồn đầu kỳ",
+      "wbs": [
+        "1.3.3.4"
+      ],
+      "role": "FE",
+      "month": 3,
+      "days": 3.2,
+      "mm": 0.14545454545454548,
+      "cost": 3490909.0909090913,
+      "kind": "work"
+    },
+    {
+      "id": "A16",
+      "name": "Phát triển import/export danh mục, lô và tồn đầu kỳ",
+      "wbs": [
+        "1.3.3.4"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 909090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A16",
+      "name": "Phát triển import/export danh mục, lô và tồn đầu kỳ",
+      "wbs": [
+        "1.3.3.4"
+      ],
+      "role": "BA",
+      "month": 3,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 272727.27272727276,
+      "kind": "work"
+    },
+    {
+      "id": "A17",
+      "name": "Phát triển nhà cung cấp, công nợ, đơn hàng và vận chuyển",
+      "wbs": [
+        "1.3.4.2"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 5.6000000000000005,
+      "mm": 0.2545454545454546,
+      "cost": 6872727.272727273,
+      "kind": "work"
+    },
+    {
+      "id": "A17",
+      "name": "Phát triển nhà cung cấp, công nợ, đơn hàng và vận chuyển",
+      "wbs": [
+        "1.3.4.2"
+      ],
+      "role": "FE",
+      "month": 3,
+      "days": 5.6000000000000005,
+      "mm": 0.2545454545454546,
+      "cost": 6109090.90909091,
+      "kind": "work"
+    },
+    {
+      "id": "A17",
+      "name": "Phát triển nhà cung cấp, công nợ, đơn hàng và vận chuyển",
+      "wbs": [
+        "1.3.4.2"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.7000000000000001,
+      "mm": 0.03181818181818182,
+      "cost": 1590909.090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A17",
+      "name": "Phát triển nhà cung cấp, công nợ, đơn hàng và vận chuyển",
+      "wbs": [
+        "1.3.4.2"
+      ],
+      "role": "BA",
+      "month": 3,
+      "days": 0.35000000000000003,
+      "mm": 0.01590909090909091,
+      "cost": 477272.72727272735,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 1.6,
+      "mm": 0.07272727272727274,
+      "cost": 1963636.363636364,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "BE",
+      "month": 4,
+      "days": 1.6,
+      "mm": 0.08,
+      "cost": 2160000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "FE",
+      "month": 3,
+      "days": 1.6,
+      "mm": 0.07272727272727274,
+      "cost": 1745454.5454545456,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "FE",
+      "month": 4,
+      "days": 1.6,
+      "mm": 0.08,
+      "cost": 1920000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 454545.4545454546,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "TL",
+      "month": 4,
+      "days": 0.2,
+      "mm": 0.01,
+      "cost": 500000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "BA",
+      "month": 3,
+      "days": 0.1,
+      "mm": 0.004545454545454546,
+      "cost": 136363.63636363638,
+      "kind": "work"
+    },
+    {
+      "id": "A18",
+      "name": "Phát triển lịch ca và phân quyền sáu vai trò",
+      "wbs": [
+        "1.3.4.3"
+      ],
+      "role": "BA",
+      "month": 4,
+      "days": 0.1,
+      "mm": 0.005,
+      "cost": 150000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A19",
+      "name": "Phát triển danh mục tài sản, dụng cụ và vật tư",
+      "wbs": [
+        "1.3.4.4"
+      ],
+      "role": "BE",
+      "month": 4,
+      "days": 2.4000000000000004,
+      "mm": 0.12000000000000002,
+      "cost": 3240000.0000000005,
+      "kind": "work"
+    },
+    {
+      "id": "A19",
+      "name": "Phát triển danh mục tài sản, dụng cụ và vật tư",
+      "wbs": [
+        "1.3.4.4"
+      ],
+      "role": "FE",
+      "month": 4,
+      "days": 2.4000000000000004,
+      "mm": 0.12000000000000002,
+      "cost": 2880000.0000000005,
+      "kind": "work"
+    },
+    {
+      "id": "A19",
+      "name": "Phát triển danh mục tài sản, dụng cụ và vật tư",
+      "wbs": [
+        "1.3.4.4"
+      ],
+      "role": "TL",
+      "month": 4,
+      "days": 0.30000000000000004,
+      "mm": 0.015000000000000003,
+      "cost": 750000.0000000001,
+      "kind": "work"
+    },
+    {
+      "id": "A19",
+      "name": "Phát triển danh mục tài sản, dụng cụ và vật tư",
+      "wbs": [
+        "1.3.4.4"
+      ],
+      "role": "BA",
+      "month": 4,
+      "days": 0.15000000000000002,
+      "mm": 0.0075000000000000015,
+      "cost": 225000.00000000006,
+      "kind": "work"
+    },
+    {
+      "id": "A20",
+      "name": "Phát triển dashboard và toàn bộ báo cáo RTM",
+      "wbs": [
+        "1.3.4.1"
+      ],
+      "role": "BE",
+      "month": 4,
+      "days": 3.2,
+      "mm": 0.16,
+      "cost": 4320000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A20",
+      "name": "Phát triển dashboard và toàn bộ báo cáo RTM",
+      "wbs": [
+        "1.3.4.1"
+      ],
+      "role": "FE",
+      "month": 4,
+      "days": 3.2,
+      "mm": 0.16,
+      "cost": 3840000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A20",
+      "name": "Phát triển dashboard và toàn bộ báo cáo RTM",
+      "wbs": [
+        "1.3.4.1"
+      ],
+      "role": "TL",
+      "month": 4,
+      "days": 0.4,
+      "mm": 0.02,
+      "cost": 1000000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A20",
+      "name": "Phát triển dashboard và toàn bộ báo cáo RTM",
+      "wbs": [
+        "1.3.4.1"
+      ],
+      "role": "BA",
+      "month": 4,
+      "days": 0.2,
+      "mm": 0.01,
+      "cost": 300000.0,
+      "kind": "work"
+    },
+    {
+      "id": "G1",
+      "name": "Tiếp nhận bộ mẫu kho tổng: 1 cân, 1 máy in, 1 scanner, 1 PC",
+      "wbs": [
+        "1.3.3.1",
+        "1.3.3.2",
+        "1.3.3.3"
+      ],
+      "role": "PM",
+      "month": 2,
+      "days": 0.1,
+      "mm": 0.004761904761904762,
+      "cost": 238095.2380952381,
+      "kind": "work"
+    },
+    {
+      "id": "G1",
+      "name": "Tiếp nhận bộ mẫu kho tổng: 1 cân, 1 máy in, 1 scanner, 1 PC",
+      "wbs": [
+        "1.3.3.1",
+        "1.3.3.2",
+        "1.3.3.3"
+      ],
+      "role": "HW",
+      "month": 2,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 304761.9047619048,
+      "kind": "work"
+    },
+    {
+      "id": "A21",
+      "name": "Phát triển service cân RS232 và xử lý mất kết nối",
+      "wbs": [
+        "1.3.3.1"
+      ],
+      "role": "HW",
+      "month": 2,
+      "days": 7.2,
+      "mm": 0.34285714285714286,
+      "cost": 10971428.57142857,
+      "kind": "work"
+    },
+    {
+      "id": "A21",
+      "name": "Phát triển service cân RS232 và xử lý mất kết nối",
+      "wbs": [
+        "1.3.3.1"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 0.9,
+      "mm": 0.04285714285714286,
+      "cost": 2142857.1428571427,
+      "kind": "work"
+    },
+    {
+      "id": "A22",
+      "name": "Phát triển QR và điều khiển in tem theo giao thức phù hợp",
+      "wbs": [
+        "1.3.3.2"
+      ],
+      "role": "HW",
+      "month": 2,
+      "days": 5.6000000000000005,
+      "mm": 0.2666666666666667,
+      "cost": 8533333.333333336,
+      "kind": "work"
+    },
+    {
+      "id": "A22",
+      "name": "Phát triển QR và điều khiển in tem theo giao thức phù hợp",
+      "wbs": [
+        "1.3.3.2"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 0.7000000000000001,
+      "mm": 0.03333333333333334,
+      "cost": 1666666.666666667,
+      "kind": "work"
+    },
+    {
+      "id": "A23",
+      "name": "Tích hợp scanner và ba máy chấm công sẵn có",
+      "wbs": [
+        "1.3.3.3"
+      ],
+      "role": "HW",
+      "month": 2,
+      "days": 1.6,
+      "mm": 0.0761904761904762,
+      "cost": 2438095.2380952383,
+      "kind": "work"
+    },
+    {
+      "id": "A23",
+      "name": "Tích hợp scanner và ba máy chấm công sẵn có",
+      "wbs": [
+        "1.3.3.3"
+      ],
+      "role": "HW",
+      "month": 3,
+      "days": 3.2,
+      "mm": 0.14545454545454548,
+      "cost": 4654545.454545455,
+      "kind": "work"
+    },
+    {
+      "id": "A23",
+      "name": "Tích hợp scanner và ba máy chấm công sẵn có",
+      "wbs": [
+        "1.3.3.3"
+      ],
+      "role": "BE",
+      "month": 2,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 257142.85714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A23",
+      "name": "Tích hợp scanner và ba máy chấm công sẵn có",
+      "wbs": [
+        "1.3.3.3"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 490909.090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A23",
+      "name": "Tích hợp scanner và ba máy chấm công sẵn có",
+      "wbs": [
+        "1.3.3.3"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 476190.4761904762,
+      "kind": "work"
+    },
+    {
+      "id": "A23",
+      "name": "Tích hợp scanner và ba máy chấm công sẵn có",
+      "wbs": [
+        "1.3.3.3"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 909090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A24",
+      "name": "Lập Test Plan và dữ liệu đối soát RTM/AC",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "QA",
+      "month": 3,
+      "days": 4.0,
+      "mm": 0.18181818181818182,
+      "cost": 3636363.6363636362,
+      "kind": "work"
+    },
+    {
+      "id": "A24",
+      "name": "Lập Test Plan và dữ liệu đối soát RTM/AC",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "BA",
+      "month": 3,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 681818.1818181819,
+      "kind": "work"
+    },
+    {
+      "id": "A24",
+      "name": "Lập Test Plan và dữ liệu đối soát RTM/AC",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 1136363.6363636365,
+      "kind": "work"
+    },
+    {
+      "id": "A25",
+      "name": "Kiểm luồng cân tới web và phục hồi trên bộ mẫu",
+      "wbs": [
+        "1.3.5.1"
+      ],
+      "role": "QA",
+      "month": 3,
+      "days": 4.0,
+      "mm": 0.18181818181818182,
+      "cost": 3636363.6363636362,
+      "kind": "work"
+    },
+    {
+      "id": "A25",
+      "name": "Kiểm luồng cân tới web và phục hồi trên bộ mẫu",
+      "wbs": [
+        "1.3.5.1"
+      ],
+      "role": "HW",
+      "month": 3,
+      "days": 1.0,
+      "mm": 0.045454545454545456,
+      "cost": 1454545.4545454546,
+      "kind": "work"
+    },
+    {
+      "id": "A25",
+      "name": "Kiểm luồng cân tới web và phục hồi trên bộ mẫu",
+      "wbs": [
+        "1.3.5.1"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 613636.3636363636,
+      "kind": "work"
+    },
+    {
+      "id": "A26",
+      "name": "Kiểm tem, FEFO/BOM và đối soát các module đã sẵn sàng",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "QA",
+      "month": 3,
+      "days": 4.800000000000001,
+      "mm": 0.21818181818181823,
+      "cost": 4363636.363636364,
+      "kind": "work"
+    },
+    {
+      "id": "A26",
+      "name": "Kiểm tem, FEFO/BOM và đối soát các module đã sẵn sàng",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "HW",
+      "month": 3,
+      "days": 1.2000000000000002,
+      "mm": 0.05454545454545456,
+      "cost": 1745454.5454545459,
+      "kind": "work"
+    },
+    {
+      "id": "A26",
+      "name": "Kiểm tem, FEFO/BOM và đối soát các module đã sẵn sàng",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "BE",
+      "month": 3,
+      "days": 0.6000000000000001,
+      "mm": 0.02727272727272728,
+      "cost": 736363.6363636365,
+      "kind": "work"
+    },
+    {
+      "id": "A26",
+      "name": "Kiểm tem, FEFO/BOM và đối soát các module đã sẵn sàng",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "FE",
+      "month": 3,
+      "days": 0.6000000000000001,
+      "mm": 0.02727272727272728,
+      "cost": 654545.4545454547,
+      "kind": "work"
+    },
+    {
+      "id": "A27",
+      "name": "Kiểm tích hợp đầy đủ 20 dòng RTM, quyền, offline và điều chuyển",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "QA",
+      "month": 4,
+      "days": 4.800000000000001,
+      "mm": 0.24000000000000005,
+      "cost": 4800000.000000001,
+      "kind": "work"
+    },
+    {
+      "id": "A27",
+      "name": "Kiểm tích hợp đầy đủ 20 dòng RTM, quyền, offline và điều chuyển",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "BE",
+      "month": 4,
+      "days": 0.6000000000000001,
+      "mm": 0.030000000000000006,
+      "cost": 810000.0000000001,
+      "kind": "work"
+    },
+    {
+      "id": "A27",
+      "name": "Kiểm tích hợp đầy đủ 20 dòng RTM, quyền, offline và điều chuyển",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "FE",
+      "month": 4,
+      "days": 0.6000000000000001,
+      "mm": 0.030000000000000006,
+      "cost": 720000.0000000001,
+      "kind": "work"
+    },
+    {
+      "id": "A27",
+      "name": "Kiểm tích hợp đầy đủ 20 dòng RTM, quyền, offline và điều chuyển",
+      "wbs": [
+        "1.3.5.2"
+      ],
+      "role": "TL",
+      "month": 4,
+      "days": 0.6000000000000001,
+      "mm": 0.030000000000000006,
+      "cost": 1500000.0000000002,
+      "kind": "work"
+    },
+    {
+      "id": "R2",
+      "name": "Dự phòng xử lý/kiểm lại lỗi tích hợp trước M2",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "BE",
+      "month": 4,
+      "days": 2.0,
+      "mm": 0.1,
+      "cost": 2700000.0,
+      "kind": "reserve"
+    },
+    {
+      "id": "R2",
+      "name": "Dự phòng xử lý/kiểm lại lỗi tích hợp trước M2",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "FE",
+      "month": 4,
+      "days": 2.0,
+      "mm": 0.1,
+      "cost": 2400000.0,
+      "kind": "reserve"
+    },
+    {
+      "id": "R2",
+      "name": "Dự phòng xử lý/kiểm lại lỗi tích hợp trước M2",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "HW",
+      "month": 4,
+      "days": 1.2,
+      "mm": 0.06,
+      "cost": 1920000.0,
+      "kind": "reserve"
+    },
+    {
+      "id": "R2",
+      "name": "Dự phòng xử lý/kiểm lại lỗi tích hợp trước M2",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "QA",
+      "month": 4,
+      "days": 3.2,
+      "mm": 0.16,
+      "cost": 3200000.0,
+      "kind": "reserve"
+    },
+    {
+      "id": "R2",
+      "name": "Dự phòng xử lý/kiểm lại lỗi tích hợp trước M2",
+      "wbs": [
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "TL",
+      "month": 4,
+      "days": 0.4,
+      "mm": 0.02,
+      "cost": 1000000.0,
+      "kind": "reserve"
+    },
+    {
+      "id": "G2",
+      "name": "Nhận phần thiết bị còn lại kho tổng, xác nhận điện/LAN/Excel/người học",
+      "wbs": [
+        "1.4.1.1",
+        "1.4.1.3",
+        "1.4.1.2"
+      ],
+      "role": "PM",
+      "month": 5,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 454545.4545454546,
+      "kind": "work"
+    },
+    {
+      "id": "G2",
+      "name": "Nhận phần thiết bị còn lại kho tổng, xác nhận điện/LAN/Excel/người học",
+      "wbs": [
+        "1.4.1.1",
+        "1.4.1.3",
+        "1.4.1.2"
+      ],
+      "role": "OS",
+      "month": 5,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 163636.36363636365,
+      "kind": "work"
+    },
+    {
+      "id": "G2",
+      "name": "Nhận phần thiết bị còn lại kho tổng, xác nhận điện/LAN/Excel/người học",
+      "wbs": [
+        "1.4.1.1",
+        "1.4.1.3",
+        "1.4.1.2"
+      ],
+      "role": "HW",
+      "month": 5,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 290909.09090909094,
+      "kind": "work"
+    },
+    {
+      "id": "A28",
+      "name": "Lắp đặt kho tổng và cấu hình toàn bộ đầu cuối/ngoại vi",
+      "wbs": [
+        "1.4.1.1"
+      ],
+      "role": "OS",
+      "month": 5,
+      "days": 3.2,
+      "mm": 0.14545454545454548,
+      "cost": 2618181.8181818184,
+      "kind": "work"
+    },
+    {
+      "id": "A28",
+      "name": "Lắp đặt kho tổng và cấu hình toàn bộ đầu cuối/ngoại vi",
+      "wbs": [
+        "1.4.1.1"
+      ],
+      "role": "HW",
+      "month": 5,
+      "days": 2.4,
+      "mm": 0.10909090909090909,
+      "cost": 3490909.090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A28",
+      "name": "Lắp đặt kho tổng và cấu hình toàn bộ đầu cuối/ngoại vi",
+      "wbs": [
+        "1.4.1.1"
+      ],
+      "role": "TL",
+      "month": 5,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 909090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A29",
+      "name": "Import và đối soát dữ liệu kho tổng trong môi trường chạy thử",
+      "wbs": [
+        "1.4.1.3"
+      ],
+      "role": "OS",
+      "month": 5,
+      "days": 1.2000000000000002,
+      "mm": 0.05454545454545456,
+      "cost": 981818.181818182,
+      "kind": "work"
+    },
+    {
+      "id": "A29",
+      "name": "Import và đối soát dữ liệu kho tổng trong môi trường chạy thử",
+      "wbs": [
+        "1.4.1.3"
+      ],
+      "role": "BA",
+      "month": 5,
+      "days": 1.7999999999999998,
+      "mm": 0.0818181818181818,
+      "cost": 2454545.454545454,
+      "kind": "work"
+    },
+    {
+      "id": "A29",
+      "name": "Import và đối soát dữ liệu kho tổng trong môi trường chạy thử",
+      "wbs": [
+        "1.4.1.3"
+      ],
+      "role": "BE",
+      "month": 5,
+      "days": 0.8999999999999999,
+      "mm": 0.0409090909090909,
+      "cost": 1104545.4545454544,
+      "kind": "work"
+    },
+    {
+      "id": "A30",
+      "name": "Hoàn thiện kịch bản UAT và SOP/User Manual sáu vai trò",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "BA",
+      "month": 5,
+      "days": 3.5,
+      "mm": 0.1590909090909091,
+      "cost": 4772727.2727272725,
+      "kind": "work"
+    },
+    {
+      "id": "A30",
+      "name": "Hoàn thiện kịch bản UAT và SOP/User Manual sáu vai trò",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "QA",
+      "month": 5,
+      "days": 1.0,
+      "mm": 0.045454545454545456,
+      "cost": 909090.9090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A30",
+      "name": "Hoàn thiện kịch bản UAT và SOP/User Manual sáu vai trò",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "OS",
+      "month": 5,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 409090.9090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A31",
+      "name": "UAT kho tổng, đo từng cân/in tem và kiểm toàn bộ luồng",
+      "wbs": [
+        "1.4.1.2",
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "QA",
+      "month": 5,
+      "days": 3.2,
+      "mm": 0.14545454545454548,
+      "cost": 2909090.9090909096,
+      "kind": "work"
+    },
+    {
+      "id": "A31",
+      "name": "UAT kho tổng, đo từng cân/in tem và kiểm toàn bộ luồng",
+      "wbs": [
+        "1.4.1.2",
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "BA",
+      "month": 5,
+      "days": 0.8,
+      "mm": 0.03636363636363637,
+      "cost": 1090909.090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A31",
+      "name": "UAT kho tổng, đo từng cân/in tem và kiểm toàn bộ luồng",
+      "wbs": [
+        "1.4.1.2",
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "OS",
+      "month": 5,
+      "days": 1.6,
+      "mm": 0.07272727272727274,
+      "cost": 1309090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A31",
+      "name": "UAT kho tổng, đo từng cân/in tem và kiểm toàn bộ luồng",
+      "wbs": [
+        "1.4.1.2",
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "HW",
+      "month": 5,
+      "days": 0.8,
+      "mm": 0.03636363636363637,
+      "cost": 1163636.3636363638,
+      "kind": "work"
+    },
+    {
+      "id": "A31",
+      "name": "UAT kho tổng, đo từng cân/in tem và kiểm toàn bộ luồng",
+      "wbs": [
+        "1.4.1.2",
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "BE",
+      "month": 5,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 490909.090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A31",
+      "name": "UAT kho tổng, đo từng cân/in tem và kiểm toàn bộ luồng",
+      "wbs": [
+        "1.4.1.2",
+        "1.3.5.1",
+        "1.3.5.2"
+      ],
+      "role": "FE",
+      "month": 5,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 436363.6363636364,
+      "kind": "work"
+    },
+    {
+      "id": "R3",
+      "name": "Dự phòng sửa và kiểm lại phát hiện UAT kho tổng",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "QA",
+      "month": 5,
+      "days": 1.6,
+      "mm": 0.07272727272727274,
+      "cost": 1454545.4545454548,
+      "kind": "reserve"
+    },
+    {
+      "id": "R3",
+      "name": "Dự phòng sửa và kiểm lại phát hiện UAT kho tổng",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "BE",
+      "month": 5,
+      "days": 1.0,
+      "mm": 0.045454545454545456,
+      "cost": 1227272.7272727273,
+      "kind": "reserve"
+    },
+    {
+      "id": "R3",
+      "name": "Dự phòng sửa và kiểm lại phát hiện UAT kho tổng",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "FE",
+      "month": 5,
+      "days": 1.0,
+      "mm": 0.045454545454545456,
+      "cost": 1090909.0909090908,
+      "kind": "reserve"
+    },
+    {
+      "id": "R3",
+      "name": "Dự phòng sửa và kiểm lại phát hiện UAT kho tổng",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "HW",
+      "month": 5,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 581818.1818181819,
+      "kind": "reserve"
+    },
+    {
+      "id": "R3",
+      "name": "Dự phòng sửa và kiểm lại phát hiện UAT kho tổng",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "OS",
+      "month": 5,
+      "days": 0.6,
+      "mm": 0.02727272727272727,
+      "cost": 490909.0909090909,
+      "kind": "reserve"
+    },
+    {
+      "id": "A32",
+      "name": "Đào tạo thực hành kho tổng và BA bàn giao hướng dẫn cho PM/Onsite",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "OS",
+      "month": 5,
+      "days": 2.0999999999999996,
+      "mm": 0.09545454545454544,
+      "cost": 1718181.8181818181,
+      "kind": "work"
+    },
+    {
+      "id": "A32",
+      "name": "Đào tạo thực hành kho tổng và BA bàn giao hướng dẫn cho PM/Onsite",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "BA",
+      "month": 5,
+      "days": 0.8999999999999999,
+      "mm": 0.0409090909090909,
+      "cost": 1227272.727272727,
+      "kind": "work"
+    },
+    {
+      "id": "A32",
+      "name": "Đào tạo thực hành kho tổng và BA bàn giao hướng dẫn cho PM/Onsite",
+      "wbs": [
+        "1.4.1.2"
+      ],
+      "role": "PM",
+      "month": 5,
+      "days": 0.30000000000000004,
+      "mm": 0.01363636363636364,
+      "cost": 681818.181818182,
+      "kind": "work"
+    },
+    {
+      "id": "A33",
+      "name": "Cấu hình production, chuyển dữ liệu và thử backup/restore",
+      "wbs": [
+        "1.4.2.1"
+      ],
+      "role": "TL",
+      "month": 6,
+      "days": 1.5,
+      "mm": 0.06818181818181818,
+      "cost": 3409090.9090909087,
+      "kind": "work"
+    },
+    {
+      "id": "A33",
+      "name": "Cấu hình production, chuyển dữ liệu và thử backup/restore",
+      "wbs": [
+        "1.4.2.1"
+      ],
+      "role": "BE",
+      "month": 6,
+      "days": 2.0999999999999996,
+      "mm": 0.09545454545454544,
+      "cost": 2577272.727272727,
+      "kind": "work"
+    },
+    {
+      "id": "A33",
+      "name": "Cấu hình production, chuyển dữ liệu và thử backup/restore",
+      "wbs": [
+        "1.4.2.1"
+      ],
+      "role": "OS",
+      "month": 6,
+      "days": 0.6000000000000001,
+      "mm": 0.02727272727272728,
+      "cost": 490909.090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A34",
+      "name": "Kiểm điều kiện go-live và delta cấu hình/dữ liệu production",
+      "wbs": [
+        "1.4.2.1",
+        "1.4.2.2"
+      ],
+      "role": "QA",
+      "month": 6,
+      "days": 1.2,
+      "mm": 0.05454545454545454,
+      "cost": 1090909.0909090908,
+      "kind": "work"
+    },
+    {
+      "id": "A34",
+      "name": "Kiểm điều kiện go-live và delta cấu hình/dữ liệu production",
+      "wbs": [
+        "1.4.2.1",
+        "1.4.2.2"
+      ],
+      "role": "TL",
+      "month": 6,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 909090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A34",
+      "name": "Kiểm điều kiện go-live và delta cấu hình/dữ liệu production",
+      "wbs": [
+        "1.4.2.1",
+        "1.4.2.2"
+      ],
+      "role": "OS",
+      "month": 6,
+      "days": 0.6,
+      "mm": 0.02727272727272727,
+      "cost": 490909.0909090909,
+      "kind": "work"
+    },
+    {
+      "id": "A34",
+      "name": "Kiểm điều kiện go-live và delta cấu hình/dữ liệu production",
+      "wbs": [
+        "1.4.2.1",
+        "1.4.2.2"
+      ],
+      "role": "PM",
+      "month": 6,
+      "days": 0.4,
+      "mm": 0.018181818181818184,
+      "cost": 909090.9090909092,
+      "kind": "work"
+    },
+    {
+      "id": "A35",
+      "name": "Kích hoạt vận hành chính thức kho tổng",
+      "wbs": [
+        "1.4.2.2"
+      ],
+      "role": "PM",
+      "month": 6,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 454545.4545454546,
+      "kind": "work"
+    },
+    {
+      "id": "A35",
+      "name": "Kích hoạt vận hành chính thức kho tổng",
+      "wbs": [
+        "1.4.2.2"
+      ],
+      "role": "OS",
+      "month": 6,
+      "days": 0.5,
+      "mm": 0.022727272727272728,
+      "cost": 409090.9090909091,
+      "kind": "work"
+    },
+    {
+      "id": "A35",
+      "name": "Kích hoạt vận hành chính thức kho tổng",
+      "wbs": [
+        "1.4.2.2"
+      ],
+      "role": "BE",
+      "month": 6,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 245454.5454545455,
+      "kind": "work"
+    },
+    {
+      "id": "A35",
+      "name": "Kích hoạt vận hành chính thức kho tổng",
+      "wbs": [
+        "1.4.2.2"
+      ],
+      "role": "HW",
+      "month": 6,
+      "days": 0.2,
+      "mm": 0.009090909090909092,
+      "cost": 290909.09090909094,
+      "kind": "work"
+    },
+    {
+      "id": "A36",
+      "name": "Hỗ trợ onsite trong hai tuần đầu vận hành kho tổng",
+      "wbs": [
+        "1.4.2.3"
+      ],
+      "role": "OS",
+      "month": 6,
+      "days": 8.0,
+      "mm": 0.36363636363636365,
+      "cost": 6545454.545454546,
+      "kind": "work"
+    },
+    {
+      "id": "A36",
+      "name": "Hỗ trợ onsite trong hai tuần đầu vận hành kho tổng",
+      "wbs": [
+        "1.4.2.3"
+      ],
+      "role": "HW",
+      "month": 6,
+      "days": 3.0,
+      "mm": 0.13636363636363635,
+      "cost": 4363636.363636363,
+      "kind": "work"
+    },
+    {
+      "id": "A36",
+      "name": "Hỗ trợ onsite trong hai tuần đầu vận hành kho tổng",
+      "wbs": [
+        "1.4.2.3"
+      ],
+      "role": "BE",
+      "month": 6,
+      "days": 1.0,
+      "mm": 0.045454545454545456,
+      "cost": 1227272.7272727273,
+      "kind": "work"
+    },
+    {
+      "id": "G3",
+      "name": "Nhận và tiền cấu hình thiết bị hai chi nhánh, chốt tuyến công tác",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "role": "OS",
+      "month": 6,
+      "days": 0.8999999999999999,
+      "mm": 0.0409090909090909,
+      "cost": 736363.6363636362,
+      "kind": "work"
+    },
+    {
+      "id": "G3",
+      "name": "Nhận và tiền cấu hình thiết bị hai chi nhánh, chốt tuyến công tác",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "role": "HW",
+      "month": 6,
+      "days": 1.7999999999999998,
+      "mm": 0.0818181818181818,
+      "cost": 2618181.818181818,
+      "kind": "work"
+    },
+    {
+      "id": "G3",
+      "name": "Nhận và tiền cấu hình thiết bị hai chi nhánh, chốt tuyến công tác",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "role": "PM",
+      "month": 6,
+      "days": 0.30000000000000004,
+      "mm": 0.01363636363636364,
+      "cost": 681818.181818182,
+      "kind": "work"
+    },
+    {
+      "id": "A37",
+      "name": "Di chuyển và lắp thiết bị tại chi nhánh 1",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 2.4000000000000004,
+      "mm": 0.1142857142857143,
+      "cost": 2057142.8571428573,
+      "kind": "work"
+    },
+    {
+      "id": "A37",
+      "name": "Di chuyển và lắp thiết bị tại chi nhánh 1",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "role": "HW",
+      "month": 7,
+      "days": 0.8999999999999999,
+      "mm": 0.04285714285714285,
+      "cost": 1371428.5714285711,
+      "kind": "work"
+    },
+    {
+      "id": "A38",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 1",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "TL",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 1428571.4285714286,
+      "kind": "work"
+    },
+    {
+      "id": "A38",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 1",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "BE",
+      "month": 7,
+      "days": 1.0,
+      "mm": 0.047619047619047616,
+      "cost": 1285714.2857142857,
+      "kind": "work"
+    },
+    {
+      "id": "A38",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 1",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "FE",
+      "month": 7,
+      "days": 0.4,
+      "mm": 0.01904761904761905,
+      "cost": 457142.85714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A38",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 1",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 514285.71428571426,
+      "kind": "work"
+    },
+    {
+      "id": "A39",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "QA",
+      "month": 7,
+      "days": 1.6,
+      "mm": 0.0761904761904762,
+      "cost": 1523809.523809524,
+      "kind": "work"
+    },
+    {
+      "id": "A39",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 0.8,
+      "mm": 0.0380952380952381,
+      "cost": 685714.2857142858,
+      "kind": "work"
+    },
+    {
+      "id": "A39",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "HW",
+      "month": 7,
+      "days": 0.4,
+      "mm": 0.01904761904761905,
+      "cost": 609523.8095238096,
+      "kind": "work"
+    },
+    {
+      "id": "A39",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "TL",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 476190.4761904762,
+      "kind": "work"
+    },
+    {
+      "id": "R51",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 514285.71428571426,
+      "kind": "reserve"
+    },
+    {
+      "id": "R51",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "QA",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 571428.5714285714,
+      "kind": "reserve"
+    },
+    {
+      "id": "R51",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "HW",
+      "month": 7,
+      "days": 0.3,
+      "mm": 0.014285714285714285,
+      "cost": 457142.8571428571,
+      "kind": "reserve"
+    },
+    {
+      "id": "R51",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "BE",
+      "month": 7,
+      "days": 0.3,
+      "mm": 0.014285714285714285,
+      "cost": 385714.2857142857,
+      "kind": "reserve"
+    },
+    {
+      "id": "R51",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 1",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "FE",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 228571.42857142858,
+      "kind": "reserve"
+    },
+    {
+      "id": "A40",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 1",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 1.6,
+      "mm": 0.0761904761904762,
+      "cost": 1371428.5714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A40",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 1",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "role": "PM",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 476190.4761904762,
+      "kind": "work"
+    },
+    {
+      "id": "A40",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 1",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "role": "BE",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 257142.85714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A41",
+      "name": "Di chuyển và lắp thiết bị tại chi nhánh 2",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 2.4000000000000004,
+      "mm": 0.1142857142857143,
+      "cost": 2057142.8571428573,
+      "kind": "work"
+    },
+    {
+      "id": "A41",
+      "name": "Di chuyển và lắp thiết bị tại chi nhánh 2",
+      "wbs": [
+        "1.5.1.1"
+      ],
+      "role": "HW",
+      "month": 7,
+      "days": 0.8999999999999999,
+      "mm": 0.04285714285714285,
+      "cost": 1371428.5714285711,
+      "kind": "work"
+    },
+    {
+      "id": "A42",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 2",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "TL",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 1428571.4285714286,
+      "kind": "work"
+    },
+    {
+      "id": "A42",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 2",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "BE",
+      "month": 7,
+      "days": 1.0,
+      "mm": 0.047619047619047616,
+      "cost": 1285714.2857142857,
+      "kind": "work"
+    },
+    {
+      "id": "A42",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 2",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "FE",
+      "month": 7,
+      "days": 0.4,
+      "mm": 0.01904761904761905,
+      "cost": 457142.85714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A42",
+      "name": "Cấu hình đồng bộ/ngoại tuyến và dữ liệu chi nhánh 2",
+      "wbs": [
+        "1.5.2.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 514285.71428571426,
+      "kind": "work"
+    },
+    {
+      "id": "A43",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "QA",
+      "month": 7,
+      "days": 1.6,
+      "mm": 0.0761904761904762,
+      "cost": 1523809.523809524,
+      "kind": "work"
+    },
+    {
+      "id": "A43",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 0.8,
+      "mm": 0.0380952380952381,
+      "cost": 685714.2857142858,
+      "kind": "work"
+    },
+    {
+      "id": "A43",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "HW",
+      "month": 7,
+      "days": 0.4,
+      "mm": 0.01904761904761905,
+      "cost": 609523.8095238096,
+      "kind": "work"
+    },
+    {
+      "id": "A43",
+      "name": "Nghiệm thu cân/tem, UAT và đối soát chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "TL",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 476190.4761904762,
+      "kind": "work"
+    },
+    {
+      "id": "R52",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 514285.71428571426,
+      "kind": "reserve"
+    },
+    {
+      "id": "R52",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "QA",
+      "month": 7,
+      "days": 0.6,
+      "mm": 0.02857142857142857,
+      "cost": 571428.5714285714,
+      "kind": "reserve"
+    },
+    {
+      "id": "R52",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "HW",
+      "month": 7,
+      "days": 0.3,
+      "mm": 0.014285714285714285,
+      "cost": 457142.8571428571,
+      "kind": "reserve"
+    },
+    {
+      "id": "R52",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "BE",
+      "month": 7,
+      "days": 0.3,
+      "mm": 0.014285714285714285,
+      "cost": 385714.2857142857,
+      "kind": "reserve"
+    },
+    {
+      "id": "R52",
+      "name": "Dự phòng sửa/kiểm lại trước vận hành chi nhánh 2",
+      "wbs": [
+        "1.5.1.1",
+        "1.5.2.1"
+      ],
+      "role": "FE",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 228571.42857142858,
+      "kind": "reserve"
+    },
+    {
+      "id": "A44",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 2",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "role": "OS",
+      "month": 7,
+      "days": 1.6,
+      "mm": 0.0761904761904762,
+      "cost": 1371428.5714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A44",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 2",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "role": "PM",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 476190.4761904762,
+      "kind": "work"
+    },
+    {
+      "id": "A44",
+      "name": "Đào tạo, xác nhận vận hành và hỗ trợ ban đầu chi nhánh 2",
+      "wbs": [
+        "1.5.3.1"
+      ],
+      "role": "BE",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 257142.85714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A45",
+      "name": "Kỹ sư RS232/Frontend bàn giao đặc tả và hồ sơ trước khi rời dự án",
+      "wbs": [
+        "1.6.1.1",
+        "1.6.1.2",
+        "1.6.2.1"
+      ],
+      "role": "HW",
+      "month": 7,
+      "days": 0.5,
+      "mm": 0.023809523809523808,
+      "cost": 761904.7619047619,
+      "kind": "work"
+    },
+    {
+      "id": "A45",
+      "name": "Kỹ sư RS232/Frontend bàn giao đặc tả và hồ sơ trước khi rời dự án",
+      "wbs": [
+        "1.6.1.1",
+        "1.6.1.2",
+        "1.6.2.1"
+      ],
+      "role": "FE",
+      "month": 7,
+      "days": 0.4,
+      "mm": 0.01904761904761905,
+      "cost": 457142.85714285716,
+      "kind": "work"
+    },
+    {
+      "id": "A45",
+      "name": "Kỹ sư RS232/Frontend bàn giao đặc tả và hồ sơ trước khi rời dự án",
+      "wbs": [
+        "1.6.1.1",
+        "1.6.1.2",
+        "1.6.2.1"
+      ],
+      "role": "TL",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 476190.4761904762,
+      "kind": "work"
+    },
+    {
+      "id": "A45",
+      "name": "Kỹ sư RS232/Frontend bàn giao đặc tả và hồ sơ trước khi rời dự án",
+      "wbs": [
+        "1.6.1.1",
+        "1.6.1.2",
+        "1.6.2.1"
+      ],
+      "role": "QA",
+      "month": 7,
+      "days": 0.2,
+      "mm": 0.009523809523809525,
+      "cost": 190476.1904761905,
+      "kind": "work"
+    },
+    {
+      "id": "A45",
+      "name": "Kỹ sư RS232/Frontend bàn giao đặc tả và hồ sơ trước khi rời dự án",
+      "wbs": [
+        "1.6.1.1",
+        "1.6.1.2",
+        "1.6.2.1"
+      ],
+      "role": "PM",
+      "month": 7,
+      "days": 0.1,
+      "mm": 0.004761904761904762,
+      "cost": 238095.2380952381,
+      "kind": "work"
+    },
+    {
+      "id": "A46",
+      "name": "Tổng hợp hồ sơ bốn cân và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.1"
+      ],
+      "role": "QA",
+      "month": 8,
+      "days": 2.4000000000000004,
+      "mm": 0.13333333333333336,
+      "cost": 2666666.666666667,
+      "kind": "work"
+    },
+    {
+      "id": "A46",
+      "name": "Tổng hợp hồ sơ bốn cân và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.1"
+      ],
+      "role": "TL",
+      "month": 8,
+      "days": 0.6000000000000001,
+      "mm": 0.03333333333333334,
+      "cost": 1666666.666666667,
+      "kind": "work"
+    },
+    {
+      "id": "A46",
+      "name": "Tổng hợp hồ sơ bốn cân và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.1"
+      ],
+      "role": "BE",
+      "month": 8,
+      "days": 0.30000000000000004,
+      "mm": 0.01666666666666667,
+      "cost": 450000.0000000001,
+      "kind": "work"
+    },
+    {
+      "id": "A47",
+      "name": "Tổng hợp hồ sơ bốn máy in và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.2"
+      ],
+      "role": "QA",
+      "month": 8,
+      "days": 1.6,
+      "mm": 0.08888888888888889,
+      "cost": 1777777.7777777778,
+      "kind": "work"
+    },
+    {
+      "id": "A47",
+      "name": "Tổng hợp hồ sơ bốn máy in và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.2"
+      ],
+      "role": "TL",
+      "month": 8,
+      "days": 0.4,
+      "mm": 0.022222222222222223,
+      "cost": 1111111.1111111112,
+      "kind": "work"
+    },
+    {
+      "id": "A47",
+      "name": "Tổng hợp hồ sơ bốn máy in và kiểm lại phần thay đổi",
+      "wbs": [
+        "1.6.1.2"
+      ],
+      "role": "BE",
+      "month": 8,
+      "days": 0.2,
+      "mm": 0.011111111111111112,
+      "cost": 300000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A48",
+      "name": "Hoàn thiện SRS/SAD/SOP/User Manual và đào tạo bổ sung",
+      "wbs": [
+        "1.6.2.1"
+      ],
+      "role": "PM",
+      "month": 8,
+      "days": 1.0,
+      "mm": 0.05555555555555555,
+      "cost": 2777777.7777777775,
+      "kind": "work"
+    },
+    {
+      "id": "A48",
+      "name": "Hoàn thiện SRS/SAD/SOP/User Manual và đào tạo bổ sung",
+      "wbs": [
+        "1.6.2.1"
+      ],
+      "role": "OS",
+      "month": 8,
+      "days": 3.0,
+      "mm": 0.16666666666666666,
+      "cost": 3000000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A48",
+      "name": "Hoàn thiện SRS/SAD/SOP/User Manual và đào tạo bổ sung",
+      "wbs": [
+        "1.6.2.1"
+      ],
+      "role": "TL",
+      "month": 8,
+      "days": 1.0,
+      "mm": 0.05555555555555555,
+      "cost": 2777777.7777777775,
+      "kind": "work"
+    },
+    {
+      "id": "A48",
+      "name": "Hoàn thiện SRS/SAD/SOP/User Manual và đào tạo bổ sung",
+      "wbs": [
+        "1.6.2.1"
+      ],
+      "role": "BE",
+      "month": 8,
+      "days": 0.5,
+      "mm": 0.027777777777777776,
+      "cost": 750000.0,
+      "kind": "work"
+    },
+    {
+      "id": "R6",
+      "name": "Dự phòng đóng phát hiện nghiệm thu tổng thể",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "QA",
+      "month": 8,
+      "days": 1.2,
+      "mm": 0.06666666666666667,
+      "cost": 1333333.3333333333,
+      "kind": "reserve"
+    },
+    {
+      "id": "R6",
+      "name": "Dự phòng đóng phát hiện nghiệm thu tổng thể",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "TL",
+      "month": 8,
+      "days": 0.4,
+      "mm": 0.022222222222222223,
+      "cost": 1111111.1111111112,
+      "kind": "reserve"
+    },
+    {
+      "id": "R6",
+      "name": "Dự phòng đóng phát hiện nghiệm thu tổng thể",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "BE",
+      "month": 8,
+      "days": 1.0,
+      "mm": 0.05555555555555555,
+      "cost": 1500000.0,
+      "kind": "reserve"
+    },
+    {
+      "id": "R6",
+      "name": "Dự phòng đóng phát hiện nghiệm thu tổng thể",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "OS",
+      "month": 8,
+      "days": 0.4,
+      "mm": 0.022222222222222223,
+      "cost": 400000.0,
+      "kind": "reserve"
+    },
+    {
+      "id": "A49",
+      "name": "Nghiệm thu tổng thể với chủ đầu tư và các kho",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "PM",
+      "month": 8,
+      "days": 0.6,
+      "mm": 0.03333333333333333,
+      "cost": 1666666.6666666667,
+      "kind": "work"
+    },
+    {
+      "id": "A49",
+      "name": "Nghiệm thu tổng thể với chủ đầu tư và các kho",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "QA",
+      "month": 8,
+      "days": 0.6,
+      "mm": 0.03333333333333333,
+      "cost": 666666.6666666666,
+      "kind": "work"
+    },
+    {
+      "id": "A49",
+      "name": "Nghiệm thu tổng thể với chủ đầu tư và các kho",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "TL",
+      "month": 8,
+      "days": 0.4,
+      "mm": 0.022222222222222223,
+      "cost": 1111111.1111111112,
+      "kind": "work"
+    },
+    {
+      "id": "A49",
+      "name": "Nghiệm thu tổng thể với chủ đầu tư và các kho",
+      "wbs": [
+        "1.6.3.1"
+      ],
+      "role": "OS",
+      "month": 8,
+      "days": 0.4,
+      "mm": 0.022222222222222223,
+      "cost": 400000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A50",
+      "name": "Bàn giao phần mềm/mã nguồn, CSDL, tài khoản, backup và trách nhiệm phí",
+      "wbs": [
+        "1.6.3.2"
+      ],
+      "role": "PM",
+      "month": 8,
+      "days": 0.6,
+      "mm": 0.03333333333333333,
+      "cost": 1666666.6666666667,
+      "kind": "work"
+    },
+    {
+      "id": "A50",
+      "name": "Bàn giao phần mềm/mã nguồn, CSDL, tài khoản, backup và trách nhiệm phí",
+      "wbs": [
+        "1.6.3.2"
+      ],
+      "role": "TL",
+      "month": 8,
+      "days": 0.6,
+      "mm": 0.03333333333333333,
+      "cost": 1666666.6666666667,
+      "kind": "work"
+    },
+    {
+      "id": "A50",
+      "name": "Bàn giao phần mềm/mã nguồn, CSDL, tài khoản, backup và trách nhiệm phí",
+      "wbs": [
+        "1.6.3.2"
+      ],
+      "role": "BE",
+      "month": 8,
+      "days": 1.0,
+      "mm": 0.05555555555555555,
+      "cost": 1500000.0,
+      "kind": "work"
+    },
+    {
+      "id": "A50",
+      "name": "Bàn giao phần mềm/mã nguồn, CSDL, tài khoản, backup và trách nhiệm phí",
+      "wbs": [
+        "1.6.3.2"
+      ],
+      "role": "OS",
+      "month": 8,
+      "days": 0.4,
+      "mm": 0.022222222222222223,
+      "cost": 400000.0,
+      "kind": "work"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 1,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 2,
+      "days": 2.1,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 3,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 4,
+      "days": 2.0,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 5,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 6,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 7,
+      "days": 2.1,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L01",
+      "name": "Giao ban tuần/tháng",
+      "wbs": [
+        "1.1.2.1"
+      ],
+      "role": "PM",
+      "month": 8,
+      "days": 1.1,
+      "mm": 0.061111111111111116,
+      "cost": 3055555.555555556,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 1,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 2,
+      "days": 1.05,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 3,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 4,
+      "days": 1.0,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 5,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 6,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 7,
+      "days": 1.05,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L02",
+      "name": "Kiểm soát chi phí/dự phòng",
+      "wbs": [
+        "1.1.2.2"
+      ],
+      "role": "PM",
+      "month": 8,
+      "days": 0.55,
+      "mm": 0.030555555555555558,
+      "cost": 1527777.777777778,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 1,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 2,
+      "days": 1.05,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 3,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 4,
+      "days": 1.0,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 5,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 6,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 7,
+      "days": 1.05,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L03",
+      "name": "Báo cáo chủ đầu tư",
+      "wbs": [
+        "1.1.2.3"
+      ],
+      "role": "PM",
+      "month": 8,
+      "days": 0.55,
+      "mm": 0.030555555555555558,
+      "cost": 1527777.777777778,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 1,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 2,
+      "days": 1.05,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 3,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 4,
+      "days": 1.0,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 5,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 6,
+      "days": 1.1,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 7,
+      "days": 1.05,
+      "mm": 0.05,
+      "cost": 2500000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L04",
+      "name": "Tiếp nhận và đánh giá thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "PM",
+      "month": 8,
+      "days": 0.55,
+      "mm": 0.030555555555555558,
+      "cost": 1527777.777777778,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 1,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 2,
+      "days": 2.1,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 3,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 4,
+      "days": 2.0,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 5,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 6,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 7,
+      "days": 2.1,
+      "mm": 0.1,
+      "cost": 5000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L05",
+      "name": "Thẩm định kỹ thuật thay đổi",
+      "wbs": [
+        "1.1.3.1"
+      ],
+      "role": "TL",
+      "month": 8,
+      "days": 1.1,
+      "mm": 0.061111111111111116,
+      "cost": 3055555.555555556,
+      "kind": "LoE"
+    },
+    {
+      "id": "L06",
+      "name": "Đảm bảo chất lượng quy trình",
+      "wbs": [
+        "1.1.3.2"
+      ],
+      "role": "QA",
+      "month": 3,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 2000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L06",
+      "name": "Đảm bảo chất lượng quy trình",
+      "wbs": [
+        "1.1.3.2"
+      ],
+      "role": "QA",
+      "month": 4,
+      "days": 2.0,
+      "mm": 0.1,
+      "cost": 2000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L06",
+      "name": "Đảm bảo chất lượng quy trình",
+      "wbs": [
+        "1.1.3.2"
+      ],
+      "role": "QA",
+      "month": 5,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 2000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L06",
+      "name": "Đảm bảo chất lượng quy trình",
+      "wbs": [
+        "1.1.3.2"
+      ],
+      "role": "QA",
+      "month": 6,
+      "days": 2.2,
+      "mm": 0.1,
+      "cost": 2000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L06",
+      "name": "Đảm bảo chất lượng quy trình",
+      "wbs": [
+        "1.1.3.2"
+      ],
+      "role": "QA",
+      "month": 7,
+      "days": 2.1,
+      "mm": 0.1,
+      "cost": 2000000.0,
+      "kind": "LoE"
+    },
+    {
+      "id": "L06",
+      "name": "Đảm bảo chất lượng quy trình",
+      "wbs": [
+        "1.1.3.2"
+      ],
+      "role": "QA",
+      "month": 8,
+      "days": 1.1,
+      "mm": 0.061111111111111116,
+      "cost": 1222222.2222222222,
+      "kind": "LoE"
+    }
+  ],
+  "monthly": [
+    {
+      "month": 1,
+      "wages": 130000000,
+      "modeledDays": {
+        "PM": 9.6,
+        "TL": 12.9,
+        "HW": 0,
+        "BA": 13.0,
+        "BE": 0,
+        "FE": 0,
+        "QA": 0,
+        "OS": 0
+      },
+      "modeledCost": 68863636.36363636,
+      "unassignedWages": 61136363.63636364,
+      "otherCost": 7000000.0,
+      "workBudget": 137000000.0
+    },
+    {
+      "month": 2,
+      "wages": 213000000,
+      "modeledDays": {
+        "PM": 5.3500000000000005,
+        "TL": 7.7,
+        "HW": 14.600000000000001,
+        "BA": 1.0,
+        "BE": 16.8,
+        "FE": 16.6,
+        "QA": 0,
+        "OS": 0
+      },
+      "modeledCost": 95319047.61904763,
+      "unassignedWages": 117680952.38095237,
+      "otherCost": 36000000.0,
+      "workBudget": 249000000.0
+    },
+    {
+      "month": 3,
+      "wages": 233000000,
+      "modeledDays": {
+        "PM": 5.5,
+        "TL": 5.300000000000001,
+        "HW": 5.4,
+        "BA": 1.6,
+        "BE": 19.1,
+        "FE": 18.200000000000003,
+        "QA": 15.0,
+        "OS": 0
+      },
+      "modeledCost": 91513636.36363637,
+      "unassignedWages": 141486363.63636363,
+      "otherCost": 3000000.0,
+      "workBudget": 236000000.0
+    },
+    {
+      "month": 4,
+      "wages": 233000000,
+      "modeledDays": {
+        "PM": 5.0,
+        "TL": 3.9000000000000004,
+        "HW": 1.2,
+        "BA": 0.45000000000000007,
+        "BE": 9.8,
+        "FE": 9.8,
+        "QA": 10.0,
+        "OS": 0
+      },
+      "modeledCost": 59835000.0,
+      "unassignedWages": 173165000.0,
+      "otherCost": 5000000.0,
+      "workBudget": 238000000.0
+    },
+    {
+      "month": 5,
+      "wages": 251000000,
+      "modeledDays": {
+        "PM": 6.000000000000001,
+        "TL": 2.6,
+        "HW": 3.8,
+        "BA": 7.0,
+        "BE": 2.3,
+        "FE": 1.4,
+        "QA": 8.0,
+        "OS": 9.4
+      },
+      "modeledCost": 53931818.18181818,
+      "unassignedWages": 197068181.8181818,
+      "otherCost": 49000000.0,
+      "workBudget": 300000000.0
+    },
+    {
+      "month": 6,
+      "wages": 221000000,
+      "modeledDays": {
+        "PM": 6.4,
+        "TL": 4.1000000000000005,
+        "HW": 5.0,
+        "BA": 0,
+        "BE": 3.3,
+        "FE": 0,
+        "QA": 3.4000000000000004,
+        "OS": 10.6
+      },
+      "modeledCost": 46950000.0,
+      "unassignedWages": 174050000.0,
+      "otherCost": 71000000.0,
+      "workBudget": 292000000.0
+    },
+    {
+      "month": 7,
+      "wages": 221000000,
+      "modeledDays": {
+        "PM": 5.75,
+        "TL": 3.9,
+        "HW": 3.6999999999999997,
+        "BA": 0,
+        "BE": 3.0,
+        "FE": 1.6,
+        "QA": 6.7,
+        "OS": 12.0
+      },
+      "modeledCost": 50966666.666666664,
+      "unassignedWages": 170033333.33333334,
+      "otherCost": 12000000.0,
+      "workBudget": 233000000.0
+    },
+    {
+      "month": 8,
+      "wages": 165000000,
+      "modeledDays": {
+        "PM": 4.95,
+        "TL": 4.5,
+        "HW": 0,
+        "BA": 0,
+        "BE": 3.0,
+        "FE": 0,
+        "QA": 6.9,
+        "OS": 4.2
+      },
+      "modeledCost": 42616666.66666667,
+      "unassignedWages": 122383333.33333333,
+      "otherCost": 7000000.0,
+      "workBudget": 172000000.0
+    }
+  ],
+  "controls": {
+    "wbsCount": 45,
+    "budgetMM": 50,
+    "modeledPersonDays": 341.3,
+    "wages": 1667000000,
+    "modeledLaborCost": 509996471.8614719,
+    "unassignedWages": 1157003528.138528,
+    "modeledCostRoundedAtEnd": 509996471.86,
+    "modeledCostRoundedRoleMonth": 509996471.89,
+    "otherCost": 190000000.0,
+    "reserve": 143000000.0
+  }
+}
